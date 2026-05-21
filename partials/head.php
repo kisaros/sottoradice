@@ -1,7 +1,3 @@
-/** @var string $dominio */
-/** @var string $dominioIcomoon */
-/** @var bool $ambienteLocale */
-
 <style>
     :root {
         --ambienteLocale: <?php echo $ambienteLocale ? 'true' : 'false'; ?>;
