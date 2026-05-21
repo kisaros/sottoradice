@@ -34,7 +34,7 @@
     <![endif]-->
 
     <!-- start favicon -->
-    <link rel="icon" type="image/png" href="<?php echo $dominio; ?>assets/images/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href=" assets/images/favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="<?php echo $dominio; ?>assets/images/favicon/favicon.svg" />
     <link rel="shortcut icon" href="<?php echo $dominio; ?>assets/images/favicon/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="<?php echo $dominio; ?>assets/images/favicon/apple-touch-icon.png" />
@@ -50,37 +50,37 @@
     global $ogImage;
     ?>
 
-    <meta name="title" content="<?php echo isset($title) ? $title : "Effatà, per aprirsi all'ascolto della Parola"; ?>">
+    <meta name="title" content="<?php echo isset($title) ? $title : "Sottoradice, la matematica fatta da noi."; ?>">
     <meta name="description"
-          content="<?php echo isset($desc) ? $desc : "Leggi il commento al Vangelo del giorno e scritti teologici su Effatà, a cura di Mons. Costantino Di Bruno"; ?>">
+          content="<?php echo isset($desc) ? $desc : "Progetti interattivi e guide realizzati dagli studenti dell'IIS Benedetto Radice di Bronte. Per capire davvero la matematica."; ?>">
     <meta name="keywords"
-          content="<?php echo isset($keywords) ? $keywords : "Effatà, DiBruno, Parola, Vangelo del giorno, teologia, fede"; ?>">
+          content="<?php echo isset($keywords) ? $keywords : "Sottoradice, Bronte, matematica, progetti interattivi, wizard, giochi matematici"; ?>">
 
 
-    <meta itemprop="name" content="Effatà - Pensieri quotidiani di Mons. Costantino Di Bruno">
+    <meta itemprop="name" content="Sottoradice, la matematica fatta da noi">
     <meta itemprop="description"
-          content="<?php echo isset($desc) ? $desc : "Leggi il commento al Vangelo del giorno e scritti teologici su Effatà, a cura di Mons. Costantino Di Bruno"; ?>">
+          content="<?php echo isset($desc) ? $desc : "Progetti interattivi e guide realizzati dagli studenti dell'IIS Benedetto Radice di Bronte. Per capire davvero la matematica."; ?>">
 
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:description"
-          content="<?php echo isset($desc) ? $desc : "Leggi il commento al Vangelo del giorno e scritti teologici su Effatà, a cura di Mons. Costantino Di Bruno"; ?>">
+          content="<?php echo isset($desc) ? $desc : "Progetti interattivi e guide realizzati dagli studenti dell'IIS Benedetto Radice di Bronte. Per capire davvero la matematica."; ?>">
     <meta name="twitter:image"
-          content="<?php echo isset($ogImage) ? $ogImage : "https://effata.altervista.org/assets/images/og-home.jpg"; ?>">
+          content="<?php echo isset($ogImage) ? $ogImage : "$dominio assets/images/og-home.jpg"; ?>">
 
     <meta name="twitter:site" content="@MonsDiBruno">
 
     <meta name="twitter:title"
-          content="<?php echo isset($title) ? $title : "Effatà, per aprirsi all'ascolto della Parola"; ?>">
+          content="<?php echo isset($title) ? $title : "Sottoradice, la matematica fatta da noi."; ?>">
 
     <meta property="og:description"
-          content="<?php echo isset($desc) ? $desc : "Leggi il commento al Vangelo del giorno e scritti teologici su Effatà, a cura di Mons. Costantino Di Bruno"; ?>">
+          content="<?php echo isset($desc) ? $desc : "Progetti interattivi e guide realizzati dagli studenti dell'IIS Benedetto Radice di Bronte. Per capire davvero la matematica."; ?>">
     <meta property="og:image"
-          content="<?php echo isset($ogImage) ? $ogImage : "https://effata.altervista.org/assets/images/og-home.jpg"; ?>">
+          content="<?php echo isset($ogImage) ? $ogImage : "$dominio assets/images/og-home.jpg"; ?>">
     <meta property="og:locale" content="it_IT">
     <meta property="og:site_name" content="Effatà - Pensieri quotidiani di Mons. Costantino Di Bruno">
     <meta property="og:title"
-          content="<?php echo isset($title) ? $title : "Effatà, per aprirsi all'ascolto della Parola"; ?>">
+          content="<?php echo isset($title) ? $title : "Sottoradice, la matematica fatta da noi."; ?>">
     <meta property="og:type" content="website">
     <meta property="og:url" content="<?php echo $ogUrl ?? ('https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']); ?>">
     <script src="https://kit.fontawesome.com/3aa3ed91dd.js" crossorigin="anonymous"></script>
@@ -90,7 +90,7 @@
     <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 
 
-    <title><?php echo isset($title) ? $title : "Effatà, per aprirsi all'ascolto della Parola"; ?></title>
+    <title><?php echo isset($title) ? $title : "Sottoradice, la matematica fatta da noi."; ?></title>
 
 
     <?php if ($_SERVER['SERVER_NAME'] !== 'localhost') : ?>
