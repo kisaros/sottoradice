@@ -1,0 +1,159 @@
+#iubenda-cs-banner.iubenda-cs-default .iubenda-cs-brand {
+    padding: 16px 0 !important;
+    margin: 0 !important;
+}
+
+#iubenda-cs-banner.iubenda-cs-default .iubenda-cs-rationale {
+    margin: auto !important;
+    position: relative;
+    padding: 28px !important;
+    @media (min-width: 575px) {
+        width: 540px !important;
+        max-width: 540px !important;
+    }
+    @media (min-width: 768px) {
+        width: 720px !important;
+        max-width: 720px !important;
+    }
+    @media (min-width: 992px) {
+        width: 960px !important;
+        max-width: 960px !important;
+    }
+    @media (min-width: 1200px) {
+        width: 1140px !important;
+        max-width: 1140px !important;
+    }
+
+
+    .iubenda-banner-content {
+        padding: 0 !important;
+    }
+}
+
+#iubenda-cs-banner {
+    a {
+        word-break: break-word;
+        color: $text-color;
+        text-decoration: underline !important;
+        transition: all .2s ease-in-out;
+        opacity: .7;
+        &:hover {
+            color: $text-color;
+            opacity: 1;
+            text-decoration: underline !important;
+        }
+    }
+    .iubenda-cs-content {
+        background-color: white !important;
+        color: $text-color !important;
+        font-size: 14px !important;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        z-index: 1111;
+    }
+
+    .iubenda-cs-close-btn {
+        background-color: white !important;
+        color: $text-color !important;
+        border-color: white;
+        position: absolute;
+        top: 16px;
+        right: 28px;
+        font-size: 24px;
+        -webkit-appearance: media-slider;
+    }
+
+    #iubenda-cs-title {
+        font-family: $font-family-serif !important;
+        font-size: 20px !important;
+        font-weight: 600 !important;
+        margin-bottom: 16px !important;
+    }
+
+    #iubFooterBtn {
+        height: 40px;
+        min-width: 160px;
+        width: auto;
+        padding: 0 26px;
+        background-color: transparent;
+        border: 1px solid $btn-dark;
+        color: $btn-dark;
+        &:hover {
+            background-color: $btn-dark;
+            border: 1px solid $btn-dark;
+            color: white;
+            &:focus {
+                color: white;
+            }
+        }
+        &:focus {
+            color: $btn-dark;
+        }
+    }
+
+    .iubenda-cs-opt-group {
+        display: block;
+        justify-content: space-between;
+        margin-top: 16px;
+        @media (min-width: 768px) {
+            display: flex;
+        }
+
+        .iubenda-cs-customize-btn {
+            height: 40px;
+            min-width: 160px;
+            width: 100%;
+            padding: 0 26px;
+            background-color: transparent;
+            border: 1px solid $btn-dark;
+            color: $btn-dark;
+            @media (min-width: 768px) {
+                width: auto;
+            }
+            &:hover {
+                background-color: $btn-dark;
+                border: 1px solid $btn-dark;
+                color: white;
+                &:focus {
+                    color: white;
+                }
+            }
+            &:focus {
+                color: $btn-dark;
+            }
+        }
+        .iubenda-cs-opt-group-consent {
+            display: flex;
+            justify-content: space-between;
+            @media (min-width: 768px) {
+                justify-content: flex-end;
+            }
+            .iubenda-cs-accept-btn, .iubenda-cs-reject-btn {
+                height: 40px;
+                width: calc(50% - 5px);
+                padding: 0 26px;
+                background-color: $btn-dark;
+                border: 1px solid $btn-dark;
+                color: white;
+                margin-top: 10px;
+                @media (min-width: 768px) {
+                    min-width: 160px;
+                    width: auto;
+                    margin-left: 10px;
+                    margin-top: 0;
+                }
+                &:hover {
+                    background-color: $btn-dark-hover;
+                    border: 1px solid $btn-dark-hover;
+                    color: white !important;
+                }
+                &:focus {
+                    color: white;
+                }
+            }
+        }
+    }
+}
+

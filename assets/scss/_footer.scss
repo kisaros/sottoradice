@@ -1,0 +1,167 @@
+/* SECTION FOOTER */
+
+.loader {
+  position: relative;
+  height: 1.5cm;
+  text-align: center;
+  margin-top: .5em;
+}
+
+.loader img {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.footer {
+
+  background-color: $text-color;
+  color: $white;
+  border-top: .8px solid $text-color;
+
+  .order-3 {
+    border-top: .8px solid $white;
+    margin-top: 14px;
+    @media (min-width: 992px) {
+      border-top: none;
+      margin-top: 0;
+    }
+  }
+
+  .footer-bottom {
+    .copyright, .policy {
+      opacity: .5;
+    }
+  }
+
+  .border-top-lg {
+    @media (min-width: 992px) {
+      border-top: .5px solid rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  .logo {
+    background-image: url("https://sottoradice.altervista.org/assets/images/full-logo-white.svg");
+    filter: brightness(.9);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50px;
+    width: 250px;
+    background-size: contain;
+    transition: all .2s ease-in-out;
+    opacity: 1 !important;
+    @media (min-width: 768px) {
+      background-position: left;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  a {
+    color: $white;
+    opacity: .8;
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 26px;
+    margin-bottom: 3px;
+    display: inline-block;
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 1px;
+      bottom: 0;
+      left: 0;
+      background-color: $white;
+      transform-origin: bottom right;
+      transition: transform .3s ease-out;
+    }
+
+    &:hover:after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  }
+
+  .list-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    @media (min-width: 992px) {
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    h6 {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+
+  .policy {
+    a {
+      opacity: 1;
+      &:hover {
+        text-decoration: none;
+        opacity: 1;
+      }
+    }
+    small {
+      font-weight: 300 !important;
+    }
+  }
+
+}
+
+
+
+/* BACK TO TOP */
+
+.back-to-top {
+  display: none;
+  z-index: 111;
+  background-color: $success;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  transition: all 0.2s ease-in-out;
+  opacity: .8;
+  .icon {
+    color: white;
+  }
+}
+
+.back-to-top:hover {
+  background-color: $success;
+  opacity: 1;
+  .icon {
+    color: white;
+  }
+}
+
+.back-to-top i {
+  font-size: 11px;
+  line-height: 32px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .icon {
+    color: white;
+  }
+}

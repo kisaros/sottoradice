@@ -1,0 +1,153 @@
+/* MENU MODAL */
+
+#menu-mobile .modal {
+    background: rgba(0,0,0,.5);
+}
+
+#menu-mobile .come-from-modal.left .modal-dialog,
+.come-from-modal.right .modal-dialog {
+    position: fixed;
+    margin: auto;
+    width: 320px;
+    height: 100%;
+    -webkit-transform: translate3d(0%, 0, 0);
+    -ms-transform: translate3d(0%, 0, 0);
+    -o-transform: translate3d(0%, 0, 0);
+    transform: translate3d(0%, 0, 0);
+}
+
+#menu-mobile .come-from-modal.left .modal-content,
+.come-from-modal.right .modal-content {
+    height: 100%;
+    overflow-y: auto;
+    border-radius: 0px;
+}
+
+#menu-mobile .come-from-modal.left .modal-body,
+.come-from-modal.right .modal-body {
+    padding: 15px 15px;
+}
+#menu-mobile .come-from-modal.right.fade .modal-dialog {
+    right: -320px;
+    -webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
+    -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
+    -o-transition: opacity 0.3s linear, right 0.3s ease-out;
+    transition: opacity 0.3s linear, right 0.3s ease-out;
+}
+
+#menu-mobile .show .modal-dialog {
+    right: 0px !important;
+    -webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
+    -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
+    -o-transition: opacity 0.3s linear, right 0.3s ease-out;
+    transition: opacity 0.3s linear, right 0.3s ease-out;
+}
+
+#menu-mobile .modal-body a {
+    font-family: $font-family-serif;
+    font-size: 22px;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    color: $text-color;
+    transition: all .2s ease-in-out;
+}
+
+#menu-mobile .modal-body a:hover {
+    color: $link-color;
+}
+
+.modal-backdrop .show {
+    opacity: 0;
+}
+
+.modal {
+    background-color: rgba(0,0,0,.5);
+}
+
+.modal-backdrop {
+    display: none;
+}
+
+.modal-header {
+    padding: 20px;
+    display: inline-block;
+}
+
+.modal-body {
+    padding: 20px !important;
+}
+
+@media (min-width: 768px) {
+    .modal-header {
+        padding: 26px;
+        display: inline-block;
+    }
+}
+
+.modal-content {
+    border: none;
+}
+
+.close {
+    opacity: 1;
+    color: $text-color;
+}
+
+.logo-menu-mobile {
+    background-image: url("https://effata.altervista.org/assets/images/logo.svg");
+    height: 44px;
+    width: 100%;
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#menu-mobile {
+    .icon-twitter {
+        font-size: 18px;
+        width: 38px;
+    }
+    .icon-youtube {
+        font-size: 16px;
+        width: 38px;
+    }
+    .icon-facebook, .icon-world {
+        font-size: 20px;
+        width: 38px;
+    }
+    ul {
+        p {
+            color: $link-hover-color;
+            font-size: 14px;
+            font-weight: 800;
+            text-transform: uppercase;
+            white-space: pre-wrap;
+        }
+        li {
+            opacity: .5;
+            transition: all .2s ease-in-out;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.collapse-menu-mobile:after {
+    font-family: 'icomoon' !important;
+    font-size: 7px !important;
+    content: "\e900" !important;
+    display: block !important;
+    margin-left: 10px !important;
+    border-top: 0 !important;
+    margin-top: 6px !important;
+}
+
+.modal-content {
+    border-radius: 0 !important;
+}
+
+.modal-lg {
+    max-width: 650px !important;
+}

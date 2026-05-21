@@ -1,0 +1,57 @@
+.chi-siamo {
+    background-color: $primary;
+    background-image: url("assets/images/chi-siamo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    .link-plus {
+        font-size: 40px;
+        color: white;
+        background-color: rgba(255,255,255,.2);
+        &:hover {
+            color: white;
+            background-color: rgba(255,255,255,.3);
+        }
+    }
+}
+
+.team-foto {
+    .profile-img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 2px solid white;
+    }
+}
+
+.card-img {
+    @media (min-width: 768px) {
+        max-width: calc(16.6% - 16px) !important;
+    }
+    .profile-img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
+
+    .text-big {
+        font-size: 55px;
+    }
+}
+
+.card-img-large {
+    @media (min-width: 768px) {
+        max-width: 100% !important;
+    }
+    .profile-img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+    }
+
+    .text-big {
+        font-size: 55px;
+    }
+}
+

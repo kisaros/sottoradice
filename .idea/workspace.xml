@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9803a0f7-dbde-4a13-a4c7-4cd875e27d4b" name="Changes" comment="home + chi siamo sottoradice">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css.map" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="223" />
+    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="PHP File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;kisaros&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/kisaros/sottoradice.git&quot;,
+    &quot;accountId&quot;: &quot;d0f828b3-15f5-4d3b-b588-03bcc0c699d5&quot;
+  }
+}</component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3D8HJVvzQj85R9qbIwXLVJZwKg6" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Applications/MAMP/htdocs/sottoradice&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-PS-261.23567.149" />
+        <option value="bundled-php-predefined-a98d8de5180a-022fa7b8ab75-com.jetbrains.php.sharedIndexes-PS-261.23567.149" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9803a0f7-dbde-4a13-a4c7-4cd875e27d4b" name="Changes" comment="" />
+      <created>1777656705003</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1777656705003</updated>
+      <workItem from="1777656706005" duration="457000" />
+      <workItem from="1777710826102" duration="1840000" />
+      <workItem from="1778341739829" duration="2920000" />
+      <workItem from="1778360615290" duration="981000" />
+      <workItem from="1778748443583" duration="9436000" />
+      <workItem from="1778853666877" duration="10151000" />
+      <workItem from="1778913341756" duration="12808000" />
+      <workItem from="1779006969664" duration="19132000" />
+      <workItem from="1779171640348" duration="14175000" />
+      <workItem from="1779257327658" duration="9855000" />
+      <workItem from="1779346802328" duration="2468000" />
+    </task>
+    <task id="LOCAL-00001" summary="php 8.3.30 sostituzione strftime">
+      <option name="closed" value="true" />
+      <created>1777665371745</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1777665371745</updated>
+    </task>
+    <task id="LOCAL-00002" summary="php 8.3.30 vangelo home">
+      <option name="closed" value="true" />
+      <created>1777665893091</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1777665893091</updated>
+    </task>
+    <task id="LOCAL-00003" summary="php 8.3.30 vangelo + gospel + liturgia">
+      <option name="closed" value="true" />
+      <created>1777666789133</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1777666789133</updated>
+    </task>
+    <task id="LOCAL-00004" summary="php 8.3.30 catechesi">
+      <option name="closed" value="true" />
+      <created>1777667439482</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1777667439482</updated>
+    </task>
+    <task id="LOCAL-00005" summary="php 8.3.30 giornale">
+      <option name="closed" value="true" />
+      <created>1777667779324</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1777667779324</updated>
+    </task>
+    <task id="LOCAL-00006" summary="php 8.3.30 backend e login">
+      <option name="closed" value="true" />
+      <created>1777669098474</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1777669098474</updated>
+    </task>
+    <task id="LOCAL-00007" summary="php 8.3.30 backend giornale">
+      <option name="closed" value="true" />
+      <created>1777670481625</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1777670481625</updated>
+    </task>
+    <task id="LOCAL-00008" summary="bug fix home?pensiero mobile (non caricava i file javascript)">
+      <option name="closed" value="true" />
+      <created>1778342138165</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1778342138165</updated>
+    </task>
+    <task id="LOCAL-00009" summary="bug fix link approfondimenti bibbia">
+      <option name="closed" value="true" />
+      <created>1778358591251</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1778358591252</updated>
+    </task>
+    <task id="LOCAL-00010" summary="btn prev commenti bibbia, sfondo bianco">
+      <option name="closed" value="true" />
+      <created>1778358860678</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1778358860678</updated>
+    </task>
+    <task id="LOCAL-00011" summary="inizio sottoradice">
+      <option name="closed" value="true" />
+      <created>1778360951228</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1778360951228</updated>
+    </task>
+    <task id="LOCAL-00012" summary="home + chi siamo sottoradice">
+      <option name="closed" value="true" />
+      <created>1779262319741</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1779262319741</updated>
+    </task>
+    <task id="LOCAL-00013" summary="home + chi siamo sottoradice">
+      <option name="closed" value="true" />
+      <created>1779262339729</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1779262339729</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="php 8.3.30 sostituzione strftime" />
+    <MESSAGE value="php 8.3.30 vangelo home" />
+    <MESSAGE value="php 8.3.30 vangelo + gospel + liturgia" />
+    <MESSAGE value="php 8.3.30 catechesi" />
+    <MESSAGE value="php 8.3.30 giornale" />
+    <MESSAGE value="php 8.3.30 backend e login" />
+    <MESSAGE value="php 8.3.30 backend giornale" />
+    <MESSAGE value="bug fix home?pensiero mobile (non caricava i file javascript)" />
+    <MESSAGE value="bug fix link approfondimenti bibbia" />
+    <MESSAGE value="btn prev commenti bibbia, sfondo bianco" />
+    <MESSAGE value="inizio sottoradice" />
+    <MESSAGE value="home + chi siamo sottoradice" />
+    <option name="LAST_COMMIT_MESSAGE" value="home + chi siamo sottoradice" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/ricercaFULL.php</url>
+          <line>188</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

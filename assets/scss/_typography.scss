@@ -1,0 +1,436 @@
+/********************************************************
+ * CUSTOOM
+ ********************************************************
+ 01. Globals
+ 02. Style
+ 03. Icomoon
+ 04. Backend
+ ********************************************************
+ */
+
+/**/
+/* 01. GLOBALS */
+/**/
+
+br {
+  content: "";
+  margin: 2em;
+  display: block;
+  font-size: 24%;
+}
+
+.sans-serif {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.sans-serif-italic {
+  font-family: "Outfit", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.text-big {
+  font-size: 70px;
+}
+
+.text-pink {
+  color: $pink;
+}
+
+.text-orange {
+  color: $orange;
+}
+
+.text-teal {
+  color: $teal;
+}
+
+.text-purple {
+  color: $purple;
+}
+
+.text-underline {
+  text-decoration: underline;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.font-weight-300 {
+  font-weight: 300 !important;
+}
+
+.font-weight-400 {
+  font-weight: 400 !important;
+}
+
+.font-weight-500 {
+  font-weight: 500 !important;
+}
+
+.font-weight-600 {
+  font-weight: 600 !important;
+}
+
+.font-weight-700 {
+  font-weight: 700 !important;
+}
+
+.font-weight-800 {
+  font-weight: 800 !important;
+}
+
+
+.text-large {
+  @media (min-width: 768px) {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  @media (min-width: 992px) {
+    font-size: 22px;
+    line-height: 32px;
+  }
+  @media (min-width: 1200px) {
+    font-size: 25px;
+    line-height: 33px;
+  }
+}
+
+/**/
+/* 02. STYLE */
+/**/
+
+h1 {
+  font-family: $font-family-serif;
+  font-size: 35px;
+  line-height: 45px;
+  @media (min-width: 768px) {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  @media (min-width: 1200px) {
+    font-size: 48px;
+    line-height: 60px;
+  }
+}
+
+h2 {
+  font-family: $font-family-serif;
+  font-weight: 700;
+  text-align: center;
+  padding: 4px 0 20px !important;
+  margin-bottom: 0;
+  margin-top: 34px;
+  font-size: 30px;
+  line-height: 40px;
+  @media (min-width: 768px) {
+    text-align: left;
+    font-size: 35px;
+    line-height: 45px;
+  }
+  @media (min-width: 1200px) {
+    padding: 4px 0 34px !important;
+    margin-top: 34px;
+    font-size: 40px;
+    line-height: 50px;
+  }
+}
+
+
+.text-h2 {
+  font-family: $font-family-serif;
+  font-weight: 700;
+  text-align: center;
+  font-size: 30px;
+  line-height: 40px;
+  @media (min-width: 768px) {
+    font-size: 35px;
+    line-height: 45px;
+  }
+  @media (min-width: 1200px) {
+    font-size: 40px;
+    line-height: 50px;
+  }
+}
+
+.hero {
+  h2 {
+    margin-top: 0px;
+    padding-top: 0 !important;
+    font-size: 20px;
+    line-height: 30px;
+    @media (min-width: 768px) {
+      font-size: 20px;
+      line-height: 30px;
+    }
+    @media (min-width: 1200px) {
+      font-size: 23px;
+      line-height: 35px;
+    }
+  }
+}
+
+h3 {
+  font-family: $font-family-serif;
+  font-size: 23px;
+  line-height: 33px;
+  @media (min-width: 768px) {
+    font-size: 27px;
+    line-height: 34px;
+  }
+  @media (min-width: 1200px) {
+    font-size: 27px;
+    line-height: 34px;
+  }
+}
+
+.text-h3 {
+  font-family: $font-family-serif;
+  font-weight: 700;
+  text-align: center;
+  font-size: 20px;
+  line-height: 30px;
+  @media (min-width: 768px) {
+    font-size: 25px;
+    line-height: 35px;
+  }
+  @media (min-width: 1200px) {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+h4 {
+  font-family: $font-family-serif;
+  font-size: 20px;
+  line-height: 30px;
+  @media (min-width: 768px) {
+    font-size: 23px;
+    line-height: 33px;
+  }
+  @media (min-width: 1200px) {
+    font-size: 25px;
+    line-height: 35px;
+  }
+}
+
+.text-h4 {
+  font-size: 20px;
+  line-height: 30px;
+  @media (min-width: 768px) {
+    font-size: 23px;
+    line-height: 33px;
+  }
+  @media (min-width: 1200px) {
+    font-size: 25px;
+    line-height: 35px;
+  }
+}
+
+h5 {
+  font-family: $font-family-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  @media (min-width: 768px) {
+    font-size: 22px;
+    line-height: 32px;
+  }
+  @media (min-width: 1200px) {
+    font-size: 23px;
+    line-height: 33px;
+  }
+}
+
+h6 {
+  font-family: $font-family-serif;
+  font-size: 18px;
+  line-height: 24px;
+  @media (min-width: 768px) {
+    font-size: 20px;
+    line-height: 27px;
+  }
+  @media (min-width: 1200px) {
+    font-size: 20px;
+    line-height: 27px;
+  }
+}
+
+.text-h6 {
+  h6 {
+    font-family: $font-family-serif;
+    font-size: 18px;
+    line-height: 24px;
+    @media (min-width: 768px) {
+      font-size: 20px;
+      line-height: 27px;
+    }
+    @media (min-width: 1200px) {
+      font-size: 20px;
+      line-height: 27px;
+    }
+  }
+}
+
+p {
+  font-family: $font-family-sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  @media (min-width: 768px) {
+   // font-weight: 300;
+    font-size: 16px;
+    line-height: 28px;
+  }
+  @media (min-width: 1200px) {
+    font-size: 16px;
+    line-height: 28px;
+  }
+}
+
+quote {
+  font-weight: 300 !important;
+  font-family: $font-family-sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  @media (min-width: 768px) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  @media (min-width: 1200px) {
+    font-size: 22px;
+    line-height: 32px;
+  }
+}
+
+/**/
+/* 03. ICOMOON */
+/**/
+
+$ambienteLocale: var(--ambienteLocale); // Recupera il valore della variabile globale
+
+$dominioIcomoon: if($ambienteLocale, 'http://localhost:8888/effata_dev/assets/', 'https://effata.altervista.org/assets/'); // Definisci la variabile in base all'ambiente
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?d9aoau');
+  src:  url('../fonts/icomoon.eot?d9aoau#iefix') format('embedded-opentype'),
+  url('../fonts/icomoon.ttf?d9aoau') format('truetype'),
+  url('../fonts/icomoon.woff?d9aoau') format('woff'),
+  url('../fonts/icomoon.svg?d9aoau#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  color: $text-color;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-down:before {
+  content: "\e900";
+}
+
+.icon-arrow-left:before {
+  content: "\e901";
+  font-size: 22px;
+  font-weight: 600;
+}
+.icon-arrow-right:before {
+  content: "\e902";
+  font-size: 22px;
+  font-weight: 600;
+}
+.icon-download:before {
+  content: "\e903";
+  font-weight: 600;
+}
+.icon-facebook:before {
+  content: "\e904";
+}
+.icon-favicon:before {
+  content: "\e905";
+}
+.icon-files-empty:before {
+  content: "\e906";
+}
+.icon-headphones-alt:before {
+  content: "\e907";
+}
+.icon-link:before {
+  content: "\e908";
+}
+.icon-mail:before {
+  content: "\e909";
+}
+.icon-mail2:before {
+  content: "\e90a";
+  font-size: 22px;
+}
+.icon-menu:before {
+  content: "\e90b";
+}
+.icon-minus:before {
+  content: "\e90c";
+}
+.icon-plus:before {
+  content: "\e90d";
+}
+.icon-search:before {
+  content: "\e90e";
+}
+.icon-share:before {
+  content: "\e90f";
+}
+.icon-telegram:before {
+  content: "\e910";
+  font-size: 22px;
+}
+.icon-times:before {
+  content: "\e911";
+}
+.icon-twitter:before {
+  content: "\e912";
+}
+.icon-whatsapp:before {
+  content: "\e913";
+  font-size: 22px;
+}
+.icon-world:before {
+  content: "\e914";
+}
+.icon-youtube:before {
+  content: "\e915";
+}
+.icon-filter:before {
+  content: "\e916";
+}
+.icon-advanced-search:before {
+  content: "\e917";
+}
+
+
+
+/**/
+/* 04. BACKEND */
+/**/
+
+.backend {
+  * {
+    font-family: $font-family-sans-serif !important;
+  }
+}

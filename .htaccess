@@ -1,0 +1,113 @@
+## =========================================
+## ATTIVA MOD_REWRITE
+## =========================================
+#RewriteEngine On
+#
+## Se il sito è in una sottocartella in locale, Apache in genere se la cava da solo.
+## Se servisse, puoi decommentare e adattare questa riga:
+## RewriteBase /effata_dev/
+#
+#
+## =========================================
+## RICONOSCI AMBIENTE LOCALE
+## localhost / 127.0.0.1 / porta opzionale
+## =========================================
+#SetEnvIf Host "^localhost(:[0-9]+)?$" IS_LOCAL=1
+#SetEnvIf Host "^127\.0\.0\.1(:[0-9]+)?$" IS_LOCAL=1
+#
+#
+## =========================================
+## FORZA HTTPS
+## SOLO IN PRODUZIONE
+## =========================================
+#RewriteCond %{ENV:IS_LOCAL} !1
+#RewriteCond %{HTTPS} off
+#RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+#
+#
+## =========================================
+## BLOCCA BOT NON DESIDERATI
+## SOLO IN PRODUZIONE
+## =========================================
+#RewriteCond %{ENV:IS_LOCAL} !1
+#RewriteCond %{HTTP_USER_AGENT} (bot|crawl|spider) [NC]
+#RewriteCond %{HTTP_USER_AGENT} !(Googlebot|Bingbot|Slurp|DuckDuckBot|Yandex) [NC]
+#RewriteRule ^ - [F,L]
+#
+#
+## =========================================
+## REDIRECT CANONICI
+## SOLO IN PRODUZIONE E SOLO SU RICHIESTE ORIGINALI
+## =========================================
+#
+## home.php -> /
+#RewriteCond %{ENV:IS_LOCAL} !1
+#RewriteCond %{THE_REQUEST} \s/+home\.php(?:[\s?]|$) [NC]
+#RewriteRule ^home\.php$ / [R=301,L]
+#
+## Redirect generale da *.php a URL senza estensione
+## Esclusi file tecnici
+#RewriteCond %{ENV:IS_LOCAL} !1
+#RewriteCond %{THE_REQUEST} \s/+([^.]+)\.php(?:[\s?]|$) [NC]
+#RewriteCond %1 !^(index|cron|ajax|api)$ [NC]
+#RewriteRule ^([^.]+)\.php$ /$1 [R=301,L]
+#
+## vangelo.php?data=aaaa-mm-dd -> /vangelo/aaaa-mm-dd
+#RewriteCond %{ENV:IS_LOCAL} !1
+#RewriteCond %{THE_REQUEST} \s/+vangelo(?:\.php)?\?data=([0-9]{4}-[0-9]{2}-[0-9]{2})(?:[\s&]|$) [NC]
+#RewriteRule ^vangelo(?:\.php)?$ /vangelo/%1? [R=301,L]
+#
+## gospel.php?data=aaaa-mm-dd -> /gospel/aaaa-mm-dd
+#RewriteCond %{ENV:IS_LOCAL} !1
+#RewriteCond %{THE_REQUEST} \s/+gospel(?:\.php)?\?data=([0-9]{4}-[0-9]{2}-[0-9]{2})(?:[\s&]|$) [NC]
+#RewriteRule ^gospel(?:\.php)?$ /gospel/%1? [R=301,L]
+#
+## liturgia.php?data=aaaa-mm-dd -> /liturgia/aaaa-mm-dd
+#RewriteCond %{ENV:IS_LOCAL} !1
+#RewriteCond %{THE_REQUEST} \s/+liturgia(?:\.php)?\?data=([0-9]{4}-[0-9]{2}-[0-9]{2})(?:[\s&]|$) [NC]
+#RewriteRule ^liturgia(?:\.php)?$ /liturgia/%1? [R=301,L]
+#
+## bibbia.php?libro=Marco&capitolo=7&versetto=34 -> /bibbia/Marco/7/34
+#RewriteCond %{ENV:IS_LOCAL} !1
+#RewriteCond %{THE_REQUEST} \s/+bibbia(?:\.php)?\?libro=([^&\s]+)&capitolo=([0-9]+)&versetto=([0-9]+)(?:[\s&]|$) [NC]
+#RewriteRule ^bibbia(?:\.php)?$ /bibbia/%1/%2/%3? [R=301,L]
+#
+## bibbia.php?libro=Genesi&capitolo=2 -> /bibbia/Genesi/2
+#RewriteCond %{ENV:IS_LOCAL} !1
+#RewriteCond %{THE_REQUEST} \s/+bibbia(?:\.php)?\?libro=([^&\s]+)&capitolo=([0-9]+)(?:[\s&]|$) [NC]
+#RewriteRule ^bibbia(?:\.php)?$ /bibbia/%1/%2? [R=301,L]
+#
+#
+## =========================================
+## RISCRITTURE INTERNE
+## URL PULITI -> FILE PHP REALI
+## QUESTE POSSONO RESTARE ATTIVE ANCHE IN LOCALE
+## =========================================
+#
+## Home
+#RewriteRule ^$ home.php [L]
+#
+## URL con data
+#RewriteRule ^vangelo/([0-9]{4}-[0-9]{2}-[0-9]{2})/?$ vangelo.php?data=$1 [QSA,L]
+#RewriteRule ^gospel/([0-9]{4}-[0-9]{2}-[0-9]{2})/?$ gospel.php?data=$1 [QSA,L]
+#RewriteRule ^liturgia/([0-9]{4}-[0-9]{2}-[0-9]{2})/?$ liturgia.php?data=$1 [QSA,L]
+#
+## Bibbia
+#RewriteRule ^bibbia/([^/]+)/([0-9]+)/([0-9]+)/?$ bibbia.php?libro=$1&capitolo=$2&versetto=$3 [QSA,L]
+#RewriteRule ^bibbia/([^/]+)/([0-9]+)/?$ bibbia.php?libro=$1&capitolo=$2 [QSA,L]
+#
+## Pagine principali senza .php
+#RewriteRule ^vangelo/?$ vangelo.php [L]
+#RewriteRule ^gospel/?$ gospel.php [L]
+#RewriteRule ^liturgia/?$ liturgia.php [L]
+#RewriteRule ^bibbia/?$ bibbia.php [L]
+#
+#
+## =========================================
+## NASCONDI .php PER TUTTE LE ALTRE PAGINE
+## es. santo-rosario -> santo-rosario.php
+## =========================================
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME}\.php -f
+#RewriteRule ^([^/.]+)/?$ $1.php [L]

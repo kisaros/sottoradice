@@ -1,0 +1,355 @@
+/*
+**************************
+FORM
+**************************
+1. Global
+2. Homepage
+3. Pages Vangelo + Liturgia
+4. Gestionale
+*/
+
+
+/* 1. GLOBAL */
+
+input:-internal-autofill-selected {
+    background-color: white !important;
+}
+
+.form-bacheca-social {
+    border-bottom: 1px solid $bg-medium !important;
+}
+
+.backend {
+    .form-control {
+        border: 1px solid $bg-dark !important;
+        color: $text-color !important;
+        border-radius: 0;
+        background-color: transparent !important;
+        transition: all .2s ease-in-out;
+        max-width: 100%;
+        margin: auto;
+        font-weight: 300;
+        font-size: 15px;
+        text-align: left !important;
+        &:focus {
+            border: 1px solid $warning-plus !important;
+        }
+    }
+}
+
+form .form-control {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid $text-color;
+    color: $text-color !important;
+    border-radius: 0;
+    background-color: transparent !important;
+    transition: all .2s ease-in-out;
+    margin: auto;
+    font-weight: 300;
+    font-size: 13px;
+    @media (min-width: 768px) {
+        font-size: 16px;
+    }
+}
+
+.form-control {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid $text-color;
+    color: $text-color !important;
+    border-radius: 0;
+    background-color: transparent !important;
+    transition: all .2s ease-in-out;
+    margin: auto;
+    font-weight: 300;
+    font-size: 13px;
+    @media (min-width: 768px) {
+        font-size: 16px;
+    }
+    &:focus {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid $warning-plus !important;
+        background-color: transparent;
+        box-shadow: none !important;
+        color: $link-color;
+    }
+}
+
+@media (min-width: 768px) {
+    form .form-control {
+        font-size: 16px;
+    }
+}
+
+
+
+form .form-control:focus {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid $warning-plus !important;
+    background-color: transparent;
+    box-shadow: none !important;
+    color: $link-color;
+}
+
+form label {
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 0px;
+    font-weight: 300;
+}
+
+@media (min-width: 768px) {
+    form label {
+        font-size: 16px;
+    }
+}
+
+form h5 {
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+@media (min-width: 768px) {
+    form h5 {
+        font-size: 16px;
+    }
+}
+
+form input {
+    text-align: center;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+@media (min-width: 768px) {
+    form input {
+        font-size: 16px;
+    }
+}
+
+select {
+    -moz-appearance: none !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+    background-image: url("https://effata.altervista.org/assets/images/arrow-down.svg");
+    background-repeat: no-repeat;
+    background-size: 11px auto;
+    background-position: right 0 bottom 6px !important;
+    @media (min-width: 768px) {
+        background-size: 15px auto;
+        background-position: right 10px center;
+    }
+}
+
+.form-group, .search-box {
+    margin-bottom: 0;
+    .btn {
+        height: 49px;
+        min-width: auto;
+        @media (min-width: 768px) {
+            height: 60px;
+            min-width: auto;
+        }
+    }
+}
+
+.search-box-row {
+    width: 80%;
+    @media (min-width: 768px) {
+        width: 640px;
+    }
+}
+
+.form-group {
+    .dropdown-menu-bibbia {
+        border: none;
+        border-radius: 0;
+        position: absolute;
+        top: 47px !important;
+        left: auto !important;
+        right: 0 !important;
+        @media (min-width: 768px) {
+            top: 59px !important;
+        }
+        @media (min-width: 1200px) {
+            min-width: 182px;
+        }
+        button {
+            &:focus {
+                background-color: $bg-accordion-hover;
+            }
+            &:hover {
+                background-color: $btn-light-hover;
+            }
+
+        }
+    }
+    .btn-dark {
+        &:focus {
+            background-color: $btn-dark-hover;
+        }
+    }
+}
+
+.dropdown-menu-giornale {
+    border: none;
+    border-radius: 0;
+    position: absolute;
+    top: 0px !important;
+    left: 0 !important;
+    min-width: 130px !important;
+    @media (min-width: 768px) {
+        min-width: 160px !important;
+    }
+    @media (min-width: 1200px) {
+        min-width: 160px !important;
+    }
+    button:hover {
+        background-color: $bg-footer;
+    }
+}
+
+.dropdown-menu-bibbia-download {
+    border: none;
+    border-radius: 0;
+    position: absolute;
+    top: 0px !important;
+    right: 0 !important;
+    min-width: 25% !important;
+    button:hover {
+        background-color: $bg-footer;
+    }
+}
+
+
+/* 2. HOMEPAGE */
+
+.range-date {
+    max-width: 90%;
+    margin: auto;
+}
+
+.range-date .middle {
+    max-width: 48%;
+    min-width: 48%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.range-date input {
+    text-align: center;
+    font-weight: 300;
+    font-size: 12px;
+    max-width: 100%;
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    .range-date input {
+        font-size: 20px;
+    }
+}
+
+.range-date .label-small {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+@media (min-width: 768px) {
+    .range-date .label-small {
+        font-size: 14px;
+    }
+}
+
+
+/* 3. PAGES VANGELO + LITURGIA */
+
+.long-post-search form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 253px;
+    position: relative;
+    z-index: 1;
+}
+
+.long-post-search form label {
+    font-size: 18px;
+    text-align: center;
+    font-weight: 300;
+}
+
+@media (min-width: 768px) {
+    .long-post-search form label {
+        font-size: 23px;
+    }
+}
+
+.long-post-search form input {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.long-post-search form select {
+    font-size: 16px;
+    font-weight: 400;
+    width: 150px;
+}
+
+.long-post-search .title {
+    font-size: 18px;
+    text-align: center;
+    font-weight: 300;
+}
+
+@media (min-width: 768px) {
+    .long-post-search .title {
+        font-size: 23px;
+    }
+}
+
+/* 3. PAGES VANGELO + LITURGIA */
+
+.long-form .form-control {
+    border: 1px solid #82A4B0 !important;
+    color: var(--green-dark) !important;
+    border-radius: 0;
+    background-color: transparent !important;
+    transition: all .2s ease-in-out;
+    max-width: 100%;
+    margin: auto;
+    font-weight: 300;
+    font-size: 15px;
+    text-align: left !important;
+}
+
+.long-form .form-control:focus {
+    border: 1px solid var(--pink) !important;
+}
+
+.long-form label {
+    display: block;
+    text-align: left;
+    font-size: 22px;
+    margin: 15px 0;
+    font-weight: 400;
+}
+
+
+
+

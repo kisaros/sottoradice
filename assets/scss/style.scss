@@ -1,0 +1,30 @@
+$dominio: var(--dominio);
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css');
+@import url('https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css');
+
+//@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Playfair+Display:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+@import "bootstrap/utilities";
+@import "bootstrap/reboot";
+@import "bootstrap/buttons";
+@import "bootstrap/images";
+@import "bootstrap/modals";
+
+@import "iubenda";
+@import "alert";
+@import "button";
+@import "carousel";
+@import "slick-slider";
+@import "custom";
+@import "footer";
+@import "form";
+@import "menu-modal";
+@import "navbar";
+@import "_typography.scss";
+
+// pages
+@import "pages/home.scss";

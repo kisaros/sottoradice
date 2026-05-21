@@ -1,0 +1,406 @@
+/* BUTTON */
+
+button:focus, button:hover, button, button:visited, .btn:focus, span:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.btn {
+  height: 35px;
+  min-width: auto;
+  width: auto;
+  font-size: 16px;
+  font-weight: 300;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .2s ease-in-out;
+  padding: 0 20px;
+  border-radius: 0;
+  @media screen and (min-width: 768px) {
+    height: 40px;
+    min-width: 160px;
+    width: auto;
+  }
+
+  text-decoration: none;
+  opacity: 1;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.btn-sfoglia-disabled {
+  border-color: rgba(0,0,0,.2) !important;
+  background-color: #f8f9fa !important;
+  opacity: 0.65 !important;
+  &:hover {
+    background-color: #f8f9fa !important;
+    border-color: rgba(0,0,0,.2) !important;
+  }
+}
+
+.btn-disabled {
+  opacity: 0.5 !important;
+  &:hover {
+    cursor: not-allowed !important;
+    background-color: inherit;
+  }
+}
+
+
+.btn-none {
+  height: auto;
+  min-width: auto;
+  width: auto;
+  padding: 0;
+  border-radius: 0;
+  border: none;
+  text-align: left;
+  font-weight: 300;
+  background: none;
+}
+
+.btn-outline {
+  min-width: 220px;
+  @media screen and (min-width: 768px) {
+    min-width: 220px;
+  }
+  @media (min-width: 1200px) {
+  }
+}
+
+.btn-white {
+  background-color: white;
+  color: $text-color;
+  border: .5px solid $bg-accordion;
+
+  &:hover {
+    background-color: $bg-accordion;
+  }
+
+  &:focus {
+    color: $text-color;
+  }
+}
+
+.btn-light {
+  background-color: $btn-light;
+  color: $text-color;
+  border: 1px solid $btn-light;
+
+  &:hover {
+    background-color: $btn-light-hover;
+    border: 1px solid $btn-light-hover;
+  }
+
+  &:focus {
+    color: $text-color;
+  }
+}
+
+.btn-outline-light {
+  background-color: transparent;
+  border: 1px solid $btn-light-hover;
+  color: $btn-light-hover;
+
+  .icon {
+    color: $btn-light-hover;
+  }
+
+  &:active {
+    background-color: $btn-light-hover !important;
+    border-color: $btn-light-hover !important;
+  }
+
+  &:focus {
+    color: $btn-light-hover;
+
+    .icon {
+      color: $btn-light-hover;
+    }
+  }
+
+  &:hover {
+    background-color: $btn-light-hover;
+    border: 1px solid $btn-light-hover;
+    color: $text-color;
+  }
+}
+
+.btn-medium {
+  background-color: $btn-medium;
+  color: $text-color;
+  border: 1px solid $btn-medium;
+
+  &:hover {
+    background-color: $btn-medium-hover;
+    border: 1px solid $btn-medium-hover;
+  }
+
+  &:focus {
+    color: $text-color;
+  }
+}
+
+.btn-outline-medium {
+  background-color: transparent;
+  border: 1px solid $btn-medium;
+  color: $text-color;
+
+  &:active {
+    background-color: $btn-medium !important;
+    border-color: $btn-medium !important;
+  }
+
+  &:focus {
+    color: $btn-medium;
+
+    .icon {
+      color: $btn-medium;
+    }
+  }
+
+  &:hover {
+    background-color: $btn-medium-hover;
+    border: 1px solid $btn-medium-hover;
+    color: $text-color;
+  }
+}
+
+.btn-dark {
+  background-color: $btn-dark;
+  border: 1px solid $btn-dark;
+  color: white;
+
+  .icon {
+    color: white;
+  }
+
+  &:hover {
+    background-color: $btn-dark-hover;
+    border: 1px solid $btn-dark-hover;
+    color: white !important;
+
+    .icon {
+      color: white !important;
+    }
+  }
+
+  &:focus {
+    color: white;
+
+    .icon {
+      color: white;
+    }
+  }
+}
+
+.btn-outline-dark {
+  background-color: transparent;
+  border: 1px solid $btn-dark;
+  color: $btn-dark;
+
+  .icon {
+    color: $btn-dark;
+  }
+
+  &:hover {
+    background-color: $btn-dark;
+    border: 1px solid $btn-dark;
+    color: white;
+
+    .icon {
+      color: white;
+    }
+
+    &:focus {
+      color: white;
+
+      .icon {
+        color: white;
+      }
+    }
+  }
+
+  &:focus {
+    color: $btn-dark;
+
+    .icon {
+      color: $btn-dark;
+    }
+  }
+}
+
+.btn-outline-social {
+  background-color: $btn-outline-social;
+  border: 1px solid $btn-dark;
+  color: $btn-dark;
+  @media (min-width: 768px) {
+    min-width: 180px !important;
+  }
+  @media (min-width: 1200px) {
+    min-width: 220px !important;
+  }
+
+  .icon {
+    color: $btn-dark;
+  }
+
+  &:hover {
+    background-color: $btn-dark;
+    border: 1px solid $btn-dark;
+    color: white;
+
+    .icon {
+      color: white;
+    }
+
+    &:focus {
+      color: white;
+
+      .icon {
+        color: white;
+      }
+    }
+  }
+
+  &:focus {
+    color: $btn-dark;
+
+    .icon {
+      color: $btn-dark;
+    }
+  }
+}
+
+.btn-rounded {
+  opacity: 1;
+  padding: 0;
+  border-radius: 50%;
+  height: 47px;
+  width: 47px;
+  min-width: 47px;
+  @media (min-width: 1200px) {
+    height: 57px;
+    width: 57px;
+    min-width: 57px;
+  }
+}
+
+.btn-rounded-xsmall {
+  opacity: 1;
+  padding: 0;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  min-width: 20px;
+  transform: translateY(-5px);
+  font-size: 10px;
+  background-color: $btn-light;
+
+  &:hover {
+    background-color: $btn-light-hover;
+  }
+}
+
+.disabled {
+  background-color: transparent;
+  border: none;
+  color: $text-color;
+  opacity: 1;
+  width: auto;
+  min-width: 1px;
+
+  &:hover {
+    background-color: transparent;
+    border: none;
+    color: $text-color;
+  }
+}
+
+.btn-rounded-small {
+  opacity: 1;
+  padding: 0;
+  border-radius: 50%;
+  height: 38px;
+  width: 38px;
+  min-width: 38px;
+  @media (min-width: 1200px) {
+    height: 38px;
+    width: 38px;
+    min-width: 38px;
+  }
+}
+
+.rounded-xsmall {
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+}
+
+.btn-transparent-light {
+  height: auto;
+  padding: 6px 0;
+  border: 1px solid transparent;
+  background-color: transparent;
+
+  &:hover {
+    background-color: $btn-light-hover;
+  }
+}
+
+.btn-accordion {
+  height: auto;
+  padding: 6px 0;
+  border: 1px solid transparent;
+  background-color: $bg-accordion;
+
+  &:hover {
+    background-color: $btn-accordion-hover;
+  }
+}
+
+.litanie-accordion {
+  div {
+    .btn-accordion {
+      margin-bottom: 4px;
+
+      .titolo-lat {
+        font-size: 15px;
+        word-break: break-word;
+      }
+
+      .titolo-ita {
+        font-size: 20px;
+        word-break: break-word;
+      }
+    }
+
+    &:last-child {
+      .btn-accordion {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.btn-bible-height {
+  @media (min-width: 768px) {
+    height: 48px !important;
+  }
+}
+
+.form-search-height {
+  height: 30px !important;
+
+  .form-control {
+    height: 30px;
+    margin-bottom: 8px;
+    padding-bottom: 0;
+  }
+
+  select {
+    background-position: right 10px bottom 6px;
+  }
+}
