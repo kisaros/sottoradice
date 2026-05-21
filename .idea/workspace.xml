@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9803a0f7-dbde-4a13-a4c7-4cd875e27d4b" name="Changes" comment="home + chi siamo sottoradice">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="9803a0f7-dbde-4a13-a4c7-4cd875e27d4b" name="Changes" comment="modifiche head">
       <change beforePath="$PROJECT_DIR$/partials/head.php" beforeDir="false" afterPath="$PROJECT_DIR$/partials/head.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -108,7 +107,7 @@
       <workItem from="1779006969664" duration="19132000" />
       <workItem from="1779171640348" duration="14175000" />
       <workItem from="1779257327658" duration="9855000" />
-      <workItem from="1779346802328" duration="3502000" />
+      <workItem from="1779346802328" duration="3688000" />
     </task>
     <task id="LOCAL-00001" summary="php 8.3.30 sostituzione strftime">
       <option name="closed" value="true" />
@@ -214,7 +213,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779262339729</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="modifiche head">
+      <option name="closed" value="true" />
+      <created>1779351128576</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1779351128576</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,7 +251,8 @@
     <MESSAGE value="btn prev commenti bibbia, sfondo bianco" />
     <MESSAGE value="inizio sottoradice" />
     <MESSAGE value="home + chi siamo sottoradice" />
-    <option name="LAST_COMMIT_MESSAGE" value="home + chi siamo sottoradice" />
+    <MESSAGE value="modifiche head" />
+    <option name="LAST_COMMIT_MESSAGE" value="modifiche head" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
