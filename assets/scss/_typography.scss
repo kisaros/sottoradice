@@ -51,6 +51,10 @@ br {
   color: $purple;
 }
 
+.text-black-80 {
+  color: #40404c;
+}
+
 .text-underline {
   text-decoration: underline;
   &:hover {
@@ -133,8 +137,8 @@ h2 {
   @media (min-width: 1200px) {
     padding: 4px 0 34px !important;
     margin-top: 34px;
-    font-size: 40px;
-    line-height: 50px;
+    font-size: 38px;
+    line-height: 48px;
   }
 }
 
@@ -150,8 +154,8 @@ h2 {
     line-height: 45px;
   }
   @media (min-width: 1200px) {
-    font-size: 40px;
-    line-height: 50px;
+    font-size: 38px;
+    line-height: 48px;
   }
 }
 
@@ -244,6 +248,21 @@ h5 {
   }
 }
 
+.text-h5 {
+  font-family: $font-family-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  @media (min-width: 768px) {
+    font-size: 22px;
+    line-height: 32px;
+  }
+  @media (min-width: 1200px) {
+    font-size: 23px;
+    line-height: 33px;
+  }
+}
+
 h6 {
   font-family: $font-family-serif;
   font-size: 18px;
@@ -288,6 +307,22 @@ p {
     font-size: 16px;
     line-height: 28px;
   }
+}
+
+.text-p-plus {
+    font-family: $font-family-sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 28px;
+    @media (min-width: 768px) {
+      // font-weight: 300;
+      font-size: 18px;
+      line-height: 28px;
+    }
+    @media (min-width: 1200px) {
+      font-size: 18px;
+      line-height: 28px;
+    }
 }
 
 quote {

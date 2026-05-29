@@ -78,12 +78,14 @@
     <meta property="og:image"
           content="<?php echo isset($ogImage) ? $ogImage : "$dominio assets/images/og-home.jpg"; ?>">
     <meta property="og:locale" content="it_IT">
-    <meta property="og:site_name" content="Effatà - Pensieri quotidiani di Mons. Costantino Di Bruno">
+    <meta property="og:site_name" content="Sottoradice, la matematica fatta da noi.">
     <meta property="og:title"
           content="<?php echo isset($title) ? $title : "Sottoradice, la matematica fatta da noi."; ?>">
     <meta property="og:type" content="website">
     <meta property="og:url" content="<?php echo $ogUrl ?? ('https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']); ?>">
     <script src="https://kit.fontawesome.com/3aa3ed91dd.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
 
 
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>

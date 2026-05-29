@@ -4092,6 +4092,11 @@ button:focus, button:hover, button, button:visited, .btn:focus, span:focus {
     .btn-outline-dark:focus .icon {
       color: #5C5C5E; }
 
+.btn-secondary, .btn-primary, .btn-success {
+  color: white !important; }
+  .btn-secondary:hover, .btn-primary:hover, .btn-success:hover {
+    color: white !important; }
+
 .btn-outline-social {
   background-color: #faf9f8;
   border: 1px solid #5C5C5E;
@@ -4816,6 +4821,16 @@ html, body {
 
 *::selection {
   background: default; }
+
+.box-link {
+  color: inherit !important;
+  transition: all .2s ease-in-out; }
+  .box-link:hover {
+    color: inherit !important;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.1); }
+
+main {
+  margin-top: 70px; }
 
 .box-shadow {
   box-shadow: 0 0 35px rgba(0, 0, 0, 0.17); }
@@ -5705,6 +5720,78 @@ iframe {
 .bg-accordion-hover {
   background-color: #f6f4f3; }
 
+.wave-bg {
+  position: relative;
+  overflow: hidden;
+  background: #9d96f4; }
+  .wave-bg > * {
+    position: relative;
+    z-index: 2; }
+  .wave-bg::before {
+    content: '';
+    position: absolute;
+    width: 140%;
+    height: 320px;
+    top: -140px;
+    left: -10%;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 45% 55% 70% 30% / 50% 40% 60% 50%;
+    transform: rotate(-4deg);
+    z-index: 1; }
+  .wave-bg::after {
+    content: '';
+    position: absolute;
+    width: 130%;
+    height: 280px;
+    bottom: -160px;
+    right: -10%;
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 60% 40% 30% 70% / 50% 60% 40% 50%;
+    transform: rotate(3deg);
+    z-index: 1; }
+
+.bg-waves-purple {
+  position: relative;
+  overflow: hidden;
+  background: #7f7ff387;
+  isolation: isolate; }
+  .bg-waves-purple::before, .bg-waves-purple::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 140%;
+    height: 420px;
+    border-radius: 43% 57% 55% 45% / 48% 42% 58% 52%;
+    transform: translateX(-50%) rotate(-2deg);
+    z-index: -1;
+    pointer-events: none; }
+  .bg-waves-purple::after {
+    bottom: -291px;
+    background: #7f7ff3;
+    border-radius: 52% 48% 44% 56% / 55% 47% 53% 45%;
+    transform: translateX(-39%) rotate(2deg); }
+
+.bg-waves-success {
+  position: relative;
+  overflow: hidden;
+  background: #27a64440;
+  isolation: isolate; }
+  .bg-waves-success::before, .bg-waves-success::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 140%;
+    height: 420px;
+    border-radius: 43% 57% 55% 45% / 48% 42% 58% 52%;
+    transform: translateX(-50%) rotate(-2deg);
+    z-index: -1;
+    pointer-events: none; }
+  .bg-waves-success::after {
+    bottom: -291px;
+    background: #27a644ad;
+    border-radius: 52% 48% 44% 56% / 55% 47% 53% 45%;
+    transform: translateX(-39%) rotate(2deg); }
+
 .ch-masonry {
   column-count: 3;
   column-gap: 1.5rem;
@@ -6501,6 +6588,9 @@ br {
 .text-purple {
   color: #6f42c1; }
 
+.text-black-80 {
+  color: #40404c; }
+
 .text-underline {
   text-decoration: underline; }
   .text-underline:hover {
@@ -6571,8 +6661,8 @@ h2 {
     h2 {
       padding: 4px 0 34px !important;
       margin-top: 34px;
-      font-size: 40px;
-      line-height: 50px; } }
+      font-size: 38px;
+      line-height: 48px; } }
 
 .text-h2 {
   font-family: "Outfit", sans-serif;
@@ -6586,8 +6676,8 @@ h2 {
       line-height: 45px; } }
   @media (min-width: 1200px) {
     .text-h2 {
-      font-size: 40px;
-      line-height: 50px; } }
+      font-size: 38px;
+      line-height: 48px; } }
 
 .hero h2 {
   margin-top: 0px;
@@ -6670,6 +6760,20 @@ h5 {
       font-size: 23px;
       line-height: 33px; } }
 
+.text-h5 {
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px; }
+  @media (min-width: 768px) {
+    .text-h5 {
+      font-size: 22px;
+      line-height: 32px; } }
+  @media (min-width: 1200px) {
+    .text-h5 {
+      font-size: 23px;
+      line-height: 33px; } }
+
 h6 {
   font-family: "Outfit", sans-serif;
   font-size: 18px;
@@ -6708,6 +6812,20 @@ p {
   @media (min-width: 1200px) {
     p {
       font-size: 16px;
+      line-height: 28px; } }
+
+.text-p-plus {
+  font-family: "Outfit", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 28px; }
+  @media (min-width: 768px) {
+    .text-p-plus {
+      font-size: 18px;
+      line-height: 28px; } }
+  @media (min-width: 1200px) {
+    .text-p-plus {
+      font-size: 18px;
       line-height: 28px; } }
 
 quote {
@@ -6873,5 +6991,441 @@ quote {
   border-radius: 50%; }
 .card-img-large .text-big {
   font-size: 55px; }
+
+.project-image {
+  height: 300px; }
+
+.appunti-pdf a {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.17);
+  color: #212121; }
+  .appunti-pdf a span {
+    color: rgba(102, 16, 242, 0.7); }
+  .appunti-pdf a:hover {
+    color: #212121;
+    background-color: #f8f9fa; }
+  .appunti-pdf a:last-child {
+    border-bottom: none; }
+.appunti-pdf p {
+  line-height: 21px;
+  margin-bottom: 0;
+  word-break: keep-all;
+  overflow-wrap: normal; }
+  @media (min-width: 768px) {
+    .appunti-pdf p {
+      margin-bottom: -0.5rem; } }
+
+.insta-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px; }
+  .insta-gallery .gallery-item {
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    display: block;
+    background: #f2f2f2; }
+    .insta-gallery .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .3s ease, filter .3s ease; }
+    .insta-gallery .gallery-item:hover img {
+      transform: scale(1.06);
+      filter: brightness(0.85); }
+  @media (max-width: 768px) {
+    .insta-gallery {
+      grid-template-columns: repeat(3, 1fr); } }
+
+.scompolab-section {
+  position: relative; }
+
+.scompolab-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 28px;
+  box-shadow: 0 24px 70px rgba(20, 30, 60, 0.08);
+  overflow: hidden; }
+  .scompolab-card p {
+    font-weight: 300 !important; }
+
+.scompolab-header {
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(92, 185, 107, 0.4), rgba(34, 184, 102, 0.08));
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem; }
+  .scompolab-header h2 {
+    font-size: clamp(2rem, 4vw, 3.5rem); }
+
+.scompolab-progress {
+  padding: 1.5rem 2rem 0; }
+  .scompolab-progress .progress {
+    height: 8px;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.06); }
+  .scompolab-progress .progress-bar {
+    border-radius: 999px;
+    background: #ffc107;
+    transition: width .25s ease; }
+
+.scompolab-body {
+  padding: 2rem; }
+
+.scompolab-step {
+  display: none; }
+  .scompolab-step.active {
+    display: block; }
+  .scompolab-step h3 {
+    font-weight: 700;
+    margin-bottom: .75rem; }
+
+.scompolab-keyboard {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .5rem; }
+  .scompolab-keyboard button {
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    width: 36px;
+    height: 36px;
+    background: #f8f9fb;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer; }
+    .scompolab-keyboard button:hover {
+      background: #ffffff;
+      border-color: #28a745;
+      color: #28a745; }
+
+.scompolab-examples {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .5rem; }
+  .scompolab-examples button {
+    border: 0;
+    background: rgba(111, 66, 193, 0.08);
+    color: #6f42c1;
+    border-radius: 50rem;
+    padding: 0 1rem;
+    font-size: .85rem;
+    font-weight: 400;
+    cursor: pointer; }
+    .scompolab-examples button:hover {
+      background: rgba(111, 66, 193, 0.14); }
+
+.scompolab-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: .75rem;
+  margin-top: 2rem; }
+
+.scompolab-analysis {
+  background: #f8f9fb;
+  padding: 1.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.06); }
+
+.scompolab-poly-display {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem; }
+  .scompolab-poly-display span {
+    background: #ffffff;
+    color: #28a745;
+    border: 1px solid rgba(40, 167, 69, 0.18);
+    border-radius: 16px;
+    padding: .75rem 1rem;
+    font-size: 1.35rem;
+    font-weight: 700; }
+
+.scompolab-clues {
+  display: grid;
+  gap: .75rem; }
+
+.scompolab-clue {
+  background: #ffffff;
+  border-left: 4px solid #28a745;
+  border-radius: 12px;
+  padding: .85rem 1rem; }
+
+.scompolab-methods {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .75rem; }
+  .scompolab-methods button {
+    text-align: left;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s ease; }
+    .scompolab-methods button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(20, 30, 60, 0.08); }
+    .scompolab-methods button.selected {
+      border-color: #6f42c1;
+      background: rgba(111, 66, 193, 0.08);
+      color: #6f42c1; }
+
+.scompolab-feedback {
+  margin-top: 1.25rem; }
+
+.scompolab-question,
+.scompolab-summary {
+  background: #f8f9fb;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.06); }
+
+.scompolab-target {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: .85rem 1rem;
+  color: rgba(0, 0, 0, 0.65);
+  font-size: .95rem; }
+
+@media (max-width: 767.98px) {
+  .scompolab-header {
+    flex-direction: column;
+    padding: 1.5rem; }
+
+  .scompolab-progress,
+  .scompolab-body {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem; }
+
+  .scompolab-methods {
+    grid-template-columns: 1fr; }
+
+  .scompolab-actions {
+    flex-direction: column-reverse; }
+    .scompolab-actions .btn {
+      width: 100%; } }
+.scompolab-rule-box {
+  background: rgba(255, 210, 63, 0.18);
+  border-left: 5px solid #ffd23f;
+  border-radius: 18px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem; }
+  .scompolab-rule-box p {
+    margin-bottom: 0; }
+
+.scompolab-choice {
+  margin-top: 1.5rem; }
+  .scompolab-choice .btn {
+    border-radius: 999px;
+    margin-right: .5rem;
+    margin-bottom: .5rem; }
+    .scompolab-choice .btn.selected {
+      background: #28a745;
+      color: #fff; }
+
+.scompolab-mini-title {
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-size: .75rem;
+  font-weight: 800;
+  color: #28a745;
+  margin-bottom: .75rem; }
+
+.scompolab-poly-display.small {
+  margin-bottom: 1rem; }
+  .scompolab-poly-display.small span {
+    font-size: 1rem;
+    padding: .5rem .75rem; }
+
+.scompolab-methods button small {
+  display: block;
+  margin-top: .35rem;
+  color: rgba(0, 0, 0, 0.55);
+  font-weight: 400;
+  line-height: 1.3; }
+.scompolab-methods button.selected small {
+  color: #6f42c1; }
+
+.scompolab-formula {
+  background: #ffffff;
+  border: 1px solid rgba(40, 167, 69, 0.15);
+  color: #28a745;
+  border-radius: 16px;
+  padding: .85rem 1rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-top: .75rem; }
+
+.scompolab-summary h4 {
+  font-weight: 700;
+  margin-bottom: 1rem; }
+
+/* Aggiunte per ScompoLab v3 */
+.scompolab-current {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  padding: 1.5rem 2rem;
+  background: #f8f9fb;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06); }
+
+.scompolab-current-label {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-size: .7rem;
+  font-weight: 800;
+  color: rgba(0, 0, 0, 0.45);
+  margin-bottom: .35rem; }
+
+.scompolab-current-poly,
+.scompolab-current-factorization {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #6f42c1;
+  word-break: break-word; }
+
+.scompolab-option-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .75rem; }
+
+.scompolab-option-grid button,
+.scompolab-term {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: #fff;
+  border-radius: 6px;
+  padding: .5rem .8rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: left;
+  transition: .2s ease; }
+
+.scompolab-option-grid button:hover,
+.scompolab-term:hover {
+  border-color: #28a745;
+  box-shadow: 0 10px 25px rgba(20, 30, 60, 0.08); }
+
+.scompolab-option-grid button.selected,
+.scompolab-term.selected {
+  background: rgba(40, 167, 69, 0.08);
+  border-color: #28a745;
+  color: #28a745; }
+
+.scompolab-poly-display {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem; }
+
+.scompolab-term {
+  font-size: 1rem;
+  color: #28a745; }
+
+.scompolab-formula {
+  background: #ffffff;
+  border: 1px solid rgba(40, 167, 69, 0.15);
+  color: #28a745;
+  border-radius: 16px;
+  padding: .85rem 1rem;
+  font-size: 1.15rem;
+  font-weight: 800; }
+
+.scompolab-rule-box {
+  background: rgba(255, 210, 63, 0.18);
+  border-left: 5px solid #ffd23f;
+  border-radius: 18px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem; }
+
+@media (max-width: 767.98px) {
+  .scompolab-current,
+  .scompolab-option-grid {
+    grid-template-columns: 1fr; } }
+/* Aggiunte per ScompoLab v3 */
+.scompolab-current {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  padding: 1.5rem 2rem;
+  background: #f8f9fb;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06); }
+
+.scompolab-current-label {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-size: .7rem;
+  font-weight: 800;
+  color: rgba(0, 0, 0, 0.45);
+  margin-bottom: .35rem; }
+
+.scompolab-current-poly,
+.scompolab-current-factorization {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #6f42c1;
+  word-break: break-word; }
+
+.scompolab-option-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .75rem; }
+
+.scompolab-option-grid button,
+.scompolab-term {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: #fff;
+  border-radius: 8px;
+  min-width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: left;
+  transition: .2s ease; }
+
+.scompolab-option-grid button:hover,
+.scompolab-term:hover {
+  border-color: #6f42c1;
+  box-shadow: 0 10px 25px rgba(20, 30, 60, 0.08); }
+
+.scompolab-option-grid button.selected,
+.scompolab-term.selected {
+  background: rgba(111, 66, 193, 0.08);
+  border-color: #6f42c1;
+  color: #6f42c1; }
+
+.scompolab-poly-display {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem; }
+
+.scompolab-term {
+  font-size: 1rem;
+  color: #28a745; }
+
+.scompolab-formula {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.17);
+  color: #212121;
+  border-radius: 16px;
+  padding: .85rem 1rem;
+  font-size: 1.15rem;
+  font-weight: 800; }
+
+.scompolab-rule-box {
+  background: rgba(255, 210, 63, 0.18);
+  border-left: 5px solid #ffd23f;
+  border-radius: 18px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem; }
+
+@media (max-width: 767.98px) {
+  .scompolab-current,
+  .scompolab-option-grid {
+    grid-template-columns: 1fr; } }
 
 /*# sourceMappingURL=style.css.map */

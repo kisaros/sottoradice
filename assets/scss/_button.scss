@@ -232,6 +232,13 @@ button:focus, button:hover, button, button:visited, .btn:focus, span:focus {
   }
 }
 
+.btn-secondary, .btn-primary, .btn-success {
+  color: white !important;
+  &:hover {
+    color: white !important;
+  }
+}
+
 .btn-outline-social {
   background-color: $btn-outline-social;
   border: 1px solid $btn-dark;

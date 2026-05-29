@@ -24,7 +24,9 @@ $dominio: var(--dominio);
 @import "form";
 @import "menu-modal";
 @import "navbar";
-@import "_typography.scss";
+@import "typography.scss";
 
 // pages
 @import "pages/home.scss";
+@import "pages/progetti.scss";
+@import "pages/scompolab.scss";

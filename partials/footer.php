@@ -4,7 +4,7 @@
 
 <footer class="footer position-relative pt-4" style="z-index: 1;">
     <div class="container">
-        <div class="d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between pt-2"  >
+        <div class="d-flex flex-column align-items-center align-items-md-start flex-lg-row justify-content-center justify-content-lg-between pt-2"  >
             <div class="d-flex flex-column mb-4">
                 <a href="<?php echo $dominioHome ?>" class="logo" title="Homepage - Sottoradice"></a>
 
