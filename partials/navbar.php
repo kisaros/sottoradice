@@ -7,7 +7,7 @@
             <!-- MENU MOBILE -->
 
             <div class="d-xl-none" id="menu-mobile">
-                <button type="button" class="icon icon-menu btn-menu" data-toggle="modal" data-target="#menuModal">
+                <button type="button" class="btn-menu fa-bars-staggered fa-solid" data-toggle="modal" data-target="#menuModal">
 
                 </button>
 

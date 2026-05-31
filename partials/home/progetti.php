@@ -22,7 +22,7 @@
 
 
     <!-- in evidenza -->
-    <a class="box-link col-12 d-flex rounded-lg border px-0 mb-4"
+    <a class="border box-link col-12 d-flex flex-column flex-md-row mb-4 px-0 rounded-lg"
        href="<?php echo $dominio ?>progetti/scomporre-per-comprendere.php"
        title="Scomporre per comprendere | Sottoradice">
         <div class="w-md-50 p-4">

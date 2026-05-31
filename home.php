@@ -33,7 +33,7 @@ include_once 'partials/head.php';
                         interattivi e guide realizzati dagli studenti dell'IIS "Benedetto Radice" di Bronte. Per capire
                         davvero
                         la matematica.</h2>
-                    <div class="d-flex align-item-center justify-content-start">
+                    <div class="align-item-center d-flex justify-content-center justify-content-md-start mb-4 mb-md-0">
                         <a href="/progetti.php" title="Progetti | Sottoradice"
                            class="btn btn-outline-success rounded-lg mr-3">Esplora i progetti</a>
                         <a href="/chi-siamo.php" title="Chi siamo | Sottoradice"
