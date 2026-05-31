@@ -35,14 +35,16 @@
         <div class="footer-bottom border-top-lg d-flex flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-between px-0 mt-0 mt-lg-4">
 
             <div class="order-2 w-lg-auto order-lg-3 policy d-flex justify-content-center">
-                <a href="https://www.iubenda.com/privacy-policy/77134567/cookie-policy"
+                <a href="https://www.iubenda.com/privacy-policy/97615000/cookie-policy"
                    class="iubenda-advertising-preferences-link" title="Cookie Policy ">
                     <small>Cookie Policy</small>
                 </a>
+                <script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
                 &nbsp;-&nbsp;
-                <a href="https://www.iubenda.com/privacy-policy/77134567" rel="noreferrer nofollow" target="_blank">
+                <a href="https://www.iubenda.com/privacy-policy/97615000" rel="noreferrer nofollow" target="_blank">
                     <small>Privacy Policy</small>
                 </a>
+                <script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
                 &nbsp;-&nbsp;
                 <a href='#' class='iubenda-cs-preferences-link'><small>Preferenze Privacy</small></a>
             </div>

@@ -107,21 +107,9 @@
             width: 100%;
             padding: 0 26px;
             background-color: transparent;
-            border: 1px solid $btn-dark;
-            color: $btn-dark;
+            border-radius: 8px !important;
             @media (min-width: 768px) {
                 width: auto;
-            }
-            &:hover {
-                background-color: $btn-dark;
-                border: 1px solid $btn-dark;
-                color: white;
-                &:focus {
-                    color: white;
-                }
-            }
-            &:focus {
-                color: $btn-dark;
             }
         }
         .iubenda-cs-opt-group-consent {
@@ -134,23 +122,12 @@
                 height: 40px;
                 width: calc(50% - 5px);
                 padding: 0 26px;
-                background-color: $btn-dark;
-                border: 1px solid $btn-dark;
-                color: white;
+                border-radius: 8px !important;
                 margin-top: 10px;
                 @media (min-width: 768px) {
                     min-width: 160px;
                     width: auto;
-                    margin-left: 10px;
                     margin-top: 0;
-                }
-                &:hover {
-                    background-color: $btn-dark-hover;
-                    border: 1px solid $btn-dark-hover;
-                    color: white !important;
-                }
-                &:focus {
-                    color: white;
                 }
             }
         }
