@@ -186,7 +186,7 @@ include_once 'partials/head.php';
 
                 <div class="card-img col-2 d-flex flex-column align-items-center justify-content-center border rounded-lg p-3 m-2">
                     <img class="profile-img"
-                         src="assets/images/1.png"
+                         src="<?php echo $dominio ?>assets/images/1.jpg"
                          alt="">
                     <p class="font-weight-400 mb-1">Gabriele G.</p>
                     <small class="text-secondary text-center">Maestro del raccoglimento</small>
@@ -194,57 +194,133 @@ include_once 'partials/head.php';
 
                 <div class="card-img col-2 d-flex flex-column align-items-center justify-content-center border rounded-lg p-3 m-2">
                     <img class="profile-img"
-                         src="assets/images/2.png"
+                         src="<?php echo $dominio ?>assets/images/2.jpg"
                          alt="">
-                    <p class="font-weight-400 mb-1">Gabriele G.</p>
+                    <p class="font-weight-400 mb-1">Gioele M.</p>
                     <small class="text-secondary text-center">Maestro del raccoglimento</small>
                 </div>
 
                 <div class="card-img col-2 d-flex flex-column align-items-center justify-content-center border rounded-lg p-3 m-2">
                     <img class="profile-img"
-                         src="assets/images/3.png"
+                         src="<?php echo $dominio ?>assets/images/3.jpg"
                          alt="">
-                    <p class="font-weight-400 mb-1">Gabriele G.</p>
+                    <p class="font-weight-400 mb-1">Gabriele T.</p>
                     <small class="text-secondary text-center">Maestro del raccoglimento</small>
                 </div>
 
                 <div class="card-img col-2 d-flex flex-column align-items-center justify-content-center border rounded-lg p-3 m-2">
                     <img class="profile-img"
-                         src="assets/images/4.png"
+                         src="<?php echo $dominio ?>assets/images/4.jpg"
                          alt="">
-                    <p class="font-weight-400 mb-1">Gabriele G.</p>
+                    <p class="font-weight-400 mb-1">Samuele I.</p>
                     <small class="text-secondary text-center">Maestro del raccoglimento</small>
                 </div>
 
                 <div class="card-img col-2 d-flex flex-column align-items-center justify-content-center border rounded-lg p-3 m-2">
                     <img class="profile-img"
-                         src="assets/images/5.png"
+                         src="<?php echo $dominio ?>assets/images/5.jpg"
                          alt="">
-                    <p class="font-weight-400 mb-1">Gabriele G.</p>
+                    <p class="font-weight-400 mb-1">Vincenzo M.</p>
                     <small class="text-secondary text-center">Maestro del raccoglimento</small>
                 </div>
 
                 <div class="card-img col-2 d-flex flex-column align-items-center justify-content-center border rounded-lg p-3 m-2">
                     <img class="profile-img"
-                         src="assets/images/6.png"
+                         src="<?php echo $dominio ?>assets/images/6.jpg"
                          alt="">
-                    <p class="font-weight-400 mb-1">Gabriele G.</p>
+                    <p class="font-weight-400 mb-1">Leonardo C.</p>
                     <small class="text-secondary text-center">Maestro del raccoglimento</small>
                 </div>
 
                 <div class="card-img col-2 d-flex flex-column align-items-center justify-content-center border rounded-lg p-3 m-2">
                     <img class="profile-img"
-                         src="assets/images/7.png"
+                         src="<?php echo $dominio ?>assets/images/7.jpg"
                          alt="">
-                    <p class="font-weight-400 mb-1">Gabriele G.</p>
+                    <p class="font-weight-400 mb-1">Gabriele V.</p>
                     <small class="text-secondary text-center">Maestro del raccoglimento</small>
                 </div>
 
                 <div class="card-img col-2 d-flex flex-column align-items-center justify-content-center border rounded-lg p-3 m-2">
-                    <p class="text-big font-weight-400 mb-1">+9</p>
-                    <small class="text-secondary text-center"><a href="chi-siamo.php" title="Chi siamo | Sottoradice">Vedi
-                            tutti</a></small>
+                    <img class="profile-img"
+                         src="<?php echo $dominio ?>assets/images/8.jpg"
+                         alt="">
+                    <p class="font-weight-400 mb-1">Anita P.</p>
+                    <small class="text-secondary text-center">Maestro del raccoglimento</small>
                 </div>
+
+                <div class="card-img col-2 d-flex flex-column align-items-center justify-content-center border rounded-lg p-3 m-2">
+                    <img class="profile-img"
+                         src="<?php echo $dominio ?>assets/images/9.jpg"
+                         alt="">
+                    <p class="font-weight-400 mb-1">Giorgia M.</p>
+                    <small class="text-secondary text-center">Maestro del raccoglimento</small>
+                </div>
+
+                <div class="card-img col-2 d-flex flex-column align-items-center justify-content-center border rounded-lg p-3 m-2">
+                    <img class="profile-img"
+                         src="<?php echo $dominio ?>assets/images/10.jpg"
+                         alt="">
+                    <p class="font-weight-400 mb-1">Antonio A.</p>
+                    <small class="text-secondary text-center">Maestro del raccoglimento</small>
+                </div>
+
+                <div class="card-img col-2 d-flex flex-column align-items-center justify-content-center border rounded-lg p-3 m-2">
+                    <img class="profile-img"
+                         src="<?php echo $dominio ?>assets/images/11.jpg"
+                         alt="">
+                    <p class="font-weight-400 mb-1">Manuel G.</p>
+                    <small class="text-secondary text-center">Maestro del raccoglimento</small>
+                </div>
+
+                <div class="card-img col-2 d-flex flex-column align-items-center justify-content-center border rounded-lg p-3 m-2">
+                    <img class="profile-img"
+                         src="<?php echo $dominio ?>assets/images/12.jpg"
+                         alt="">
+                    <p class="font-weight-400 mb-1">Andrea T.</p>
+                    <small class="text-secondary text-center">Maestro del raccoglimento</small>
+                </div>
+
+                <div class="card-img col-2 d-flex flex-column align-items-center justify-content-center border rounded-lg p-3 m-2">
+                    <img class="profile-img"
+                         src="<?php echo $dominio ?>assets/images/13.jpg"
+                         alt="">
+                    <p class="font-weight-400 mb-1">Matteo M.</p>
+                    <small class="text-secondary text-center">Maestro del raccoglimento</small>
+                </div>
+
+                <div class="card-img col-2 d-flex flex-column align-items-center justify-content-center border rounded-lg p-3 m-2">
+                    <img class="profile-img"
+                         src="<?php echo $dominio ?>assets/images/14.jpg"
+                         alt="">
+                    <p class="font-weight-400 mb-1">Enrico M.</p>
+                    <small class="text-secondary text-center">Maestro del raccoglimento</small>
+                </div>
+
+                <div class="card-img col-2 d-flex flex-column align-items-center justify-content-center border rounded-lg p-3 m-2">
+                    <img class="profile-img"
+                         src="<?php echo $dominio ?>assets/images/15.jpg"
+                         alt="">
+                    <p class="font-weight-400 mb-1">Salvatore S.</p>
+                    <small class="text-secondary text-center">Maestro del raccoglimento</small>
+                </div>
+
+                <div class="card-img col-2 d-flex flex-column align-items-center justify-content-center border rounded-lg p-3 m-2">
+                    <img class="profile-img"
+                         src="<?php echo $dominio ?>assets/images/16.jpg"
+                         alt="">
+                    <p class="font-weight-400 mb-1">Matteo L.</p>
+                    <small class="text-secondary text-center">Maestro del raccoglimento</small>
+                </div>
+
+                <div class="card-img col-2 d-flex flex-column align-items-center justify-content-center border rounded-lg p-3 m-2">
+                    <img class="profile-img"
+                         src="<?php echo $dominio ?>assets/images/17.jpg"
+                         alt="">
+                    <p class="font-weight-400 mb-1">Mattia P.</p>
+                    <small class="text-secondary text-center">Maestro del raccoglimento</small>
+                </div>
+
+
 
 
             </div>

@@ -1,8 +1,8 @@
 <navbar id="navbar-full" class="navbar-full">
     <div class="container">
-        <div class="d-flex align-items-center justify-content-between w-100 position-relative">
+        <div class="d-flex align-items-center justify-content-between w-100 position-relative py-3">
 
-            <a href="<?php echo $dominioHome ?>" class="logo" title="Homepage - Sottoradice"></a>
+            <a href="<?php echo $dominioHome ?>" class="logo z-index-1" title="Homepage - Sottoradice"></a>
 
             <!-- MENU MOBILE -->
 

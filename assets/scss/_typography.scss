@@ -106,6 +106,10 @@ br {
 /* 02. STYLE */
 /**/
 
+h1, h2, h3, h4, h5, h6, p {
+  word-break: break-word;
+}
+
 h1 {
   font-family: $font-family-serif;
   font-size: 35px;

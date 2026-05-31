@@ -6612,6 +6612,9 @@ br {
 /**/
 /* 02. STYLE */
 /**/
+h1, h2, h3, h4, h5, h6, p {
+  word-break: break-word; }
+
 h1 {
   font-family: "Outfit", sans-serif;
   font-size: 35px;
@@ -6958,8 +6961,8 @@ quote {
   .card-img {
     max-width: calc(16.6% - 16px) !important; } }
 .card-img .profile-img {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%; }
 .card-img .text-big {
   font-size: 55px; }
