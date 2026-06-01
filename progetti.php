@@ -45,7 +45,7 @@ include_once 'partials/head.php';
         </div>
     </header>
 
-    <section class="container my-5">
+    <section class="container progetti my-5">
         <?php include 'partials/home/progetti.php'; ?>
     </section>
 </main>

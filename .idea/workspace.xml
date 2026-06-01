@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9803a0f7-dbde-4a13-a4c7-4cd875e27d4b" name="Changes" comment="home mobile">
-      <change afterPath="$PROJECT_DIR$/assets/scss/pages/_chi-siamo.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/partials/chi-siamo/intro.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/partials/chi-siamo/team.php" afterDir="false" />
+    <list default="true" id="9803a0f7-dbde-4a13-a4c7-4cd875e27d4b" name="Changes" comment="chi siamo mobile">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/_custom.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/_custom.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/pages/_home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/pages/_home.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chi-siamo.php" beforeDir="false" afterPath="$PROJECT_DIR$/chi-siamo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/not_found.php" beforeDir="false" afterPath="$PROJECT_DIR$/not_found.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/progetti.php" beforeDir="false" afterPath="$PROJECT_DIR$/progetti.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +122,7 @@
       <workItem from="1779689692789" duration="8828000" />
       <workItem from="1779866412740" duration="3199000" />
       <workItem from="1779896295044" duration="23225000" />
-      <workItem from="1780128014808" duration="32480000" />
+      <workItem from="1780128014808" duration="32969000" />
     </task>
     <task id="LOCAL-00001" summary="php 8.3.30 sostituzione strftime">
       <option name="closed" value="true" />
@@ -315,7 +308,15 @@
       <option name="project" value="LOCAL" />
       <updated>1780343349105</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="chi siamo mobile">
+      <option name="closed" value="true" />
+      <created>1780348850801</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1780348850801</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -354,7 +355,8 @@
     <MESSAGE value="menu mobile" />
     <MESSAGE value="vari" />
     <MESSAGE value="home mobile" />
-    <option name="LAST_COMMIT_MESSAGE" value="home mobile" />
+    <MESSAGE value="chi siamo mobile" />
+    <option name="LAST_COMMIT_MESSAGE" value="chi siamo mobile" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
