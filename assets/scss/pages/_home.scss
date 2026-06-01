@@ -1,3 +1,22 @@
+.home-numeri {
+    .border-right {
+        @media (max-width: 767px) {
+            border: none !important;
+        }
+    }
+    .text-infty {
+        @media (min-width: 768px) {
+            font-size: 100px;
+        }
+    }
+
+    .text-big {
+        @media (max-width: 767px) {
+            font-size: 60px;
+        }
+    }
+}
+
 .chi-siamo {
     background-color: $primary;
     background-image: url("assets/images/chi-siamo.png");
@@ -24,6 +43,25 @@
         border: 2px solid white;
     }
 }
+
+.team-foto {
+    @media (max-width: 767px) {
+        .profile-img:nth-child(n+5) {
+            display: none;
+        }
+    }
+    @media (max-width: 1199px) {
+        .profile-img:nth-child(n+11) {
+            display: none;
+        }
+    }
+    @media (min-width: 1200px) {
+        .profile-img:nth-child(n+12) {
+            display: block;
+        }
+    }
+}
+
 
 .card-img {
     @media (min-width: 768px) {
@@ -55,3 +93,10 @@
     }
 }
 
+.progetti {
+    .col-md-6 {
+        @media (min-width: 768px) {
+            max-width: calc(50% - .75rem);
+        }
+    }
+}

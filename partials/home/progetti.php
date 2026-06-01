@@ -12,7 +12,7 @@
 
     <!-- esperienza di classe -->
 
-    <div class="d-flex justify-content-center w-100 mb-4 mt-3 mt-md-2 position-relative">
+    <div class="col-12 d-flex justify-content-center mb-4 mt-3 mt-md-2 position-relative">
         <hr class="border-top-dark position-center-center w-100 z-index-0 m-0">
         <div class="text-uppercase bg-white px-4 d-flex justify-content-center align-items-center position-relative mb-0"
              style="height: 30px; z-index:1;">
@@ -46,8 +46,8 @@
     </a>
 
     <!-- altri progetti -->
-    <a href="" title="Tombola matematica | Sottoradice"
-       class="box-link col-6 rounded-lg border p-4 mb-4 mb-lg-0 mr-lg-4" style="max-width: calc(50% - .75rem);">
+    <a href="<?php echo $dominio ?>progetti/tombola-matematica.php" title="Tombola matematica | Sottoradice"
+       class="box-link col-12 col-md-6 rounded-lg border p-4 mb-4 mb-md-0 mr-md-4">
         <small class="text-warning font-weight-500 d-flex align-items-center justify-content-start mb-2">
             <span class="rounded-xsmall bg-warning mr-3"></span>
             <span class="">Gioco</span>
@@ -62,8 +62,8 @@
     </a>
 
 
-    <a href="" title="La scuola pitagorica e √2 | Sottoradice"
-       class="box-link col-6 rounded-lg border p-4 mb-0" style="max-width: calc(50% - .75rem);">
+    <a href="<?php echo $dominio ?>progetti/scuola-pitagorica.php" title="La scuola pitagorica e √2 | Sottoradice"
+       class="box-link col-12 col-md-6 rounded-lg border p-4 mb-0">
         <small class="text-pink font-weight-500 d-flex align-items-center justify-content-start mb-2">
             <span class="rounded-xsmall bg-pink mr-3"></span>
             <span class="">Ricerca</span>
@@ -89,8 +89,8 @@
         </div>
     </div>
 
-    <a href="" title="Super Mario e i vettori | Sottoradice"
-       class="box-link col-6 rounded-lg border mb-4 mb-lg-0 mr-lg-4 px-0" style="max-width: calc(50% - .75rem);">
+    <a href="<?php echo $dominio ?>progetti/super-mario.php" title="Super Mario e i vettori | Sottoradice"
+       class="box-link col-12 col-md-6 rounded-lg border mb-4 mb-md-0 mr-md-4 px-0">
 
         <picture class="w-md-50 bg-purple-25">
             <img class="img object-cover" style="height: 230px;"
@@ -113,8 +113,8 @@
     </a>
 
 
-    <a href="" title="Pac-Man 3D | Sottoradice"
-       class="box-link col-6 rounded-lg border mb-0 px-0" style="max-width: calc(50% - .75rem);">
+    <a href="<?php echo $dominio ?>progetti/pacman-3d.php" title="Pac-Man 3D | Sottoradice"
+       class="box-link col-12 col-md-6 rounded-lg border mb-0 px-0">
         <picture class="w-md-50 bg-purple-25">
             <img class="img object-cover" style="height: 230px;"
                  src="<?php echo $dominio ?>assets/images/pacman.png" alt="Pac-Man 3D | Sottoradice">

@@ -7061,6 +7061,16 @@ quote {
 .backend * {
   font-family: "Outfit", sans-serif !important; }
 
+@media (max-width: 767px) {
+  .home-numeri .border-right {
+    border: none !important; } }
+@media (min-width: 768px) {
+  .home-numeri .text-infty {
+    font-size: 100px; } }
+@media (max-width: 767px) {
+  .home-numeri .text-big {
+    font-size: 60px; } }
+
 .chi-siamo {
   background-color: #007bff;
   background-image: url("assets/images/chi-siamo.png");
@@ -7081,6 +7091,16 @@ quote {
   border-radius: 50%;
   border: 2px solid white; }
 
+@media (max-width: 767px) {
+  .team-foto .profile-img:nth-child(n+5) {
+    display: none; } }
+@media (max-width: 1199px) {
+  .team-foto .profile-img:nth-child(n+11) {
+    display: none; } }
+@media (min-width: 1200px) {
+  .team-foto .profile-img:nth-child(n+12) {
+    display: block; } }
+
 @media (min-width: 768px) {
   .card-img {
     max-width: calc(16.6% - 16px) !important; } }
@@ -7100,6 +7120,10 @@ quote {
   border-radius: 50%; }
 .card-img-large .text-big {
   font-size: 55px; }
+
+@media (min-width: 768px) {
+  .progetti .col-md-6 {
+    max-width: calc(50% - .75rem); } }
 
 .project-image {
   height: 300px; }

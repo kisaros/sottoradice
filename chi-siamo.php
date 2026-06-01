@@ -187,7 +187,7 @@ include_once 'partials/head.php';
                 <div class="card-img col-2 d-flex flex-column align-items-center justify-content-center border rounded-lg p-3 m-2">
                     <img class="profile-img"
                          src="<?php echo $dominio ?>assets/images/1.jpg"
-                         alt="">
+                         alt="Gabriele G.">
                     <p class="font-weight-400 mb-1">Gabriele G.</p>
                     <small class="text-secondary text-center">Maestro del raccoglimento</small>
                 </div>
@@ -195,7 +195,7 @@ include_once 'partials/head.php';
                 <div class="card-img col-2 d-flex flex-column align-items-center justify-content-center border rounded-lg p-3 m-2">
                     <img class="profile-img"
                          src="<?php echo $dominio ?>assets/images/2.jpg"
-                         alt="">
+                         alt="Gioele M.">
                     <p class="font-weight-400 mb-1">Gioele M.</p>
                     <small class="text-secondary text-center">Maestro del raccoglimento</small>
                 </div>
@@ -203,7 +203,7 @@ include_once 'partials/head.php';
                 <div class="card-img col-2 d-flex flex-column align-items-center justify-content-center border rounded-lg p-3 m-2">
                     <img class="profile-img"
                          src="<?php echo $dominio ?>assets/images/3.jpg"
-                         alt="">
+                         alt="Gabriele T.">
                     <p class="font-weight-400 mb-1">Gabriele T.</p>
                     <small class="text-secondary text-center">Maestro del raccoglimento</small>
                 </div>
@@ -211,7 +211,7 @@ include_once 'partials/head.php';
                 <div class="card-img col-2 d-flex flex-column align-items-center justify-content-center border rounded-lg p-3 m-2">
                     <img class="profile-img"
                          src="<?php echo $dominio ?>assets/images/4.jpg"
-                         alt="">
+                         alt="Samuele I.">
                     <p class="font-weight-400 mb-1">Samuele I.</p>
                     <small class="text-secondary text-center">Maestro del raccoglimento</small>
                 </div>
@@ -219,7 +219,7 @@ include_once 'partials/head.php';
                 <div class="card-img col-2 d-flex flex-column align-items-center justify-content-center border rounded-lg p-3 m-2">
                     <img class="profile-img"
                          src="<?php echo $dominio ?>assets/images/5.jpg"
-                         alt="">
+                         alt="Vincenzo M.">
                     <p class="font-weight-400 mb-1">Vincenzo M.</p>
                     <small class="text-secondary text-center">Maestro del raccoglimento</small>
                 </div>
@@ -227,7 +227,7 @@ include_once 'partials/head.php';
                 <div class="card-img col-2 d-flex flex-column align-items-center justify-content-center border rounded-lg p-3 m-2">
                     <img class="profile-img"
                          src="<?php echo $dominio ?>assets/images/6.jpg"
-                         alt="">
+                         alt="Leonardo C.">
                     <p class="font-weight-400 mb-1">Leonardo C.</p>
                     <small class="text-secondary text-center">Maestro del raccoglimento</small>
                 </div>
@@ -235,7 +235,7 @@ include_once 'partials/head.php';
                 <div class="card-img col-2 d-flex flex-column align-items-center justify-content-center border rounded-lg p-3 m-2">
                     <img class="profile-img"
                          src="<?php echo $dominio ?>assets/images/7.jpg"
-                         alt="">
+                         alt="Gabriele V.">
                     <p class="font-weight-400 mb-1">Gabriele V.</p>
                     <small class="text-secondary text-center">Maestro del raccoglimento</small>
                 </div>
@@ -243,7 +243,7 @@ include_once 'partials/head.php';
                 <div class="card-img col-2 d-flex flex-column align-items-center justify-content-center border rounded-lg p-3 m-2">
                     <img class="profile-img"
                          src="<?php echo $dominio ?>assets/images/8.jpg"
-                         alt="">
+                         alt="Anita P.">
                     <p class="font-weight-400 mb-1">Anita P.</p>
                     <small class="text-secondary text-center">Maestro del raccoglimento</small>
                 </div>
@@ -251,7 +251,7 @@ include_once 'partials/head.php';
                 <div class="card-img col-2 d-flex flex-column align-items-center justify-content-center border rounded-lg p-3 m-2">
                     <img class="profile-img"
                          src="<?php echo $dominio ?>assets/images/9.jpg"
-                         alt="">
+                         alt="Giorgia M.">
                     <p class="font-weight-400 mb-1">Giorgia M.</p>
                     <small class="text-secondary text-center">Maestro del raccoglimento</small>
                 </div>
@@ -259,7 +259,7 @@ include_once 'partials/head.php';
                 <div class="card-img col-2 d-flex flex-column align-items-center justify-content-center border rounded-lg p-3 m-2">
                     <img class="profile-img"
                          src="<?php echo $dominio ?>assets/images/10.jpg"
-                         alt="">
+                         alt="Antonio A.">
                     <p class="font-weight-400 mb-1">Antonio A.</p>
                     <small class="text-secondary text-center">Maestro del raccoglimento</small>
                 </div>
@@ -267,7 +267,7 @@ include_once 'partials/head.php';
                 <div class="card-img col-2 d-flex flex-column align-items-center justify-content-center border rounded-lg p-3 m-2">
                     <img class="profile-img"
                          src="<?php echo $dominio ?>assets/images/11.jpg"
-                         alt="">
+                         alt="Manuel G.">
                     <p class="font-weight-400 mb-1">Manuel G.</p>
                     <small class="text-secondary text-center">Maestro del raccoglimento</small>
                 </div>
@@ -275,7 +275,7 @@ include_once 'partials/head.php';
                 <div class="card-img col-2 d-flex flex-column align-items-center justify-content-center border rounded-lg p-3 m-2">
                     <img class="profile-img"
                          src="<?php echo $dominio ?>assets/images/12.jpg"
-                         alt="">
+                         alt="Andrea T.">
                     <p class="font-weight-400 mb-1">Andrea T.</p>
                     <small class="text-secondary text-center">Maestro del raccoglimento</small>
                 </div>
@@ -283,7 +283,7 @@ include_once 'partials/head.php';
                 <div class="card-img col-2 d-flex flex-column align-items-center justify-content-center border rounded-lg p-3 m-2">
                     <img class="profile-img"
                          src="<?php echo $dominio ?>assets/images/13.jpg"
-                         alt="">
+                         alt="Matteo M.">
                     <p class="font-weight-400 mb-1">Matteo M.</p>
                     <small class="text-secondary text-center">Maestro del raccoglimento</small>
                 </div>
@@ -291,7 +291,7 @@ include_once 'partials/head.php';
                 <div class="card-img col-2 d-flex flex-column align-items-center justify-content-center border rounded-lg p-3 m-2">
                     <img class="profile-img"
                          src="<?php echo $dominio ?>assets/images/14.jpg"
-                         alt="">
+                         alt="Enrico M.">
                     <p class="font-weight-400 mb-1">Enrico M.</p>
                     <small class="text-secondary text-center">Maestro del raccoglimento</small>
                 </div>
@@ -299,7 +299,7 @@ include_once 'partials/head.php';
                 <div class="card-img col-2 d-flex flex-column align-items-center justify-content-center border rounded-lg p-3 m-2">
                     <img class="profile-img"
                          src="<?php echo $dominio ?>assets/images/15.jpg"
-                         alt="">
+                         alt="Salvatore S.">
                     <p class="font-weight-400 mb-1">Salvatore S.</p>
                     <small class="text-secondary text-center">Maestro del raccoglimento</small>
                 </div>
@@ -307,7 +307,7 @@ include_once 'partials/head.php';
                 <div class="card-img col-2 d-flex flex-column align-items-center justify-content-center border rounded-lg p-3 m-2">
                     <img class="profile-img"
                          src="<?php echo $dominio ?>assets/images/16.jpg"
-                         alt="">
+                         alt="Matteo L.">
                     <p class="font-weight-400 mb-1">Matteo L.</p>
                     <small class="text-secondary text-center">Maestro del raccoglimento</small>
                 </div>
@@ -315,7 +315,7 @@ include_once 'partials/head.php';
                 <div class="card-img col-2 d-flex flex-column align-items-center justify-content-center border rounded-lg p-3 m-2">
                     <img class="profile-img"
                          src="<?php echo $dominio ?>assets/images/17.jpg"
-                         alt="">
+                         alt="Mattia P.">
                     <p class="font-weight-400 mb-1">Mattia P.</p>
                     <small class="text-secondary text-center">Maestro del raccoglimento</small>
                 </div>

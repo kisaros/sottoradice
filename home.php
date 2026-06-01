@@ -61,7 +61,7 @@ include_once 'partials/head.php';
 
     <!-- Progetti -->
 
-    <section class="container py-5">
+    <section class="progetti container py-5">
 
         <?php include 'partials/home/progetti.php'; ?>
 
