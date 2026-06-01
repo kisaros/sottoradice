@@ -102,12 +102,35 @@
 
         <script type="text/javascript">
             var _iub = _iub || [];
-            _iub.csConfiguration = {"askConsentAtCookiePolicyUpdate":true,"cookiePolicyInOtherWindow":true,"floatingPreferencesButtonDisplay":"anchored-center-left","perPurposeConsent":true,"siteId":4550094,"storage":{"useSiteId":true},"whitelabel":false,"cookiePolicyId":97615000,"banner":{"acceptButtonColor":"#28A745","acceptButtonDisplay":true,"closeButtonDisplay":false,"customizeButtonColor":"#464646","customizeButtonDisplay":true,"explicitWithdrawal":true,"listPurposes":true,"logo":"https://sottoradice.altervista.org/assets/images/full-logo-white.svg","position":"float-bottom-right","rejectButtonColor":"#28A745","rejectButtonDisplay":true,"showTitle":false}};
-            _iub.csLangConfiguration = {"it":{"cookiePolicyId":97615000}};
+            _iub.csConfiguration = {
+                "askConsentAtCookiePolicyUpdate": true,
+                "cookiePolicyInOtherWindow": true,
+                "floatingPreferencesButtonDisplay": "anchored-center-left",
+                "floatingPreferencesButtonZIndex": 1000,
+                "perPurposeConsent": true,
+                "siteId": 4550094,
+                "storage": {"useSiteId": true},
+                "whitelabel": false,
+                "cookiePolicyId": 97615000,
+                "banner": {
+                    "acceptButtonColor": "#28A745",
+                    "acceptButtonDisplay": true,
+                    "closeButtonDisplay": false,
+                    "customizeButtonColor": "#464646",
+                    "customizeButtonDisplay": true,
+                    "explicitWithdrawal": true,
+                    "listPurposes": true,
+                    "logo": "../assets/images/full-logo-white.svg",
+                    "position": "float-bottom-right",
+                    "rejectButtonColor": "#28A745",
+                    "rejectButtonDisplay": true,
+                    "showTitle": false
+                }
+            };
+            _iub.csLangConfiguration = {"it": {"cookiePolicyId": 97615000}};
         </script>
         <script type="text/javascript" src="https://cs.iubenda.com/autoblocking/4550094.js"></script>
         <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
-
 
 
     <?php endif ?>

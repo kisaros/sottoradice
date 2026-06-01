@@ -1,5 +1,5 @@
 <div class="appunti-pdf rounded-lg border">
-    <a class="row align-items-center justify-content-between mx-0 p-4"
+    <a class="row align-items-center justify-content-between mx-0 p-3 p-md-4"
        href="<?php echo $dominio ?>materiali/scomporre-per-comprendere/raccoglimento_totale.pdf"
        target="_blank"
        title="Appunti - Raccoglimento totale">
@@ -16,7 +16,7 @@
         </div>
     </a>
 
-    <a class="row align-items-center justify-content-between mx-0 p-4"
+    <a class="row align-items-center justify-content-between mx-0 p-3 p-md-4"
        href="<?php echo $dominio ?>materiali/scomporre-per-comprendere/raccoglimento_parziale.pdf"
        target="_blank"
        title="Appunti - Raccoglimento parziale">
@@ -33,7 +33,7 @@
         </div>
     </a>
 
-    <a class="row align-items-center justify-content-between mx-0 p-4"
+    <a class="row align-items-center justify-content-between mx-0 p-3 p-md-4"
        href="<?php echo $dominio ?>materiali/scomporre-per-comprendere/quadrato_binomio+differenza_quadrati.pdf"
        target="_blank"
        title="Appunti - Quadrato di binomio e differenza di quadrati">
@@ -50,7 +50,7 @@
         </div>
     </a>
 
-    <a class="row align-items-center justify-content-between mx-0 p-4"
+    <a class="row align-items-center justify-content-between mx-0 p-3 p-md-4"
        href="<?php echo $dominio ?>materiali/scomporre-per-comprendere/quadrato_trinomio+cubo_binomio+somma_differenza_cubi.pdf"
        target="_blank"
        title="Appunti - Quadrato di trinomio, cubo di binomio e somma o differenza di cubi">
@@ -68,7 +68,7 @@
     </a>
 
 
-    <a class="row align-items-center justify-content-between mx-0 p-4"
+    <a class="row align-items-center justify-content-between mx-0 p-3 p-md-4"
        href="<?php echo $dominio ?>materiali/scomporre-per-comprendere/trinomio_speciale.pdf" target="_blank"
        title="Appunti - Trinomio speciale">
         <div class="d-flex align-items-center">
@@ -84,7 +84,7 @@
         </div>
     </a>
 
-    <a class="row align-items-center justify-content-between mx-0 p-4"
+    <a class="row align-items-center justify-content-between mx-0 p-3 p-md-4"
        href="<?php echo $dominio ?>materiali/scomporre-per-comprendere/ruffini.pdf" target="_blank"
        title="Appunti - Zeri di un polinomio e metodo di Ruffini">
         <div class="d-flex align-items-center">

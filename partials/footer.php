@@ -14,7 +14,7 @@
             </div>
 
 
-            <div class="list-footer">
+            <div class="list-footer py-4 py-lg-0">
                 <a href="<?php echo $dominio ?>home.php" title="Sottoradice - Home" class="text-lg-right">
                     Home
                 </a>

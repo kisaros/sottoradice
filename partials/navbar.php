@@ -16,102 +16,6 @@
                         <line x1="3" y1="14" x2="13" y2="14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
                     </svg>
                 </button>
-
-                <!-- OVERLAY -->
-                <div class="sr-menu-overlay" id="srMenuOverlay" role="dialog" aria-modal="true" aria-label="Menu principale">
-
-                    <div class="sr-menu-top">
-                        <a href="<?php echo $dominioHome ?>" class="logo logo-white sr-menu-logo" title="Sottoradice - Homepage">
-
-                        </a>
-                        <button type="button" class="sr-menu-close" id="srMenuClose" aria-label="Chiudi menu">
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-                                <line x1="4" y1="4" x2="14" y2="14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                                <line x1="14" y1="4" x2="4" y2="14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                            </svg>
-                        </button>
-                    </div>
-
-                    <nav class="sr-menu-links">
-
-                        <a href="<?php echo $dominioHome ?>home.php"
-                           title="Sottoradice – Homepage"
-                           class="sr-menu-link <?php echo (basename($_SERVER['PHP_SELF']) == 'home.php') ? 'sr-menu-link--active' : '' ?>">
-                            <div class="sr-menu-link-left">
-                                <span class="sr-menu-link-num">01</span>
-                                <span class="sr-menu-link-name">Home</span>
-                            </div>
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="sr-menu-link-arrow">
-                                <line x1="3" y1="8" x2="13" y2="8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
-                                <polyline points="9,4 13,8 9,12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                            </svg>
-                        </a>
-
-                        <a href="<?php echo $dominio ?>chi-siamo.php"
-                           title="Sottoradice – Chi siamo"
-                           class="sr-menu-link <?php echo (basename($_SERVER['PHP_SELF']) == 'chi-siamo.php') ? 'sr-menu-link--active' : '' ?>">
-                            <div class="sr-menu-link-left">
-                                <span class="sr-menu-link-num">02</span>
-                                <span class="sr-menu-link-name">Chi siamo</span>
-                            </div>
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="sr-menu-link-arrow">
-                                <line x1="3" y1="8" x2="13" y2="8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
-                                <polyline points="9,4 13,8 9,12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                            </svg>
-                        </a>
-
-                        <div class="sr-menu-link sr-menu-link--has-sub <?php echo (basename($_SERVER['PHP_SELF']) == 'progetti.php') ? 'sr-menu-link--active' : '' ?>"
-                             id="srProgettiToggle" role="button" tabindex="0" aria-expanded="false">
-                            <div class="sr-menu-link-left">
-                                <span class="sr-menu-link-num">03</span>
-                                <span class="sr-menu-link-name">Progetti</span>
-                            </div>
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="sr-menu-link-chevron" id="srProgettiChevron">
-                                <polyline points="4,6 8,10 12,6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                            </svg>
-                        </div>
-
-                        <div class="sr-menu-sub" id="srMenuSub">
-                            <a href="<?php echo $dominio ?>progetti/scomporre-per-comprendere.php" class="sr-menu-sub-item" title="Scomporre per comprendere">
-                                <span class="sr-menu-sub-dot bg-primary"></span>
-                                <span class="sr-menu-sub-name">Scomporre per comprendere</span>
-                            </a>
-                            <a href="<?php echo $dominio ?>progetti/tombola-matematica.php" class="sr-menu-sub-item" title="Tombola matematica">
-                                <span class="sr-menu-sub-dot bg-success"></span>
-                                <span class="sr-menu-sub-name">Tombola matematica</span>
-                            </a>
-                            <a href="<?php echo $dominio ?>progetti/scuola-pitagorica.php" class="sr-menu-sub-item" title="La scuola pitagorica e √2">
-                                <span class="sr-menu-sub-dot bg-pink"></span>
-                                <span class="sr-menu-sub-name">Scuola pitagorica e √2</span>
-                            </a>
-                            <a href="<?php echo $dominio ?>progetti/pacman-3d.php" class="sr-menu-sub-item" title="Pac-Man 3D">
-                                <span class="sr-menu-sub-dot bg-purple"></span>
-                                <span class="sr-menu-sub-name">Pac-Man 3D</span>
-                            </a>
-                            <a href="<?php echo $dominio ?>progetti/super-mario.php" class="sr-menu-sub-item" title="Super Mario e i vettori">
-                                <span class="sr-menu-sub-dot bg-warning"></span>
-                                <span class="sr-menu-sub-name">Super Mario e i vettori</span>
-                            </a>
-                        </div>
-
-                    </nav>
-
-                    <div class="sr-menu-bottom">
-                        <div class="sr-menu-slogan">
-                            <span>Se sì, perché?</span>
-                            <span>Se no, perché?</span>
-                            <span class="sr-menu-slogan-accent">Motiva la risposta.</span>
-                        </div>
-                        <div class="sr-menu-bottom-links">
-                            <a href="https://www.iubenda.com/privacy-policy/97615000" class="sr-menu-bottom-link">Privacy</a>
-                            <a href="https://www.iubenda.com/privacy-policy/97615000/cookie-policy" class="sr-menu-bottom-link">Cookie</a>
-                            <a href="https://isradice.edu.it" title="IIS Benedetto Radice" class="sr-menu-bottom-link">IIS B. Radice</a>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- fine overlay -->
-
             </div>
 
 
@@ -143,6 +47,101 @@
     </div>
 </navbar>
 
+
+<!-- OVERLAY -->
+<div class="sr-menu-overlay" id="srMenuOverlay" role="dialog" aria-modal="true" aria-label="Menu principale">
+
+    <div class="sr-menu-top">
+        <a href="<?php echo $dominioHome ?>" class="logo logo-white sr-menu-logo" title="Sottoradice - Homepage">
+
+        </a>
+        <button type="button" class="sr-menu-close" id="srMenuClose" aria-label="Chiudi menu">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <line x1="4" y1="4" x2="14" y2="14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="14" y1="4" x2="4" y2="14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+        </button>
+    </div>
+
+    <nav class="sr-menu-links">
+
+        <a href="<?php echo $dominioHome ?>home.php"
+           title="Sottoradice – Homepage"
+           class="sr-menu-link <?php echo (basename($_SERVER['PHP_SELF']) == 'home.php') ? 'sr-menu-link--active' : '' ?>">
+            <div class="sr-menu-link-left">
+                <span class="sr-menu-link-num">01</span>
+                <span class="sr-menu-link-name">Home</span>
+            </div>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="sr-menu-link-arrow">
+                <line x1="3" y1="8" x2="13" y2="8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                <polyline points="9,4 13,8 9,12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </svg>
+        </a>
+
+        <a href="<?php echo $dominio ?>chi-siamo.php"
+           title="Sottoradice – Chi siamo"
+           class="sr-menu-link <?php echo (basename($_SERVER['PHP_SELF']) == 'chi-siamo.php') ? 'sr-menu-link--active' : '' ?>">
+            <div class="sr-menu-link-left">
+                <span class="sr-menu-link-num">02</span>
+                <span class="sr-menu-link-name">Chi siamo</span>
+            </div>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="sr-menu-link-arrow">
+                <line x1="3" y1="8" x2="13" y2="8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                <polyline points="9,4 13,8 9,12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </svg>
+        </a>
+
+        <div class="sr-menu-link sr-menu-link--has-sub <?php echo (basename($_SERVER['PHP_SELF']) == 'progetti.php') ? 'sr-menu-link--active' : '' ?>"
+             id="srProgettiToggle" role="button" tabindex="0" aria-expanded="false">
+            <div class="sr-menu-link-left">
+                <span class="sr-menu-link-num">03</span>
+                <span class="sr-menu-link-name">Progetti</span>
+            </div>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="sr-menu-link-chevron" id="srProgettiChevron">
+                <polyline points="4,6 8,10 12,6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </svg>
+        </div>
+
+        <div class="sr-menu-sub" id="srMenuSub">
+            <a href="<?php echo $dominio ?>progetti/scomporre-per-comprendere.php" class="sr-menu-sub-item" title="Scomporre per comprendere">
+                <span class="sr-menu-sub-dot bg-primary"></span>
+                <span class="sr-menu-sub-name">Scomporre per comprendere</span>
+            </a>
+            <a href="<?php echo $dominio ?>progetti/tombola-matematica.php" class="sr-menu-sub-item" title="Tombola matematica">
+                <span class="sr-menu-sub-dot bg-success"></span>
+                <span class="sr-menu-sub-name">Tombola matematica</span>
+            </a>
+            <a href="<?php echo $dominio ?>progetti/scuola-pitagorica.php" class="sr-menu-sub-item" title="La scuola pitagorica e √2">
+                <span class="sr-menu-sub-dot bg-pink"></span>
+                <span class="sr-menu-sub-name">Scuola pitagorica e √2</span>
+            </a>
+            <a href="<?php echo $dominio ?>progetti/pacman-3d.php" class="sr-menu-sub-item" title="Pac-Man 3D">
+                <span class="sr-menu-sub-dot bg-purple"></span>
+                <span class="sr-menu-sub-name">Pac-Man 3D</span>
+            </a>
+            <a href="<?php echo $dominio ?>progetti/super-mario.php" class="sr-menu-sub-item" title="Super Mario e i vettori">
+                <span class="sr-menu-sub-dot bg-warning"></span>
+                <span class="sr-menu-sub-name">Super Mario e i vettori</span>
+            </a>
+        </div>
+
+    </nav>
+
+    <div class="sr-menu-bottom">
+        <div class="sr-menu-slogan">
+            <span>Se sì, perché?</span>
+            <span>Se no, perché?</span>
+            <span class="sr-menu-slogan-accent">Motiva la risposta.</span>
+        </div>
+        <div class="sr-menu-bottom-links">
+            <a href="https://www.iubenda.com/privacy-policy/97615000" class="sr-menu-bottom-link">Privacy</a>
+            <a href="https://www.iubenda.com/privacy-policy/97615000/cookie-policy" class="sr-menu-bottom-link">Cookie</a>
+            <a href="https://isradice.edu.it" title="IIS Benedetto Radice" class="sr-menu-bottom-link">IIS B. Radice</a>
+        </div>
+    </div>
+
+</div>
+<!-- fine overlay -->
 
 <script>
     (function () {

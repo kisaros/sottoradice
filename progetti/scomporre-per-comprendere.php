@@ -23,16 +23,16 @@ include_once '../partials/head.php';
     <header class="">
         <div class="container pt-5">
             <div class="hero mb-4">
-                <small class="text-success font-weight-500 d-flex align-items-center justify-content-center justify-content-md-start mb-2">
+                <small class="text-success font-weight-500 d-flex align-items-center justify-content-start mb-2">
                     <span class="rounded-xsmall bg-success mr-3"></span>
                     <span class="text-uppercase">Interattivo</span>
                 </small>
-                <h1 class="serif font-weight-700 text-center text-md-left px-4 px-md-0">Scomporre per comprendere</h1>
-                <h2 class="serif font-weight-300 text-secondary text-center text-md-left pb-4 px-4 px-md-0">
+                <h1 class="serif font-weight-700 text-left px-0">Scomporre <span class="text-primary">per comprendere</span></h1>
+                <h2 class="serif font-weight-300 text-secondary text-left pb-4 px-0">
                     Wizard guidato alla scomposizione dei polinomi. Con appunti PDF della
                     classe inclusi.
                 </h2>
-                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-start">
+                <div class="d-flex flex-wrap align-items-center justify-content-start">
                     <small class="bg-purple-25 text-purple px-3 rounded-pill mb-2 mr-3">Prof.ssa Ornella Leanza</small>
                     <small class="bg-success-25 text-success px-3 rounded-pill mb-2">Classe 2AIT – a.s. 2025/26</small>
                 </div>
@@ -49,7 +49,7 @@ include_once '../partials/head.php';
     </header>
 
     <section class="container">
-        <h2 class="text-left mb-0 pb-3">Cos'è</h2>
+        <h2 class="text-purple text-left mb-0 pb-3">Cos'è</h2>
         <p class="text-p-plus mb-4">
             <span class="font-weight-700">Scomporre per comprendere</span> nasce da un’idea semplice: capire davvero
             qualcosa significa riuscire a
@@ -63,14 +63,14 @@ include_once '../partials/head.php';
     <!-- wizard -->
 
     <section class="container">
-        <h2 class="text-left mb-0 pb-3">L'app</h2>
+        <h2 class="text-warning text-left mb-0 pb-3">L'app</h2>
         <p class="text-p-plus mb-4">
             La nostra app ti guiderà nella scelta dei metodi da applicare e nell'applicazione delle procedure. Non
             risolve i tuoi esercizi, bensì i tuoi problemi!
         </p>
 
 
-        <h4>Pronto a iniziare?</h4>
+        <h4 class="">Pronto a iniziare?</h4>
         <ul class="text-p-plus">
             <li>Inserisci il polinomio.</li>
             <li>Analizza la struttura dell’espressione.</li>
@@ -85,7 +85,7 @@ include_once '../partials/head.php';
     <!-- risorse e materiali -->
 
     <section class="container mb-5">
-        <h2 class="text-left mb-0 pb-3">Risorse e materiali</h2>
+        <h2 class="text-left mb-0 pb-3"><span class="text-teal">Risorse</span> e materiali</h2>
         <?php include '../partials/progetti/scomporre-per-comprendere/risorse.php'; ?>
     </section>
 
@@ -94,7 +94,7 @@ include_once '../partials/head.php';
 
 
     <section class="container mb-5">
-        <h2 class="text-left mb-0 pb-3">Studenti in azione</h2>
+        <h2 class="text-left mb-0 pb-3">Studenti <span class="text-pink">in azione</span></h2>
         <?php include '../partials/progetti/scomporre-per-comprendere/gallery.php'; ?>
     </section>
 
