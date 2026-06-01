@@ -1,0 +1,10 @@
+.intro {
+  .numeri {
+    .anno, .crescita {
+      @media (max-width: 767px) {
+        background-color: rgba(158,158,158,.25);
+        border-radius: 0.3rem !important;
+      }
+    }
+  }
+}

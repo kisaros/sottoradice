@@ -5670,42 +5670,6 @@ iframe {
 .bg-black {
   background-color: black; }
 
-.bg-dark-900 {
-  background-color: #5C5C5E !important; }
-
-.bg-dark {
-  background-color: #5C5C5E !important; }
-
-.bg-bacheca-social {
-  background-color: #f1eeeb !important; }
-
-.bg-light {
-  background-color: #f6f4f3 !important; }
-
-.bg-before-light::before {
-  content: '';
-  background-color: #f6f4f3 !important;
-  height: 50%;
-  width: 200%;
-  display: block;
-  position: absolute;
-  transform: translate(-50%, 100%); }
-
-.bg-medium {
-  background-color: #cecac9 !important; }
-
-.bg-footer {
-  background-color: #faf9f8; }
-
-.bg-footer-50 {
-  background-color: rgba(244, 244, 244, 0.5); }
-
-.bg-accordion {
-  background-color: #faf9f8; }
-
-.bg-accordion-hover {
-  background-color: #f6f4f3; }
-
 .wave-bg {
   position: relative;
   overflow: hidden;
@@ -5777,30 +5741,6 @@ iframe {
     background: #27a644ad;
     border-radius: 52% 48% 44% 56% / 55% 47% 53% 45%;
     transform: translateX(-39%) rotate(2deg); }
-
-.ch-masonry {
-  column-count: 3;
-  column-gap: 1.5rem;
-  padding: 0; }
-
-@media only screen and (max-width: 768px) {
-  .ch-masonry {
-    column-count: 2; } }
-@media only screen and (max-width: 371px) {
-  .ch-masonry {
-    column-count: 1; } }
-.ch-masonry__item {
-  display: inline-block;
-  background: #fff;
-  padding: 15px;
-  margin: 0 0 15px;
-  width: 100%;
-  box-sizing: border-box;
-  box-shadow: 2px 2px 4px 0 #ccc; }
-
-.ch-masonry__item img {
-  width: 100%;
-  max-width: 100%; }
 
 /* SECTION FOOTER */
 .loader {
@@ -7101,15 +7041,20 @@ quote {
   .team-foto .profile-img:nth-child(n+12) {
     display: block; } }
 
-@media (min-width: 768px) {
-  .card-img {
-    max-width: calc(16.6% - 16px) !important; } }
-.card-img .profile-img {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%; }
-.card-img .text-big {
-  font-size: 55px; }
+.card-img {
+  max-width: calc(50% - 1rem) !important; }
+  @media (min-width: 768px) {
+    .card-img {
+      max-width: calc(25% - 1rem) !important; } }
+  @media (min-width: 992px) {
+    .card-img {
+      max-width: calc(16.6% - 1rem) !important; } }
+  .card-img .profile-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%; }
+  .card-img .text-big {
+    font-size: 55px; }
 
 @media (min-width: 768px) {
   .card-img-large {
@@ -7120,6 +7065,19 @@ quote {
   border-radius: 50%; }
 .card-img-large .text-big {
   font-size: 55px; }
+.card-img-large .text-h3 {
+  font-weight: 700;
+  text-align: left;
+  font-size: 18px;
+  line-height: 24px; }
+  @media (min-width: 768px) {
+    .card-img-large .text-h3 {
+      font-size: 18px;
+      line-height: 24px; } }
+  @media (min-width: 1200px) {
+    .card-img-large .text-h3 {
+      font-size: 30px;
+      line-height: 40px; } }
 
 @media (min-width: 768px) {
   .progetti .col-md-6 {
@@ -7560,5 +7518,9 @@ quote {
   .scompolab-current,
   .scompolab-option-grid {
     grid-template-columns: 1fr; } }
+@media (max-width: 767px) {
+  .intro .numeri .anno, .intro .numeri .crescita {
+    background-color: rgba(158, 158, 158, 0.25);
+    border-radius: 0.3rem !important; } }
 
 /*# sourceMappingURL=style.css.map */

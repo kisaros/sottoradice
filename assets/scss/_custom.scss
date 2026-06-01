@@ -1106,52 +1106,6 @@ iframe {
   background-color: black;
 }
 
-.bg-dark-900 {
-  background-color: $bg-dark !important;
-}
-
-.bg-dark {
-  background-color: $btn-dark !important;
-}
-
-.bg-bacheca-social {
-  background-color: $bg-bacheca-social !important;
-}
-
-.bg-light {
-  background-color: $bg-light !important;
-}
-
-.bg-before-light::before {
-  content: '';
-  background-color: $bg-light !important;
-  height: 50%;
-  width: 200%;
-  display: block;
-  position: absolute;
-  transform: translate(-50%,100%);
-}
-
-.bg-medium {
-  background-color: $bg-medium !important;
-}
-
-.bg-footer {
-  background-color: $bg-footer;
-}
-
-.bg-footer-50 {
-  background-color: rgba(244,244,244,.5);
-}
-
-.bg-accordion {
-  background-color: $bg-accordion;
-}
-
-.bg-accordion-hover {
-  background-color: $bg-accordion-hover;
-}
-
 .wave-bg {
   position: relative;
   overflow: hidden;
@@ -1261,42 +1215,3 @@ iframe {
     transform: translateX(-39%) rotate(2deg);
   }
 }
-
-
-// MASONRY
-
-
-.ch-masonry {
-  column-count: 3;
-  column-gap: 1.5rem;
-  padding: 0;
-}
-
-@media only screen and (max-width: 768px) {
-  .ch-masonry {
-    column-count: 2;
-  }
-}
-
-@media only screen and (max-width: 371px) {
-  .ch-masonry {
-    column-count: 1;
-  }
-}
-
-.ch-masonry__item {
-  display: inline-block;
-  background: #fff;
-  padding: 15px;
-  margin: 0 0 15px;
-  width: 100%;
-  box-sizing: border-box;
-  box-shadow: 2px 2px 4px 0 #ccc;
-}
-
-.ch-masonry__item img {
-  width: 100%;
-  max-width: 100%;
-}
-
-
