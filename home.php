@@ -42,7 +42,7 @@ include_once 'partials/head.php';
                     </div>
                 </div>
                 <figure class="col-12 col-md-6">
-                    <img src="https://sottoradice.altervista.org/assets/images/calcolatrice.svg"
+                    <img src="<?php echo $dominio ?>assets/images/calcolatrice.svg"
                          class="h-100 w-100 object-cover"
                          alt="Sottoradice, la matematica fatta da noi.">
                 </figure>

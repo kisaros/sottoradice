@@ -1,5 +1,14 @@
 /* NAVBAR */
 
+.logo {
+  width: 180px;
+}
+
+@media screen and (min-width: 768px) {
+  .logo {
+    width: 130px;
+  }
+}
 
 .navbar-full {
   background-color: white;
@@ -11,10 +20,11 @@
   padding: 14px 0;
 
   .logo {
-    background-image: url("https://sottoradice.altervista.org/assets/images/full-logo.svg");
+    background-image: url("../images/full-logo.svg");
     background-repeat: no-repeat;
-    height: 34px;
+    height: 23px;
     background-size: contain;
+    z-index: 1;
   }
 
   @media (min-width: 768px) {
@@ -22,20 +32,15 @@
     width: 100%;
     transition: all .6s;
     .logo {
-      background-image: url("https://sottoradice.altervista.org/assets/images/full-logo.svg");
+      background-image: url("../images/full-logo.svg");
       height: 30px;
       width: 250px;
     }
   }
 
-  .logo-full {
-    background-image: url("https://sottoradice.altervista.org/assets/images/full-logo.svg");
-    height: 34px;
-    width: 100%;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
+  .logo-white {
+    background-image: url("../images/full-logo-white.svg") !important;
+    }
 }
 
 
@@ -269,14 +274,237 @@
   padding: 10px;
 }
 
-.logo {
-  width: 130px;
+
+
+/* ── SOTTORADICE MENU MOBILE ── */
+
+.btn-menu-sr {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  border: 1px solid #e8e4dc;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #1a1814;
+  padding: 0;
+}
+.btn-menu-sr:hover {
+  background: #f8f6f1;
 }
 
-@media screen and (min-width: 768px) {
-  .logo {
-    width: 130px;
-  }
+/* overlay a schermo intero */
+.sr-menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: #1a1814;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(-100%);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
+}
+.sr-menu-overlay.sr-open {
+  transform: translateY(0);
 }
 
+/* blocca lo scroll della pagina quando il menu è aperto */
+body.sr-menu-is-open {
+  overflow: hidden;
+}
 
+/* top bar del menu */
+.sr-menu-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  flex-shrink: 0;
+}
+
+.sr-menu-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+.sr-menu-logo-sq {
+  width: 28px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sr-menu-logo-name {
+  font-size: 15px;
+  font-weight: 500;
+  color: #f8f6f1;
+  letter-spacing: -0.2px;
+}
+
+.sr-menu-close {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #f8f6f1;
+  padding: 0;
+}
+.sr-menu-close:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* link principali */
+.sr-menu-links {
+  padding: 28px 20px 0;
+  flex: 1;
+}
+
+.sr-menu-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+}
+.sr-menu-link:last-child {
+  border-bottom: none;
+}
+
+.sr-menu-link-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.sr-menu-link-num {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.2);
+  font-family: monospace;
+  width: 18px;
+}
+.sr-menu-link-name {
+  font-size: 22px;
+  font-weight: 500;
+  color: #f8f6f1;
+  letter-spacing: -0.5px;
+  line-height: 1;
+}
+.sr-menu-link-arrow,
+.sr-menu-link-chevron {
+  color: rgba(255, 255, 255, 0.2);
+  flex-shrink: 0;
+  transition: color 0.15s;
+}
+.sr-menu-link-chevron {
+  transition: color 0.15s, transform 0.2s ease;
+}
+
+/* stato attivo e hover */
+.sr-menu-link--active .sr-menu-link-name {
+  color: $warning;
+}
+.sr-menu-link:hover .sr-menu-link-name,
+.sr-menu-link--has-sub:hover .sr-menu-link-name {
+  color: $warning-plus;
+}
+.sr-menu-link:hover .sr-menu-link-arrow,
+.sr-menu-link--has-sub:hover .sr-menu-link-chevron {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* chevron ruotato quando sub è aperto */
+.sr-menu-link-chevron.sr-rotated {
+  transform: rotate(180deg);
+}
+
+/* sotto-menu progetti */
+.sr-menu-sub {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.28s ease;
+  padding-left: 32px;
+}
+.sr-menu-sub.sr-open {
+  max-height: 300px;
+}
+
+.sr-menu-sub-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  text-decoration: none;
+}
+.sr-menu-sub-item:last-child {
+  border-bottom: none;
+}
+.sr-menu-sub-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.sr-menu-sub-name {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.45);
+  transition: color 0.15s;
+}
+.sr-menu-sub-item:hover .sr-menu-sub-name {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* slogan + link legali in fondo */
+.sr-menu-bottom {
+  padding: 24px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  flex-shrink: 0;
+}
+
+.sr-menu-slogan {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  margin-bottom: 16px;
+}
+.sr-menu-slogan span {
+  font-size: 17px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.3);
+  letter-spacing: -0.3px;
+  line-height: 1.5;
+}
+.sr-menu-slogan-accent {
+  color: $warning !important;
+}
+
+.sr-menu-bottom-links {
+  display: flex;
+  gap: 16px;
+}
+.sr-menu-bottom-link {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.2);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.sr-menu-bottom-link:hover {
+  color: rgba(255, 255, 255, 0.5);
+}

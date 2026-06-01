@@ -47,7 +47,10 @@ html, body {
 }
 
 main {
-  margin-top: 70px;
+  margin-top: 40px;
+  @media (min-width: 768px) {
+    margin-top: 70px;
+  }
 }
 
 .box-shadow {

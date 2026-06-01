@@ -1,4 +1,4 @@
-<?php include 'config/database.php'; ?>
+<?php include '../config/database.php'; ?>
 
 
 <!DOCTYPE html>
@@ -10,14 +10,14 @@ $title = "Progetti | Sottoradice, la matematica fatta da noi.";
 $desc = "Progetti interattivi e guide realizzati dagli studenti dell'IIS Benedetto Radice di Bronte. Per capire davvero la matematica.";
 $ogImage = $dominio . "assets/images/og-home.jpg";
 $keywords = "Sottoradice, Bronte, matematica, progetti interattivi, wizard, giochi matematici";
-include_once 'partials/head.php';
+include_once '../partials/head.php';
 
 ?>
 
 <body>
 
 
-<?php include 'partials/navbar.php'; ?>
+<?php include '../partials/navbar.php'; ?>
 
 <main class="">
     <header class="bg-waves-purple">
@@ -46,15 +46,15 @@ include_once 'partials/head.php';
     </header>
 
     <section class="container my-5">
-        <?php include 'partials/home/progetti.php'; ?>
+        <?php include '../partials/home/progetti.php'; ?>
     </section>
 </main>
 
 
 
-<?php include 'partials/footer.php'; ?>
+<?php include '../partials/footer.php'; ?>
 
-<?php include "partials/scripts.php" ?>
+<?php include "../partials/scripts.php" ?>
 
 
 </body>

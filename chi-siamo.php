@@ -39,7 +39,7 @@ include_once 'partials/head.php';
                         tutti.</h2>
                 </div>
                 <figure class="col-12 col-md-6">
-                    <img src="assets/images/idea.svg"
+                    <img src="<?php echo $dominio ?>assets/images/idea.svg"
                          class="h-100 w-100 object-cover"
                          alt="Sottoradice, la matematica fatta da noi.">
                 </figure>
