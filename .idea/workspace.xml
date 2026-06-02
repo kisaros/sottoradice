@@ -4,10 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9803a0f7-dbde-4a13-a4c7-4cd875e27d4b" name="Changes" comment="chi siamo mobile">
+    <list default="true" id="9803a0f7-dbde-4a13-a4c7-4cd875e27d4b" name="Changes" comment="pag 404">
+      <change afterPath="$PROJECT_DIR$/assets/scss/pages/_under-construction.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/not_found.php" beforeDir="false" afterPath="$PROJECT_DIR$/not_found.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/progetti.php" beforeDir="false" afterPath="$PROJECT_DIR$/progetti.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/partials/progetti/scomporre-per-comprendere/gallery.php" beforeDir="false" afterPath="$PROJECT_DIR$/partials/progetti/scomporre-per-comprendere/gallery.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/progetti/pacman-3d.php" beforeDir="false" afterPath="$PROJECT_DIR$/progetti/pacman-3d.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/progetti/scomporre-per-comprendere.php" beforeDir="false" afterPath="$PROJECT_DIR$/progetti/scomporre-per-comprendere.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/progetti/scuola-pitagorica.php" beforeDir="false" afterPath="$PROJECT_DIR$/progetti/scuola-pitagorica.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/progetti/super-mario.php" beforeDir="false" afterPath="$PROJECT_DIR$/progetti/super-mario.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/progetti/tombola-matematica.php" beforeDir="false" afterPath="$PROJECT_DIR$/progetti/tombola-matematica.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +130,7 @@
       <workItem from="1779689692789" duration="8828000" />
       <workItem from="1779866412740" duration="3199000" />
       <workItem from="1779896295044" duration="23225000" />
-      <workItem from="1780128014808" duration="32969000" />
+      <workItem from="1780128014808" duration="38538000" />
     </task>
     <task id="LOCAL-00001" summary="php 8.3.30 sostituzione strftime">
       <option name="closed" value="true" />
@@ -316,7 +324,15 @@
       <option name="project" value="LOCAL" />
       <updated>1780348850801</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="pag 404">
+      <option name="closed" value="true" />
+      <created>1780349455869</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1780349455869</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -356,7 +372,8 @@
     <MESSAGE value="vari" />
     <MESSAGE value="home mobile" />
     <MESSAGE value="chi siamo mobile" />
-    <option name="LAST_COMMIT_MESSAGE" value="chi siamo mobile" />
+    <MESSAGE value="pag 404" />
+    <option name="LAST_COMMIT_MESSAGE" value="pag 404" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

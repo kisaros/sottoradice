@@ -19,7 +19,6 @@ include_once '../partials/head.php';
 <?php include '../partials/navbar.php'; ?>
 
 <main>
-
     <header class="">
         <div class="container pt-5">
             <div class="hero mb-4">
@@ -40,7 +39,7 @@ include_once '../partials/head.php';
 
             <div class="hero bg-waves-success mb-5">
                 <figure class="project-image">
-                    <img src="../assets/images/sottoradice_scomporre_per_comprendere.png"
+                    <img src="<?php echo $dominio ?>assets/images/sottoradice_scomporre_per_comprendere.png"
                          class="h-100 w-100 object-contain object-center"
                          alt="Sottoradice, la matematica fatta da noi.">
                 </figure>
@@ -86,7 +85,7 @@ include_once '../partials/head.php';
 
     <section class="container mb-5">
         <h2 class="text-left mb-0 pb-3"><span class="text-teal">Risorse</span> e materiali</h2>
-        <?php include '../partials/progetti/scomporre-per-comprendere/risorse.php'; ?>
+        <?php include '../partials/progetti/scomporre-per-comprendere/risor se.php'; ?>
     </section>
 
 

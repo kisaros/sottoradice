@@ -7523,4 +7523,16 @@ quote {
     background-color: rgba(158, 158, 158, 0.25);
     border-radius: 0.3rem !important; } }
 
+.under-construction {
+  min-height: calc(100vh - 100px); }
+  .under-construction header {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .under-construction figure {
+    height: auto; }
+    @media (min-width: 768px) {
+      .under-construction figure {
+        height: 60vh; } }
+
 /*# sourceMappingURL=style.css.map */
