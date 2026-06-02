@@ -64,7 +64,7 @@
             </div>
         </div>
         <picture class="w-md-50 bg-success-25">
-            <img class="img object-cover" style="height: 230px;"
+            <img class="img object-cover" style="height: 267px;"
                  src="<?php echo $dominio ?>assets/images/sottoradice_scomporre_per_comprendere.png"
                  alt="Scomporre per comprendere | Sottoradice">
         </picture>

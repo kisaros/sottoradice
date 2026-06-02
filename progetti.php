@@ -27,11 +27,11 @@ include_once 'partials/head.php';
                     <h6 class="text-uppercase text-left mx-auto">
                         Progetti
                     </h6>
-                    <h1 class="serif font-weight-700 text-center text-md-left px-4 px-md-0">
+                    <h1 class="serif font-weight-700 text-left px-0">
                         <span class="text-pink">Cosa abbiamo fatto</span><br>
                         <span class="">e cosa stiamo facendo.</span>
                     </h1>
-                    <h2 class="serif font-weight-300 text-black-80 text-center text-md-left pb-4 px-4 px-md-0 mb-0">
+                    <h2 class="serif font-weight-300 text-black-80 text-left pb-4 px-0 mb-0">
                         Progetti interattivi, ricerche, strumenti e giochi matematici realizzati dalla classe.
                         In crescita ogni anno.</h2>
                 </div>

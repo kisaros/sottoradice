@@ -103,6 +103,10 @@
         </div>
 
         <div class="sr-menu-sub" id="srMenuSub">
+            <a href="<?php echo $dominio ?>progetti.php" class="sr-menu-sub-item" title="Tutti i progetti">
+                <span class="sr-menu-sub-dot bg-danger"></span>
+                <span class="sr-menu-sub-name">Tutti i progetti</span>
+            </a>
             <a href="<?php echo $dominio ?>progetti/scomporre-per-comprendere.php" class="sr-menu-sub-item" title="Scomporre per comprendere">
                 <span class="sr-menu-sub-dot bg-primary"></span>
                 <span class="sr-menu-sub-name">Scomporre per comprendere</span>

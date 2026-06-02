@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9803a0f7-dbde-4a13-a4c7-4cd875e27d4b" name="Changes" comment="pag under construction">
-      <change afterPath="$PROJECT_DIR$/partials/progetti/progetti.php" afterDir="false" />
+    <list default="true" id="9803a0f7-dbde-4a13-a4c7-4cd875e27d4b" name="Changes" comment="index progetti">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/pages/_progetti.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/pages/_progetti.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/partials/navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/partials/navbar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/partials/progetti/progetti.php" beforeDir="false" afterPath="$PROJECT_DIR$/partials/progetti/progetti.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/progetti.php" beforeDir="false" afterPath="$PROJECT_DIR$/progetti.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/progetti/scomporre-per-comprendere.php" beforeDir="false" afterPath="$PROJECT_DIR$/progetti/scomporre-per-comprendere.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +124,7 @@
       <workItem from="1779689692789" duration="8828000" />
       <workItem from="1779866412740" duration="3199000" />
       <workItem from="1779896295044" duration="23225000" />
-      <workItem from="1780128014808" duration="41164000" />
+      <workItem from="1780128014808" duration="43449000" />
     </task>
     <task id="LOCAL-00001" summary="php 8.3.30 sostituzione strftime">
       <option name="closed" value="true" />
@@ -336,7 +334,15 @@
       <option name="project" value="LOCAL" />
       <updated>1780393865698</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="index progetti">
+      <option name="closed" value="true" />
+      <created>1780397276871</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1780397276871</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -378,7 +384,8 @@
     <MESSAGE value="chi siamo mobile" />
     <MESSAGE value="pag 404" />
     <MESSAGE value="pag under construction" />
-    <option name="LAST_COMMIT_MESSAGE" value="pag under construction" />
+    <MESSAGE value="index progetti" />
+    <option name="LAST_COMMIT_MESSAGE" value="index progetti" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
