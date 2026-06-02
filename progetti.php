@@ -28,12 +28,12 @@ include_once 'partials/head.php';
                         Progetti
                     </h6>
                     <h1 class="serif font-weight-700 text-center text-md-left px-4 px-md-0">
-                        <span class="text-pink">18 studenti,</span><br>
-                        <span class="">Un sacco di idee.</span>
+                        <span class="text-pink">Cosa abbiamo fatto</span><br>
+                        <span class="">e cosa stiamo facendo.</span>
                     </h1>
-                    <h2 class="serif font-weight-300 text-black-80 text-center text-md-left pb-4 px-4 px-md-0 mb-0">Siamo la classe
-                        2A dell'indirizzo Informatica e Telecomunicazioni dell'IIS Benedetto Radice di Bronte. Questi progetti
-                        nascono nelle ore di matematica, ma vivono qui — per tutti.</h2>
+                    <h2 class="serif font-weight-300 text-black-80 text-center text-md-left pb-4 px-4 px-md-0 mb-0">
+                        Progetti interattivi, ricerche, strumenti e giochi matematici realizzati dalla classe.
+                        In crescita ogni anno.</h2>
                 </div>
                 <figure class="col-12 col-md-6">
                     <img src="<?php echo $dominio ?>assets/images/cloud_library.svg"
@@ -46,10 +46,9 @@ include_once 'partials/head.php';
     </header>
 
     <section class="container progetti my-5">
-        <?php include 'partials/home/progetti.php'; ?>
+        <?php include 'partials/progetti/progetti.php'; ?>
     </section>
 </main>
-
 
 
 <?php include 'partials/footer.php'; ?>

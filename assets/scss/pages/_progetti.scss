@@ -2,6 +2,18 @@
   height: 300px;
 }
 
+.progetti {
+  .team-foto {
+    .profile-img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 2px solid $gray-300;
+      background-color: $gray-100;
+    }
+  }
+}
+
 .appunti-pdf {
   a {
     border-bottom: 1px solid $border-color;
@@ -28,8 +40,6 @@
     }
   }
 }
-
-
 
 .insta-gallery {
   display: grid;

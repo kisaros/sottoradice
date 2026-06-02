@@ -7086,6 +7086,13 @@ quote {
 .project-image {
   height: 300px; }
 
+.progetti .team-foto .profile-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #dee2e6;
+  background-color: #f8f9fa; }
+
 .appunti-pdf a {
   border-bottom: 1px solid rgba(0, 0, 0, 0.17);
   color: #212121; }

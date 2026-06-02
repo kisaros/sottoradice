@@ -85,7 +85,7 @@ include_once '../partials/head.php';
 
     <section class="container mb-5">
         <h2 class="text-left mb-0 pb-3"><span class="text-teal">Risorse</span> e materiali</h2>
-        <?php include '../partials/progetti/scomporre-per-comprendere/risor se.php'; ?>
+        <?php include '../partials/progetti/scomporre-per-comprendere/risorse.php'; ?>
     </section>
 
 
