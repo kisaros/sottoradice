@@ -15,18 +15,23 @@
 
 
             <div class="list-footer py-4 py-lg-0">
-                <a href="<?php echo $dominio ?>home.php" title="Sottoradice - Home" class="text-lg-right">
+                <a href="<?php echo $dominioHome ?>"
+                   title="Sottoradice - Home"
+                   class="text-lg-right">
                     Home
                 </a>
 
-                <a href="<?php echo $dominio ?>chi-siamo.php" title="Sottoradice - Chi siamo" class="text-lg-right">
+                <a href="<?php echo $dominio ?>chi-siamo/"
+                   title="Sottoradice - Chi siamo"
+                   class="text-lg-right">
                     Chi siamo
                 </a>
 
-                <a href="<?php echo $dominio ?>progetti.php" title="Sottoradice - Progetti" class="text-lg-right">
+                <a href="<?php echo $dominio ?>progetti/"
+                   title="Sottoradice - Progetti"
+                   class="text-lg-right">
                     Progetti
                 </a>
-
             </div>
         </div>
 

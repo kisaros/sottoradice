@@ -7,7 +7,7 @@
 <?php
 
 $title = "Chi siamo | Sottoradice, la matematica fatta da noi.";
-$desc = "Progetti interattivi e guide realizzati dagli studenti dell'IIS Benedetto Radice di Bronte. Per capire davvero la matematica.";
+$desc = "Un progetto che nasce con la classe 2A IT nell'a.s. 2025/2026 e cresce con ogni anno scolastico. Matematica fatta dagli studenti, per tutti.";
 $ogImage = $dominio . "assets/images/idea.svg";
 $keywords = "Sottoradice, Bronte, matematica, progetti interattivi, wizard, giochi matematici";
 include_once 'partials/head.php';
@@ -28,7 +28,7 @@ include_once 'partials/head.php';
                         Chi siamo
                     </h6>
                     <h1 class="serif font-weight-700 text-center text-md-left px-4 px-md-0">
-                        <span class="text-success">18 studenti,</span><br>
+                        <span class="text-success">17 studenti,</span><br>
                         <span class="">Un sacco di idee.</span>
                     </h1>
                     <h2 class="serif font-weight-300 text-secondary text-center text-md-left pb-4 px-4 px-md-0">Un

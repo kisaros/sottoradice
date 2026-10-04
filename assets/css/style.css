@@ -5721,6 +5721,27 @@ iframe {
     border-radius: 52% 48% 44% 56% / 55% 47% 53% 45%;
     transform: translateX(-39%) rotate(2deg); }
 
+.bg-waves-secondary {
+  position: relative;
+  overflow: hidden;
+  background: #f8f9fa;
+  isolation: isolate; }
+  .bg-waves-secondary::before, .bg-waves-secondary::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 140%;
+    height: 420px;
+    border-radius: 43% 57% 55% 45% / 48% 42% 58% 52%;
+    transform: translateX(-50%) rotate(-2deg);
+    z-index: -1;
+    pointer-events: none; }
+  .bg-waves-secondary::after {
+    bottom: -291px;
+    background: #efefef;
+    border-radius: 52% 48% 44% 56% / 55% 47% 53% 45%;
+    transform: translateX(-39%) rotate(2deg); }
+
 .bg-waves-success {
   position: relative;
   overflow: hidden;

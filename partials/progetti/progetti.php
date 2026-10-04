@@ -22,214 +22,459 @@
 
 
     <!-- in evidenza -->
-    <a class="border box-link col-12 d-flex flex-column flex-md-row mb-4 px-0 rounded-lg"
-       href="<?php echo $dominio ?>progetti/scomporre-per-comprendere.php"
-       title="Scomporre per comprendere | Sottoradice">
-        <div class="w-md-50 p-4">
-            <small class="text-success font-weight-500 d-flex align-items-center justify-content-start mb-2">
-                <span class="rounded-xsmall bg-success mr-3"></span>
-                <span class="">Interattivo</span>
-            </small>
-            <h3>Scomporre per comprendere</h3>
-            <p class="text-secondary">Wizard guidato alla scomposizione dei polinomi. Con appunti PDF della
-                classe inclusi.</p>
-            <div class="d-flex align-items-center justify-content-between mt-4">
-                <div>
-                    <small class="bg-success-25 text-success px-2 rounded-pill mb-0">Wizard</small>
-                    <small class="bg-success-25 text-success px-2 rounded-pill mb-0">App</small>
-                    <small class="bg-success-25 text-success px-2 rounded-pill mb-0">Pdf</small>
-                </div>
-                <small class="text-secondary">a.s. 2025/26</small>
-            </div>
+    <?php
+    $project = $projects[0] ?? null;
 
-            <div class="d-flex align-items-center justify-content-between mt-3">
-                <div class="team-foto d-flex align-items-center justify-content-start">
-                    <img class="profile-img"
-                         src="<?php echo $dominio ?>assets/images/1.jpg"
-                         alt="Gabriele G.">
-                    <img class="profile-img"
-                         src="<?php echo $dominio ?>assets/images/2.jpg"
-                         alt="Gioele M.">
-                    <img class="profile-img"
-                         src="<?php echo $dominio ?>assets/images/3.jpg"
-                         alt="Gabriele T.">
-                    <div class="link-plus profile-img bg-white-50 rounded-circle d-flex align-items-center justify-content-center">
-                        <small class="text-secondary font-weight-300">+14</small>
+    if ($project):
+
+        $id = $project['id'];
+
+        $tags     = $projectTags[$id] ?? [];
+        $students = $projectStudents[$id] ?? [];
+        $classes  = $projectClasses[$id] ?? [];
+        $teachers = $projectTeachers[$id] ?? [];
+
+        $color = $project['category_color'] ?: 'primary';
+
+        $shownStudents = array_slice($students, 0, 3);
+        $remainingStudents = max(count($students) - count($shownStudents), 0);
+        ?>
+
+        <a class="border box-link col-12 d-flex flex-column flex-md-row mb-4 px-0 rounded-lg"
+           href="<?= $dominio ?>progetti/<?= htmlspecialchars($project['slug']) ?>"
+           title="<?= htmlspecialchars($project['title']) ?> | Sottoradice">
+
+            <div class="w-md-50 p-4">
+
+                <small class="text-<?= htmlspecialchars($color) ?> font-weight-500 d-flex align-items-center justify-content-start mb-2">
+                    <span class="rounded-xsmall bg-<?= htmlspecialchars($color) ?> mr-3"></span>
+                    <span><?= htmlspecialchars($project['category_name']) ?></span>
+                </small>
+
+                <h3><?= htmlspecialchars($project['title']) ?></h3>
+
+                <p class="text-secondary">
+                    <?= htmlspecialchars($project['subtitle']) ?>
+                </p>
+
+                <div class="d-flex align-items-center justify-content-between mt-4">
+
+                    <div>
+                        <?php foreach ($tags as $tag): ?>
+                            <small class="bg-<?= htmlspecialchars($color) ?>-25
+                                  text-<?= htmlspecialchars($color) ?>
+                                  px-2 rounded-pill mb-0 mr-1">
+                                <?= htmlspecialchars($tag['label']) ?>
+                            </small>
+                        <?php endforeach; ?>
                     </div>
-                    <small class="text-secondary mb-0 ml-2">Classe 2A IT</small>
+
+                    <?php if (!empty($project['school_year'])): ?>
+                        <small class="text-secondary">
+                            a.s. <?= htmlspecialchars($project['school_year']) ?>
+                        </small>
+                    <?php endif; ?>
 
                 </div>
 
-                <span class="icon icon-arrow-right"></span>
+                <div class="d-flex align-items-center justify-content-between mt-3">
+
+                    <?php if (!empty($students)): ?>
+
+                        <!-- STUDENTI -->
+                        <div class="team-foto d-flex align-items-center justify-content-start">
+
+                            <?php foreach ($shownStudents as $student): ?>
+
+                                <img class="profile-img"
+                                     src="<?= $dominio . htmlspecialchars($student['image']) ?>"
+                                     alt="<?= htmlspecialchars(
+                                             $student['first_name'] . ' ' . $student['last_name']
+                                     ) ?>">
+
+                            <?php endforeach; ?>
+
+
+                            <?php if ($remainingStudents > 0): ?>
+
+                                <div class="link-plus profile-img bg-white-50 rounded-circle d-flex align-items-center justify-content-center">
+                                    <small class="text-secondary font-weight-300">
+                                        +<?= $remainingStudents ?>
+                                    </small>
+                                </div>
+
+                            <?php endif; ?>
+
+
+                            <?php if (!empty($classes)): ?>
+
+                                <small class="text-secondary mb-0 ml-2">
+
+                                    <?php
+                                    $classLabels = [];
+
+                                    foreach ($classes as $class) {
+                                        $classLabels[] = $class['name'];
+                                    }
+
+                                    echo htmlspecialchars(implode(' · ', $classLabels));
+                                    ?>
+
+                                </small>
+
+                            <?php endif; ?>
+
+                        </div>
+
+
+                    <?php elseif (!empty($teachers)): ?>
+
+                        <!-- DOCENTI -->
+                        <div class="team-foto d-flex align-items-center justify-content-start">
+
+                            <?php foreach ($teachers as $teacher): ?>
+
+                                <?php if (!empty($teacher['image'])): ?>
+                                    <img class="profile-img"
+                                         src="<?= $dominio . htmlspecialchars($teacher['image']) ?>"
+                                         alt="<?= htmlspecialchars(
+                                                 trim(
+                                                         ($teacher['title'] ?? '') . ' ' .
+                                                         ($teacher['first_name'] ?? '') . ' ' .
+                                                         ($teacher['last_name'] ?? '')
+                                                 )
+                                         ) ?>">
+                                <?php endif; ?>
+
+                            <?php endforeach; ?>
+
+
+                            <small class="text-secondary mb-0 ml-2">
+
+                                <?php
+                                $teacherNames = [];
+
+                                foreach ($teachers as $teacher) {
+
+                                    $teacherNames[] = trim(
+                                            ($teacher['title'] ?? '') . ' ' .
+                                            ($teacher['first_name'] ?? '') . ' ' .
+                                            ($teacher['last_name'] ?? '')
+                                    );
+
+                                }
+
+                                echo htmlspecialchars(implode(' · ', $teacherNames));
+                                ?>
+
+                            </small>
+
+                        </div>
+
+                    <?php else: ?>
+
+                        <!-- Nessun autore da mostrare -->
+                        <div></div>
+
+                    <?php endif; ?>
+
+
+                    <span class="icon icon-arrow-right"></span>
+
+                </div>
+
             </div>
-        </div>
-        <picture class="w-md-50 bg-success-25">
-            <img class="img object-cover" style="height: 267px;"
-                 src="<?php echo $dominio ?>assets/images/sottoradice_scomporre_per_comprendere.png"
-                 alt="Scomporre per comprendere | Sottoradice">
-        </picture>
-    </a>
+
+
+            <?php if (
+                    !empty($project['card_image']) &&
+                    !empty($project['show_card_image'])
+            ): ?>
+
+                <picture class="w-md-50 bg-<?= htmlspecialchars($color) ?>-25">
+
+                    <img class="img object-cover"
+                         style="height: 267px;"
+                         src="<?= $dominio . htmlspecialchars($project['card_image']) ?>"
+                         alt="<?= htmlspecialchars($project['title']) ?> | Sottoradice">
+
+                </picture>
+
+            <?php endif; ?>
+
+        </a>
+
+    <?php endif; ?>
 
     <!-- altri progetti -->
-    <a href="<?php echo $dominio ?>progetti/tombola-matematica.php" title="Tombola matematica | Sottoradice"
-       class="box-link col-12 col-md-6 rounded-lg border p-4 mb-4 mb-md-0 mr-md-4">
-        <small class="text-warning font-weight-500 d-flex align-items-center justify-content-start mb-2">
-            <span class="rounded-xsmall bg-warning mr-3"></span>
-            <span class="">Gioco</span>
-        </small>
-        <h3>Tombola matematica</h3>
-        <p class="text-secondary">Il classico gioco reinventato: ogni numero nasconde un quesito. Estrai,
-            risolvi, segna. Vince chi fa tombola! Modalità classica e sfida.</p>
+
+    <?php
+
+    $otherProjects = array_slice($projects, 1);
+
+    $currentGroup = 'class_experience';
+    $cardIndex = 0;
+
+    foreach ($otherProjects as $project):
+
+        $id = $project['id'];
+
+        $tags     = $projectTags[$id] ?? [];
+        $students = $projectStudents[$id] ?? [];
+        $classes  = $projectClasses[$id] ?? [];
+        $teachers = $projectTeachers[$id] ?? [];
+
+        $color = $project['category_color'] ?: 'primary';
+
+        $shownStudents = array_slice($students, 0, 3);
+        $remainingStudents = max(count($students) - count($shownStudents), 0);
+
+        $hasImage =
+                !empty($project['card_image']) &&
+                !empty($project['show_card_image']);
 
 
-        <div class="d-flex align-items-center justify-content-between mt-4">
-            <div>
-                <small class="bg-warning-25 text-warning-plus px-2 rounded-pill mb-0">Giocabile online</small>
-                <small class="bg-warning-25 text-warning-plus px-2 rounded-pill mb-0">App</small>
-            </div>
-            <small class="text-secondary">a.s. 2025/26</small>
-        </div>
+        /*
+         * Cambio gruppo:
+         * quando passiamo dalle esperienze di classe
+         * alle proposte docente mostriamo il separatore.
+         */
+        if ($project['project_group'] !== $currentGroup):
 
-        <div class="d-flex align-items-center justify-content-between mt-3">
-            <div class="team-foto d-flex align-items-center justify-content-start">
-                <img class="profile-img"
-                     src="<?php echo $dominio ?>assets/images/ol.jpg"
-                     alt="Prof.ssa Ornella Leanza">
-                <small class="text-secondary mb-0 ml-2">Prof.ssa Ornella Leanza</small>
+            $currentGroup = $project['project_group'];
+            $cardIndex = 0;
 
-            </div>
+            if ($currentGroup === 'teacher_proposal'):
+                ?>
 
-            <span class="icon icon-arrow-right"></span>
-        </div>
-    </a>
+                <div class="d-flex justify-content-center w-100 mb-4 mt-5 position-relative">
+                    <hr class="border-top-dark position-center-center w-100 z-index-0 m-0">
 
-
-    <a href="<?php echo $dominio ?>progetti/scuola-pitagorica.php" title="La scuola pitagorica e √2 | Sottoradice"
-       class="box-link col-12 col-md-6 rounded-lg border p-4 mb-0">
-        <small class="text-pink font-weight-500 d-flex align-items-center justify-content-start mb-2">
-            <span class="rounded-xsmall bg-pink mr-3"></span>
-            <span class="">Ricerca</span>
-        </small>
-        <h3>La scuola pitagorica e √2</h3>
-        <p class="text-secondary">
-            Ricerca sulla nascita di √2 e la scuola pitagorica. I migliori PowerPoint realizzati dalla classe.
-        </p>
-        <div class="d-flex align-items-center justify-content-between mt-4">
-            <div>
-                <small class="bg-pink-25 text-pink px-2 rounded-pill mb-0">Presentazioni PPT</small>
-                <small class="bg-pink-25 text-pink px-2 rounded-pill mb-0">PPT</small>
-            </div>
-            <small class="text-secondary">a.s. 2024/25</small>
-        </div>
-
-        <div class="d-flex align-items-center justify-content-between mt-3">
-            <div class="team-foto d-flex align-items-center justify-content-start">
-                <img class="profile-img"
-                     src="<?php echo $dominio ?>assets/images/4.jpg"
-                     alt="Samuele I.">
-                <img class="profile-img"
-                     src="<?php echo $dominio ?>assets/images/6.jpg"
-                     alt="Leonardo C.">
-                <img class="profile-img"
-                     src="<?php echo $dominio ?>assets/images/12.jpg"
-                     alt="Andrea T.">
-                <div class="link-plus profile-img bg-white-50 rounded-circle d-flex align-items-center justify-content-center">
-                    <small class="text-secondary font-weight-300">+14</small>
-                </div>
-                <small class="text-secondary mb-0 ml-2">Classe 1A IT</small>
-
-            </div>
-
-            <span class="icon icon-arrow-right"></span>
-        </div>
-    </a>
-
-
-    <!-- proposta docente -->
-
-    <div class="d-flex justify-content-center w-100 mb-4 mt-5 position-relative">
-        <hr class="border-top-dark position-center-center w-100 z-index-0 m-0">
-        <div class="text-uppercase bg-white px-4 d-flex justify-content-center align-items-center position-relative mb-0"
-             style="height: 30px; z-index:1;">
-            Proposta docente
-        </div>
-    </div>
-
-    <a href="<?php echo $dominio ?>progetti/super-mario.php" title="Super Mario e i vettori | Sottoradice"
-       class="box-link col-12 col-md-6 rounded-lg border mb-4 mb-md-0 mr-md-4 px-0">
-
-        <picture class="w-md-50 bg-purple-25">
-            <img class="img object-cover" style="height: 230px;"
-                 src="<?php echo $dominio ?>assets/images/super_mario.jpg" alt="Super Mario e i vettori | Sottoradice">
-        </picture>
-
-        <div class="p-4">
-            <small class="text-purple font-weight-500 d-flex align-items-center justify-content-start mb-2">
-                <span class="rounded-xsmall bg-purple mr-3"></span>
-                <span class="">GeoGebra Classic</span>
-            </small>
-            <h3>Super Mario e i vettori</h3>
-            <p class="text-secondary">Geometria piana attraverso il gioco più amato. Creato dalla prof.ssa di matematica
-                come strumento didattico.</p>
-            <div class="d-flex align-items-center justify-content-between mt-4">
-                <div>
-                    <small class="bg-purple-25 text-purple px-2 rounded-pill mb-0">Proposta docente</small>
-                    <small class="bg-purple-25 text-purple px-2 rounded-pill mb-0">GGB</small>
-                </div>
-                <small class="text-secondary">a.s. 2024/25</small>
-            </div>
-
-            <div class="d-flex align-items-center justify-content-between mt-3">
-                <div class="team-foto d-flex align-items-center justify-content-start">
-                    <img class="profile-img"
-                         src="<?php echo $dominio ?>assets/images/ol.jpg"
-                         alt="Prof.ssa Ornella Leanza">
-                    <small class="text-secondary mb-0 ml-2">Prof.ssa Ornella Leanza</small>
-
+                    <div class="text-uppercase bg-white px-4 d-flex justify-content-center align-items-center position-relative mb-0"
+                         style="height: 30px; z-index:1;">
+                        Proposta docente
+                    </div>
                 </div>
 
-                <span class="icon icon-arrow-right"></span>
-            </div>
-        </div>
-    </a>
+            <?php
+            endif;
+
+        endif;
+        ?>
 
 
-    <a href="<?php echo $dominio ?>progetti/pacman-3d.php" title="Pac-Man 3D | Sottoradice"
-       class="box-link col-12 col-md-6 rounded-lg border mb-0 px-0">
-        <picture class="w-md-50 bg-purple-25">
-            <img class="img object-cover" style="height: 230px;"
-                 src="<?php echo $dominio ?>assets/images/pacman.png" alt="Pac-Man 3D | Sottoradice">
-        </picture>
+        <a href="<?= $dominio ?>progetti/<?= htmlspecialchars($project['slug']) ?>"
+           title="<?= htmlspecialchars($project['title']) ?> | Sottoradice"
+           class="box-link col-12 col-md-6 rounded-lg border
+          <?= $hasImage ? 'px-0' : 'p-4' ?>
+          mb-4
+          <?= $cardIndex % 2 === 0 ? 'mr-md-4' : '' ?>">
 
-        <div class="p-4">
-            <small class="text-purple font-weight-500 d-flex align-items-center justify-content-start mb-2">
-                <span class="rounded-xsmall bg-purple mr-3"></span>
-                <span class="">GeoGebra 3D</span>
-            </small>
-            <h3>Pac-Man 3D</h3>
-            <p class="text-secondary">
-                La sfera nello spazio cartesiano. Esercitazione interattiva creata dalla prof.ssa di matematica.
-            </p>
-            <div class="d-flex align-items-center justify-content-between mt-4">
-                <div>
-                    <small class="bg-purple-25 text-purple px-2 rounded-pill mb-0">Proposta docente</small>
-                    <small class="bg-purple-25 text-purple px-2 rounded-pill mb-0">3D</small>
-                </div>
-                <small class="text-secondary">a.s. 2024/25</small>
-            </div>
+            <?php if ($hasImage): ?>
 
-            <div class="d-flex align-items-center justify-content-between mt-3">
-                <div class="team-foto d-flex align-items-center justify-content-start">
-                    <img class="profile-img"
-                         src="<?php echo $dominio ?>assets/images/ol.jpg"
-                         alt="Prof.ssa Ornella Leanza">
-                    <small class="text-secondary mb-0 ml-2">Prof.ssa Ornella Leanza</small>
+                <picture class="w-md-50 bg-<?= htmlspecialchars($color) ?>-25">
+
+                    <img class="img object-cover"
+                         style="height: 230px;"
+                         src="<?= $dominio . htmlspecialchars($project['card_image']) ?>"
+                         alt="<?= htmlspecialchars($project['title']) ?> | Sottoradice">
+
+                </picture>
+
+            <?php endif; ?>
+
+
+            <?php if ($hasImage): ?>
+            <div class="p-4">
+                <?php endif; ?>
+
+
+                <small class="text-<?= htmlspecialchars($color) ?>
+                      font-weight-500
+                      d-flex align-items-center justify-content-start mb-2">
+
+            <span class="rounded-xsmall
+                         bg-<?= htmlspecialchars($color) ?>
+                         mr-3"></span>
+
+                    <span>
+                <?= htmlspecialchars($project['category_name']) ?>
+            </span>
+
+                </small>
+
+
+                <h3>
+                    <?= htmlspecialchars($project['title']) ?>
+                </h3>
+
+
+                <p class="text-secondary">
+                    <?= htmlspecialchars($project['subtitle']) ?>
+                </p>
+
+
+                <div class="d-flex align-items-center justify-content-between mt-4">
+
+                    <div>
+
+                        <?php foreach ($tags as $tag): ?>
+
+                            <small class="bg-<?= htmlspecialchars($color) ?>-25
+                                  text-<?= htmlspecialchars($color) ?>
+                                  px-2 rounded-pill mb-0 mr-1">
+
+                                <?= htmlspecialchars($tag['label']) ?>
+
+                            </small>
+
+                        <?php endforeach; ?>
+
+                    </div>
+
+
+                    <?php if (!empty($project['school_year'])): ?>
+
+                        <small class="text-secondary">
+                            a.s. <?= htmlspecialchars($project['school_year']) ?>
+                        </small>
+
+                    <?php endif; ?>
 
                 </div>
 
-                <span class="icon icon-arrow-right"></span>
+
+                <div class="d-flex align-items-center justify-content-between mt-3">
+
+
+                    <?php if (!empty($students)): ?>
+
+                        <!-- STUDENTI -->
+
+                        <div class="team-foto d-flex align-items-center justify-content-start">
+
+                            <?php foreach ($shownStudents as $student): ?>
+
+                                <img class="profile-img"
+                                     src="<?= $dominio . htmlspecialchars($student['image']) ?>"
+                                     alt="<?= htmlspecialchars(
+                                             $student['first_name'] . ' ' . $student['last_name']
+                                     ) ?>">
+
+                            <?php endforeach; ?>
+
+
+                            <?php if ($remainingStudents > 0): ?>
+
+                                <div class="link-plus profile-img bg-white-50 rounded-circle d-flex align-items-center justify-content-center">
+
+                                    <small class="text-secondary font-weight-300">
+                                        +<?= $remainingStudents ?>
+                                    </small>
+
+                                </div>
+
+                            <?php endif; ?>
+
+
+                            <?php if (!empty($classes)): ?>
+
+                                <small class="text-secondary mb-0 ml-2">
+
+                                    <?php
+
+                                    $classLabels = [];
+
+                                    foreach ($classes as $class) {
+                                        $classLabels[] = $class['name'];
+                                    }
+
+                                    echo htmlspecialchars(
+                                            implode(' · ', $classLabels)
+                                    );
+
+                                    ?>
+
+                                </small>
+
+                            <?php endif; ?>
+
+                        </div>
+
+
+                    <?php elseif (!empty($teachers)): ?>
+
+                        <!-- DOCENTI -->
+
+                        <div class="team-foto d-flex align-items-center justify-content-start">
+
+                            <?php foreach ($teachers as $teacher): ?>
+
+                                <?php if (!empty($teacher['image'])): ?>
+
+                                    <img class="profile-img"
+                                         src="<?= $dominio . htmlspecialchars($teacher['image']) ?>"
+                                         alt="<?= htmlspecialchars(
+                                                 trim(
+                                                         ($teacher['title'] ?? '') . ' ' .
+                                                         ($teacher['first_name'] ?? '') . ' ' .
+                                                         ($teacher['last_name'] ?? '')
+                                                 )
+                                         ) ?>">
+
+                                <?php endif; ?>
+
+                            <?php endforeach; ?>
+
+
+                            <small class="text-secondary mb-0 ml-2">
+
+                                <?php
+
+                                $teacherNames = [];
+
+                                foreach ($teachers as $teacher) {
+
+                                    $teacherNames[] = trim(
+                                            ($teacher['title'] ?? '') . ' ' .
+                                            ($teacher['first_name'] ?? '') . ' ' .
+                                            ($teacher['last_name'] ?? '')
+                                    );
+
+                                }
+
+                                echo htmlspecialchars(
+                                        implode(' · ', $teacherNames)
+                                );
+
+                                ?>
+
+                            </small>
+
+                        </div>
+
+
+                    <?php else: ?>
+
+                        <div></div>
+
+                    <?php endif; ?>
+
+
+                    <span class="icon icon-arrow-right"></span>
+
+                </div>
+
+
+                <?php if ($hasImage): ?>
             </div>
-        </div>
-    </a>
+        <?php endif; ?>
+
+
+        </a>
+
+        <?php $cardIndex++; ?>
+
+    <?php endforeach; ?>
 
 </div>

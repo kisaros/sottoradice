@@ -5,7 +5,7 @@
                 Chi siamo
             </h6>
             <h2 class="text-left pb-2 mb-0">
-                <span class="text-warning">18 studenti,</span><br>
+                <span class="text-warning">17 studenti,</span><br>
                 <span class="text-white">Un sacco di idee.</span>
             </h2>
             <p class="text-white-50 mb-0">
@@ -65,7 +65,8 @@
                      src="<?php echo $dominio ?>assets/images/17.jpg"
                      alt="Mattia P.">
 
-                <a href="chi-siamo.php" title="Chi siamo | Sottoradice"
+                <a href="<?php echo $dominio ?>chi-siamo/"
+                   title="Chi siamo | Sottoradice"
                    class="link-plus profile-img bg-white-50 rounded-circle d-flex align-items-center justify-content-center" style="min-width: 60px">
                     <span class="font-weight-300">+</span>
                 </a>

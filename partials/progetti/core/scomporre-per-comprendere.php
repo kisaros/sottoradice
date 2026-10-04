@@ -44,3 +44,10 @@
         </div>
     </div>
 </section>
+
+
+<!-- Nerdamer -->
+<script src="https://cdn.jsdelivr.net/npm/nerdamer@latest/nerdamer.core.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/nerdamer@latest/Algebra.js"></script>
+
+<script src="<?php echo $dominio ?>assets/js/scompolab.js"></script>

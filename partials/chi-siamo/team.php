@@ -53,39 +53,39 @@
 
     <div class="row-card row mx-n2">
 
-        <div class="card-img col-6 col-md-3 col-lg-2 d-flex flex-column align-items-center justify-content-center border rounded-lg p-3 m-2">
+        <div class="card-img col-6 col-md-3 col-lg-2 d-flex flex-column align-items-center border rounded-lg p-3 m-2">
             <img class="profile-img"
                  src="<?php echo $dominio ?>assets/images/1.jpg"
                  alt="Gabriele G.">
             <p class="font-weight-400 mb-1">Gabriele G.</p>
-            <small class="text-secondary text-center">Maestro del raccoglimento</small>
+            <small class="text-secondary text-center">Specialista delle Differenze di Cubi</small>
         </div>
 
-        <div class="card-img col-6 col-md-3 col-lg-2  d-flex flex-column align-items-center justify-content-center border rounded-lg p-3 m-2">
+        <div class="card-img col-6 col-md-3 col-lg-2  d-flex flex-column align-items-center border rounded-lg p-3 m-2">
             <img class="profile-img"
                  src="<?php echo $dominio ?>assets/images/2.jpg"
                  alt="Gioele M.">
             <p class="font-weight-400 mb-1">Gioele M.</p>
-            <small class="text-secondary text-center">Maestro del raccoglimento</small>
+            <small class="text-secondary text-center">Stratega della Scomposizione</small>
         </div>
 
-        <div class="card-img col-6 col-md-3 col-lg-2  d-flex flex-column align-items-center justify-content-center border rounded-lg p-3 m-2">
+        <div class="card-img col-6 col-md-3 col-lg-2  d-flex flex-column align-items-center border rounded-lg p-3 m-2">
             <img class="profile-img"
                  src="<?php echo $dominio ?>assets/images/3.jpg"
                  alt="Gabriele T.">
             <p class="font-weight-400 mb-1">Gabriele T.</p>
-            <small class="text-secondary text-center">Maestro del raccoglimento</small>
+            <small class="text-secondary text-center">Specialista delle Somme di Cubi</small>
         </div>
 
-        <div class="card-img col-6 col-md-3 col-lg-2  d-flex flex-column align-items-center justify-content-center border rounded-lg p-3 m-2">
+        <div class="card-img col-6 col-md-3 col-lg-2  d-flex flex-column align-items-center border rounded-lg p-3 m-2">
             <img class="profile-img"
                  src="<?php echo $dominio ?>assets/images/4.jpg"
                  alt="Samuele I.">
             <p class="font-weight-400 mb-1">Samuele I.</p>
-            <small class="text-secondary text-center">Maestro del raccoglimento</small>
+            <small class="text-secondary text-center">Maestro Fattorizzatore</small>
         </div>
 
-        <div class="card-img col-6 col-md-3 col-lg-2  d-flex flex-column align-items-center justify-content-center border rounded-lg p-3 m-2">
+        <div class="card-img col-6 col-md-3 col-lg-2  d-flex flex-column align-items-center border rounded-lg p-3 m-2">
             <img class="profile-img"
                  src="<?php echo $dominio ?>assets/images/5.jpg"
                  alt="Vincenzo M.">
@@ -93,100 +93,100 @@
             <small class="text-secondary text-center">Maestro del raccoglimento</small>
         </div>
 
-        <div class="card-img col-6 col-md-3 col-lg-2  d-flex flex-column align-items-center justify-content-center border rounded-lg p-3 m-2">
+        <div class="card-img col-6 col-md-3 col-lg-2  d-flex flex-column align-items-center border rounded-lg p-3 m-2">
             <img class="profile-img"
                  src="<?php echo $dominio ?>assets/images/6.jpg"
                  alt="Leonardo C.">
             <p class="font-weight-400 mb-1">Leonardo C.</p>
-            <small class="text-secondary text-center">Maestro del raccoglimento</small>
+            <small class="text-secondary text-center">Ruffinista</small>
         </div>
 
-        <div class="card-img col-6 col-md-3 col-lg-2  d-flex flex-column align-items-center justify-content-center border rounded-lg p-3 m-2">
+        <div class="card-img col-6 col-md-3 col-lg-2  d-flex flex-column align-items-center border rounded-lg p-3 m-2">
             <img class="profile-img"
                  src="<?php echo $dominio ?>assets/images/7.jpg"
                  alt="Gabriele V.">
             <p class="font-weight-400 mb-1">Gabriele V.</p>
-            <small class="text-secondary text-center">Maestro del raccoglimento</small>
+            <small class="text-secondary text-center">Ingegnere dei Polinomi</small>
         </div>
 
-        <div class="card-img col-6 col-md-3 col-lg-2  d-flex flex-column align-items-center justify-content-center border rounded-lg p-3 m-2">
+        <div class="card-img col-6 col-md-3 col-lg-2  d-flex flex-column align-items-center border rounded-lg p-3 m-2">
             <img class="profile-img"
                  src="<?php echo $dominio ?>assets/images/8.jpg"
                  alt="Anita P.">
             <p class="font-weight-400 mb-1">Anita P.</p>
-            <small class="text-secondary text-center">Maestro del raccoglimento</small>
+            <small class="text-secondary text-center">Analista di Trinomi Speciali</small>
         </div>
 
-        <div class="card-img col-6 col-md-3 col-lg-2  d-flex flex-column align-items-center justify-content-center border rounded-lg p-3 m-2">
+        <div class="card-img col-6 col-md-3 col-lg-2  d-flex flex-column align-items-center border rounded-lg p-3 m-2">
             <img class="profile-img"
                  src="<?php echo $dominio ?>assets/images/9.jpg"
                  alt="Giorgia M.">
             <p class="font-weight-400 mb-1">Giorgia M.</p>
-            <small class="text-secondary text-center">Maestro del raccoglimento</small>
+            <small class="text-secondary text-center">Cercatrice di Zeri</small>
         </div>
 
-        <div class="card-img col-6 col-md-3 col-lg-2  d-flex flex-column align-items-center justify-content-center border rounded-lg p-3 m-2">
+        <div class="card-img col-6 col-md-3 col-lg-2  d-flex flex-column align-items-center border rounded-lg p-3 m-2">
             <img class="profile-img"
                  src="<?php echo $dominio ?>assets/images/10.jpg"
                  alt="Antonio A.">
             <p class="font-weight-400 mb-1">Antonio A.</p>
-            <small class="text-secondary text-center">Maestro del raccoglimento</small>
+            <small class="text-secondary text-center">Esploratore di Fattori</small>
         </div>
 
-        <div class="card-img col-6 col-md-3 col-lg-2  d-flex flex-column align-items-center justify-content-center border rounded-lg p-3 m-2">
+        <div class="card-img col-6 col-md-3 col-lg-2  d-flex flex-column align-items-center border rounded-lg p-3 m-2">
             <img class="profile-img"
                  src="<?php echo $dominio ?>assets/images/11.jpg"
                  alt="Manuel G.">
             <p class="font-weight-400 mb-1">Manuel G.</p>
-            <small class="text-secondary text-center">Maestro del raccoglimento</small>
+            <small class="text-secondary text-center">Esploratore di Cubi Perfetti</small>
         </div>
 
-        <div class="card-img col-6 col-md-3 col-lg-2  d-flex flex-column align-items-center justify-content-center border rounded-lg p-3 m-2">
+        <div class="card-img col-6 col-md-3 col-lg-2  d-flex flex-column align-items-center border rounded-lg p-3 m-2">
             <img class="profile-img"
                  src="<?php echo $dominio ?>assets/images/12.jpg"
                  alt="Andrea T.">
             <p class="font-weight-400 mb-1">Andrea T.</p>
-            <small class="text-secondary text-center">Maestro del raccoglimento</small>
+            <small class="text-secondary text-center">Decifratore di Binomi</small>
         </div>
 
-        <div class="card-img col-6 col-md-3 col-lg-2  d-flex flex-column align-items-center justify-content-center border rounded-lg p-3 m-2">
+        <div class="card-img col-6 col-md-3 col-lg-2  d-flex flex-column align-items-center border rounded-lg p-3 m-2">
             <img class="profile-img"
                  src="<?php echo $dominio ?>assets/images/13.jpg"
                  alt="Matteo M.">
             <p class="font-weight-400 mb-1">Matteo M.</p>
-            <small class="text-secondary text-center">Maestro del raccoglimento</small>
+            <small class="text-secondary text-center">Interprete delle Differenze di Quadrati</small>
         </div>
 
-        <div class="card-img col-6 col-md-3 col-lg-2  d-flex flex-column align-items-center justify-content-center border rounded-lg p-3 m-2">
+        <div class="card-img col-6 col-md-3 col-lg-2  d-flex flex-column align-items-center border rounded-lg p-3 m-2">
             <img class="profile-img"
                  src="<?php echo $dominio ?>assets/images/14.jpg"
                  alt="Enrico M.">
             <p class="font-weight-400 mb-1">Enrico M.</p>
-            <small class="text-secondary text-center">Maestro del raccoglimento</small>
+            <small class="text-secondary text-center">Ricercatore di Quadrati Perfetti</small>
         </div>
 
-        <div class="card-img col-6 col-md-3 col-lg-2  d-flex flex-column align-items-center justify-content-center border rounded-lg p-3 m-2">
+        <div class="card-img col-6 col-md-3 col-lg-2  d-flex flex-column align-items-center border rounded-lg p-3 m-2">
             <img class="profile-img"
                  src="<?php echo $dominio ?>assets/images/15.jpg"
                  alt="Salvatore S.">
             <p class="font-weight-400 mb-1">Salvatore S.</p>
-            <small class="text-secondary text-center">Maestro del raccoglimento</small>
+            <small class="text-secondary text-center">Raggruppatore Strategico</small>
         </div>
 
-        <div class="card-img col-6 col-md-3 col-lg-2  d-flex flex-column align-items-center justify-content-center border rounded-lg p-3 m-2">
+        <div class="card-img col-6 col-md-3 col-lg-2  d-flex flex-column align-items-center border rounded-lg p-3 m-2">
             <img class="profile-img"
                  src="<?php echo $dominio ?>assets/images/16.jpg"
                  alt="Matteo L.">
             <p class="font-weight-400 mb-1">Matteo L.</p>
-            <small class="text-secondary text-center">Maestro del raccoglimento</small>
+            <small class="text-secondary text-center">Raccoglitore Totale</small>
         </div>
 
-        <div class="card-img col-6 col-md-3 col-lg-2  d-flex flex-column align-items-center justify-content-center border rounded-lg p-3 m-2">
+        <div class="card-img col-6 col-md-3 col-lg-2  d-flex flex-column align-items-center border rounded-lg p-3 m-2">
             <img class="profile-img"
                  src="<?php echo $dominio ?>assets/images/17.jpg"
                  alt="Mattia P.">
             <p class="font-weight-400 mb-1">Mattia P.</p>
-            <small class="text-secondary text-center">Maestro del raccoglimento</small>
+            <small class="text-secondary text-center">Osservatore del Fattore Comune</small>
         </div>
 
 

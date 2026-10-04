@@ -4,7 +4,8 @@
             <div class="d-flex align-items-md-center mb-4 mb-md-0">
                 <i class="fa-solid fa-school fa-3x mr-3"></i>
                 <div>
-                    <p class="mb-0">I.I.S. "<span class="d-md-none">B.</span><span class="d-none d-md-inline-block">Benedetto</span> Radice" – Bronte (CT)</p>
+                    <p class="mb-0">I.I.S. "<span class="d-md-none">B.</span><span class="d-none d-md-inline-block">Benedetto</span>
+                        Radice" – Bronte (CT)</p>
                     <a href="https://www.isradice.edu.it/" title="IIS Benedetto Radice" target="_blank">
                         <small>Visita il sito della nostra scuola</small>
                     </a>
@@ -31,11 +32,10 @@
             Perché <span class="font-weight-300">sotto</span><span class="text-primary">radice</span>?
         </h2>
         <h6 class="font-weight-300 mb-5">
-            Il nome viene dall'IIS Benedetto Radice — siamo letteralmente "sotto la Radice". Ma √ è anche dove
-            nascono i numeri irrazionali: l'inaspettato, la scoperta, quello che non ti aspetti. Il sito nasce
-            per
-            raccogliere e condividere i progetti matematici degli studenti dell'istituto,
-            per tutte le classi che vorranno partecipare.
+            Il nome viene dall'IIS Benedetto Radice — siamo letteralmente "sotto la Radice". Ma √ è anche il simbolo
+            della scoperta matematica, di ciò che non è immediato, di ciò che sorprende. Sottoradice nasce per
+            raccogliere, raccontare e condividere i progetti di matematica realizzati dagli studenti del nostro
+            istituto, costruendo anno dopo anno uno spazio aperto a tutte le classi che vorranno partecipare.
         </h6>
         <div class="d-flex flex-column align-items-start flex-md-row justify-content-center justify-content-md-between">
             <div class="d-flex flex-column flex-md-row align-items-start align-items-xl-center justify-content-center mb-4 mb-md-0">

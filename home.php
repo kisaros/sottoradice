@@ -1,4 +1,70 @@
-<?php include 'config/database.php'; ?>
+<?php
+include 'config/database.php';
+
+
+$stmtHomeProjects = $pdo->prepare("
+    SELECT
+        p.*,
+        c.name AS category_name,
+        c.color AS category_color
+    FROM projects p
+    LEFT JOIN categories c
+        ON p.category_id = c.id
+    WHERE p.status = 'published'
+    ORDER BY COALESCE(p.sort_order, 9999), p.id
+    LIMIT 5
+");
+
+$stmtHomeProjects->execute();
+$homeProjects = $stmtHomeProjects->fetchAll();
+
+
+/* PRIMO TAG DI OGNI PROGETTO */
+
+$stmtHomeTags = $pdo->query("
+    SELECT project_id, label
+    FROM project_tags
+    ORDER BY project_id, COALESCE(sort_order, id), id
+");
+
+$homeProjectTags = [];
+
+foreach ($stmtHomeTags->fetchAll() as $tag) {
+    if (!isset($homeProjectTags[$tag['project_id']])) {
+        $homeProjectTags[$tag['project_id']] = $tag;
+    }
+}
+
+
+/* NUMERI DEL PROGETTO */
+
+$stmtStats = $pdo->query("
+    SELECT
+        (
+            SELECT COUNT(*)
+            FROM projects
+            WHERE status = 'published'
+        ) AS projects_count,
+
+        (
+            SELECT COUNT(DISTINCT ps.student_id)
+            FROM project_students ps
+            INNER JOIN projects p
+                ON p.id = ps.project_id
+            WHERE p.status = 'published'
+        ) AS students_count,
+
+        (
+            SELECT COUNT(*)
+            FROM projects
+            WHERE status = 'published'
+              AND project_group = 'teacher_proposal'
+        ) AS teacher_projects_count
+");
+
+$stats = $stmtStats->fetch();
+
+?>
 
 
 <!DOCTYPE html>
@@ -34,15 +100,15 @@ include_once 'partials/head.php';
                         davvero
                         la matematica.</h2>
                     <div class="align-item-center d-flex justify-content-center justify-content-md-start mb-4 mb-md-0">
-                        <a href="/progetti.php" title="Progetti | Sottoradice"
-                           class="btn btn-outline-success rounded-lg mr-3">Esplora i progetti</a>
-                        <a href="/chi-siamo.php" title="Chi siamo | Sottoradice"
-                           class="btn btn-outline-success rounded-lg">Chi
-                            siamo</a>
+                        <a href="<?php echo $dominio ?>progetti" title="Progetti | Sottoradice"
+                           class="btn btn-success rounded-lg mr-3">Esplora i progetti</a>
+
+                        <a href="<?php echo $dominio ?>chi-siamo" title="Chi siamo | Sottoradice"
+                           class="btn btn-outline-success rounded-lg">Chi siamo</a>
                     </div>
                 </div>
                 <figure class="col-12 col-md-6">
-                    <img src="<?php echo $dominio ?>assets/images/calcolatrice.svg"
+                    <img src="<?php echo $dominio ?>assets/images/benedetto_radice.svg"
                          class="h-100 w-100 object-cover"
                          alt="Sottoradice, la matematica fatta da noi.">
                 </figure>
