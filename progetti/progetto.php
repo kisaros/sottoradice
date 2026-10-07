@@ -4,15 +4,16 @@
 
 $slug = $_GET['slug'] ?? '';
 
-if ($slug === '') {
+/*if ($slug === '') {
     http_response_code(404);
     exit('Progetto non trovato.');
-}
+}*/
 
 $stmt = $pdo->prepare("
     SELECT
         p.*,
-        c.name AS category_name
+        c.name AS category_name,
+        c.color AS category_color
     FROM projects p
     LEFT JOIN categories c
         ON p.category_id = c.id
@@ -24,11 +25,12 @@ $stmt = $pdo->prepare("
 $stmt->execute(['slug' => $slug]);
 
 $project = $stmt->fetch();
+$color = $project['category_color'] ?? 'success';
 
-if (!$project) {
+/*if (!$project) {
     http_response_code(404);
     exit('Progetto non trovato.');
-}
+}*/
 
 /* Docenti associati al progetto */
 
@@ -148,10 +150,10 @@ include_once '../partials/head.php';
     <header class="">
         <div class="container pt-5">
             <div class="hero mb-4">
-                <small class="text-success font-weight-500 d-flex align-items-center justify-content-start mb-2">
-                    <span class="rounded-xsmall bg-success mr-3"></span>
+                <small class="text-<?= htmlspecialchars($color) ?> font-weight-500 d-flex align-items-center justify-content-start mb-2">
+                    <span class="rounded-xsmall bg-<?= htmlspecialchars($color) ?> mr-3"></span>
                     <span class="text-uppercase">
-                            <?= htmlspecialchars($project['category_name']) ?>
+                        <?= htmlspecialchars($project['category_name']) ?>
                     </span>
                 </small>
                 <h1 class="serif font-weight-700 text-left px-0">
@@ -182,7 +184,7 @@ include_once '../partials/head.php';
                 </div>
             </div>
 
-            <div class="hero bg-waves-success mb-5">
+            <div class="hero bg-waves-<?= htmlspecialchars($color) ?> mb-5">
                 <figure class="project-image">
                     <img src="<?= $dominio . htmlspecialchars($project['hero_image']) ?>"
                          class="h-100 w-100 object-contain object-center"
@@ -194,7 +196,7 @@ include_once '../partials/head.php';
 
     <?php foreach ($sections as $section): ?>
 
-        <section class="container">
+        <section class="container project-text">
 
             <h2 class="text-left mb-0 pb-3">
                 <?= $section['title_html'] ?: htmlspecialchars($section['title']) ?>

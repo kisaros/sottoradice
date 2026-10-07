@@ -640,6 +640,18 @@ iframe {
   }
 }
 
+.object-center {
+  object-position: center;
+}
+
+.object-left {
+  object-position: left;
+}
+
+.object-right {
+  object-position: right;
+}
+
 /**/
 /* 05. BORDERS */
 /**/
@@ -1238,6 +1250,34 @@ iframe {
   &::after {
     bottom: -291px;
     background: #27a644ad;
+    border-radius: 52% 48% 44% 56% / 55% 47% 53% 45%;
+    transform: translateX(-39%) rotate(2deg);
+  }
+}
+
+
+.bg-waves-warning {
+  position: relative;
+  overflow: hidden;
+  background: #ffe0a6;
+  isolation: isolate;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 140%;
+    height: 420px;
+    border-radius: 43% 57% 55% 45% / 48% 42% 58% 52%;
+    transform: translateX(-50%) rotate(-2deg);
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  &::after {
+    bottom: -291px;
+    background: $warning;
     border-radius: 52% 48% 44% 56% / 55% 47% 53% 45%;
     transform: translateX(-39%) rotate(2deg);
   }

@@ -1,0 +1,1622 @@
+/* =========================================================
+   TOMBOLA MATEMATICA — FESTIVE MODE
+   ========================================================= */
+
+.tombola-page {
+
+  /* Palette */
+  $green-dark: #173f35;
+  $green: #24745a;
+  $green-light: #4ca477;
+  $red: #c94e45;
+  $red-dark: #983c38;
+  $gold: #f6bd3b;
+  $gold-light: #ffe29a;
+  $purple: #7655a6;
+  $cream: #fffaf0;
+
+
+  .tombola-new-game-transition {
+    position: fixed;
+    inset: 0;
+    z-index: 1300;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+            radial-gradient(
+                    circle at 50% 30%,
+                    rgba(255, 210, 70, .12),
+                    transparent 35%
+            ),
+            linear-gradient(
+                    160deg,
+                    rgba(5, 48, 28, .96) 0%,
+                    rgba(9, 65, 38, .97) 45%,
+                    rgba(111, 27, 25, .97) 100%
+            );
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+            opacity .25s ease,
+            visibility .25s ease;
+
+    &.is-open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+
+      .tombola-new-game-content {
+        animation: tombola-new-game-bounce .85s
+        cubic-bezier(.34, 1.56, .64, 1);
+      }
+
+      .tombola-new-game-tree {
+        animation: tombola-tree-bounce .7s ease-in-out;
+      }
+
+      .tombola-new-game-stars {
+        animation: tombola-stars-pop .8s .15s both;
+      }
+    }
+  }
+
+  .tombola-new-game-content {
+    padding: 2rem;
+    text-align: center;
+    color: #fff;
+
+    h2 {
+      margin: .6rem 0 .8rem;
+
+      font-family: Georgia, serif;
+      font-size: clamp(3rem, 7vw, 6rem);
+      font-weight: 700;
+      line-height: .95;
+
+      color: #fff;
+
+      text-shadow:
+              4px 4px 0 #c9343c,
+              7px 7px 0 rgba(0, 0, 0, .22);
+    }
+
+    p {
+      margin-top: 1.25rem;
+      margin-bottom: 0;
+
+      color: #ffd63e;
+
+      font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+      font-weight: 700;
+    }
+  }
+
+  .tombola-new-game-tree {
+    font-size: clamp(3rem, 6vw, 5rem);
+    line-height: 1;
+  }
+
+  .tombola-new-game-stars {
+    margin-top: 1rem;
+
+    font-size: clamp(2rem, 4vw, 3rem);
+
+    span {
+      display: inline-block;
+      margin: 0 .6rem;
+    }
+  }
+
+  /* =========================================================
+     AREA GIOCO
+     ========================================================= */
+
+  .tombola-game {
+    min-height: 100vh;
+  }
+
+  .tombola-board-wrapper {
+    position: relative;
+    overflow: hidden;
+
+    padding: 2.5rem 2.75rem 2.25rem;
+
+    border-radius: 28px;
+
+    background:
+            radial-gradient(circle at 8% 12%,
+            rgba(255, 255, 255, .12) 0 3px,
+            transparent 4px),
+            radial-gradient(circle at 91% 18%,
+            rgba(246, 189, 59, .30) 0 4px,
+            transparent 5px),
+            radial-gradient(circle at 15% 82%,
+            rgba(255, 255, 255, .10) 0 3px,
+            transparent 4px),
+            radial-gradient(circle at 88% 87%,
+            rgba(246, 189, 59, .25) 0 3px,
+            transparent 4px),
+            linear-gradient(145deg, $green-dark 0%, $green 55%, #286b55 100%);
+
+    box-shadow:
+            0 18px 45px rgba(22, 63, 53, .20);
+
+    /*
+     * Decorazione superiore/inferiore:
+     * niente immagini esterne.
+     */
+    &::before,
+    &::after {
+      position: absolute;
+      z-index: 0;
+
+      color: rgba(255, 255, 255, .12);
+      letter-spacing: 1rem;
+
+      pointer-events: none;
+      white-space: nowrap;
+    }
+
+    &::before {
+      content: "✦  ·  ✧  ·  ✦  ·  ✧  ·  ✦";
+      top: 20px;
+      left: 28px;
+
+      font-size: 1.1rem;
+    }
+
+    &::after {
+      content: "✧  ·  ✦  ·  ✧  ·  ✦  ·  ✧";
+      right: 18px;
+      bottom: 18px;
+
+      font-size: .95rem;
+    }
+
+    > * {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+
+  /* =========================================================
+     ESTRAZIONE
+     ========================================================= */
+
+  .tombola-extraction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-bottom: 1rem;
+  }
+
+  .tombola-extraction-action {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .tombola-main-button {
+    min-width: 235px;
+
+    padding: .9rem 1.8rem;
+
+    border: 0;
+    border-radius: 50px;
+
+    background: $gold;
+    color: #34280b;
+
+    font-size: 1.05rem;
+    font-weight: 700;
+
+    box-shadow:
+            0 7px 0 #c88e12,
+            0 13px 25px rgba(0, 0, 0, .20);
+
+    transition:
+            transform .18s ease,
+            box-shadow .18s ease;
+
+    &:hover {
+      background: #ffc94f;
+      color: #34280b;
+
+      transform: translateY(-2px);
+
+      box-shadow:
+              0 8px 0 #c88e12,
+              0 16px 28px rgba(0, 0, 0, .22);
+    }
+
+    &:active {
+      transform: translateY(4px);
+
+      box-shadow:
+              0 3px 0 #c88e12,
+              0 7px 15px rgba(0, 0, 0, .18);
+    }
+  }
+
+
+  /* =========================================================
+     PALLINA ESTRATTA
+     ========================================================= */
+
+  .tombola-current-wrapper {
+    margin-top: 1.5rem;
+    text-align: center;
+
+    small {
+      display: block;
+      margin-bottom: .55rem;
+
+      color: rgba(255, 255, 255, .72);
+
+      text-transform: uppercase;
+      letter-spacing: .11em;
+      font-size: .68rem;
+      font-weight: 700;
+    }
+  }
+
+  .tombola-current-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 112px;
+    height: 112px;
+    margin: 0 auto;
+
+    border: 7px solid $gold-light;
+    border-radius: 50%;
+
+    background:
+            radial-gradient(
+                    circle at 32% 25%,
+                    #fff 0%,
+                    #fff 32%,
+                    #fff9e8 70%,
+                    #f0dfad 100%
+            );
+
+    color: $green-dark;
+
+    font-family: Georgia, serif;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+
+    box-shadow:
+            inset -7px -9px 15px rgba(103, 75, 14, .10),
+            0 0 0 4px rgba(255, 255, 255, .13),
+            0 12px 28px rgba(0, 0, 0, .24);
+
+    animation: tombola-ball-in .38s cubic-bezier(.2, .9, .3, 1.25);
+  }
+
+
+  /* =========================================================
+     CONTATORE + NUMERI ESTRATTI
+     ========================================================= */
+
+  .tombola-counter {
+    margin: 1.25rem 0 .65rem;
+
+    text-align: center;
+    color: rgba(255, 255, 255, .70);
+    font-size: .85rem;
+
+    strong {
+      color: #fff;
+    }
+  }
+
+  .tombola-extracted-numbers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .35rem;
+
+    min-height: 28px;
+    margin-bottom: 1.4rem;
+  }
+
+  .tombola-extracted-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 29px;
+    height: 29px;
+    padding: 0 .4rem;
+
+    border: 1px solid rgba(255, 255, 255, .20);
+    border-radius: 50px;
+
+    background: rgba(255, 255, 255, .14);
+    color: #fff;
+
+    font-size: .75rem;
+    font-weight: 700;
+  }
+
+
+  /* =========================================================
+     CARTELLA / TABELLONE
+     ========================================================= */
+
+  .tombola-board {
+    display: grid;
+    grid-template-columns: repeat(10, minmax(0, 1fr));
+    gap: .55rem;
+
+    max-width: 980px;
+    margin: 0 auto;
+
+    padding: 1.25rem;
+
+    border: 1px solid rgba(255, 255, 255, .6);
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, .94);
+
+    box-shadow:
+            0 15px 35px rgba(0, 0, 0, .16);
+  }
+
+
+  /* =========================================================
+     NUMERI
+     ========================================================= */
+
+  .tombola-number {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    aspect-ratio: 1 / 1;
+    min-width: 0;
+
+    border: 0;
+    border-radius: 12px;
+
+    font-size: 1.08rem;
+    font-weight: 700;
+    line-height: 1;
+
+    cursor: pointer;
+
+    box-shadow:
+            inset 0 -2px 0 rgba(0, 0, 0, .06),
+            0 3px 7px rgba(0, 0, 0, .07);
+
+    transition:
+            transform .15s ease,
+            box-shadow .15s ease,
+            filter .15s ease;
+
+    &:hover {
+      z-index: 2;
+
+      transform: translateY(-3px) scale(1.055);
+
+      box-shadow:
+              0 8px 14px rgba(0, 0, 0, .16);
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &--easy {
+      background: #a9ddbd;
+      color: #174f39;
+    }
+
+    &--medium {
+      background: #f7d66f;
+      color: #70520c;
+    }
+
+    &--hard {
+      background: #ec9288;
+      color: #6f2722;
+    }
+
+    &--puzzle {
+      background: #bca3dd;
+      color: #4d3273;
+    }
+
+    &.is-marked {
+      opacity: .34;
+      filter: grayscale(.35);
+
+      box-shadow: none;
+
+      transform: scale(.92);
+
+      &::after {
+        content: "✓";
+
+        position: absolute;
+        right: 5px;
+        bottom: 3px;
+
+        font-size: .65rem;
+        font-weight: 800;
+      }
+
+      &:hover {
+        transform: scale(.92);
+        box-shadow: none;
+      }
+    }
+
+    &.is-extracted {
+      position: relative;
+      z-index: 5;
+
+      cursor: pointer;
+
+      transform: scale(1.08);
+
+      &::after {
+        content: "";
+
+        position: absolute;
+        top: -6px;
+        right: -6px;
+        bottom: -6px;
+        left: -6px;
+
+        border: 4px solid #ffd43b;
+        border-radius: 12px;
+
+        pointer-events: none;
+
+        animation:
+                tombola-number-ready 1.2s ease-in-out infinite;
+      }
+
+      &:hover {
+        z-index: 6;
+        transform: translateY(-3px) scale(1.1);
+      }
+    }
+  }
+
+
+  /* =========================================================
+     COMANDI
+     ========================================================= */
+
+  .tombola-controls {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: .75rem;
+
+    margin-top: 1.6rem;
+  }
+
+  .tombola-control {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .55rem;
+
+    min-width: 180px;
+    padding: .8rem 1.2rem;
+
+    border: 0;
+    border-radius: 50px;
+
+    font-weight: 700;
+
+    box-shadow: 0 5px 12px rgba(0, 0, 0, .16);
+
+    transition:
+            transform .18s ease,
+            box-shadow .18s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 17px rgba(0, 0, 0, .22);
+    }
+
+    &--tombola {
+      background: $purple;
+      color: #fff;
+
+      &:hover {
+        background: #8565b3;
+        color: #fff;
+      }
+    }
+
+    &--challenge {
+      background: $gold;
+      color: #493609;
+
+      &:hover {
+        background: #ffc94f;
+        color: #493609;
+      }
+    }
+
+    &--reset {
+      background: rgba(255, 255, 255, .92);
+      color: $green-dark;
+
+      &:hover {
+        background: #fff;
+        color: $green-dark;
+      }
+    }
+  }
+
+
+  /* =========================================================
+     MODAL — BASE
+     ========================================================= */
+
+  .tombola-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1100;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 1.5rem;
+
+    background: rgba(12, 29, 26, .73);
+    backdrop-filter: blur(7px);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+            opacity .22s ease,
+            visibility .22s ease;
+
+    &.is-open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+
+      .tombola-modal-panel {
+        transform: translateY(0) scale(1);
+      }
+    }
+  }
+
+  .tombola-modal-panel {
+    position: relative;
+
+    width: 100%;
+    max-width: 650px;
+    max-height: calc(100vh - 3rem);
+    overflow-y: auto;
+
+    padding: 2.3rem;
+
+    border-radius: 25px;
+
+    background: $cream;
+
+    text-align: center;
+
+    box-shadow:
+            0 25px 65px rgba(0, 0, 0, .30);
+
+    transform: translateY(15px) scale(.97);
+
+    transition: transform .22s ease;
+  }
+
+  .tombola-modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, .72);
+    color: #555;
+
+    cursor: pointer;
+  }
+
+
+  /* =========================================================
+   QUESITO — FLIP CARD
+   ========================================================= */
+
+  .tombola-question-modal {
+    padding: 0;
+
+    background: rgba(5, 18, 13, .82);
+
+    perspective: 1600px;
+
+
+    /* -----------------------------------------
+       CHIUSURA
+       ----------------------------------------- */
+
+    .tombola-question-close {
+      position: fixed;
+      top: 2rem;
+      right: 2rem;
+      z-index: 5;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 54px;
+      height: 54px;
+
+      padding: 0;
+      border: 0;
+      border-radius: 50%;
+
+      background: #d62828;
+      color: #fff;
+
+      font-size: 1.35rem;
+
+      cursor: pointer;
+
+      box-shadow: 0 7px 20px rgba(0, 0, 0, .25);
+
+      transition:
+              transform .18s ease,
+              background .18s ease;
+
+      &:hover {
+        background: #b91f24;
+        color: #fff;
+
+        transform: scale(1.08);
+      }
+    }
+
+
+    /* -----------------------------------------
+       CONTENITORE 3D
+       ----------------------------------------- */
+
+    .tombola-flip-card {
+      width: 100%;
+      max-width: 1000px;
+
+      height: 72vh;
+      max-height: 650px;
+
+      perspective: 1600px;
+    }
+
+    .tombola-flip-inner {
+      position: relative;
+
+      width: 100%;
+      height: 100%;
+
+      transform-style: preserve-3d;
+
+      transition:
+              transform .8s cubic-bezier(.2, .75, .25, 1);
+
+      &.is-flipped {
+        transform: rotateY(180deg);
+      }
+    }
+
+
+    /* -----------------------------------------
+       FACCE
+       ----------------------------------------- */
+
+    .tombola-flip-face {
+      position: absolute;
+      inset: 0;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      overflow: hidden;
+
+      padding: 3rem;
+
+      border-radius: 30px;
+
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+
+      color: #fff;
+
+      box-shadow:
+              0 25px 70px rgba(0, 0, 0, .30);
+
+      /*
+       * Piccoli punti luminosi.
+       */
+      &::before {
+        content: "";
+
+        position: absolute;
+        inset: 0;
+
+        background:
+                radial-gradient(
+                        circle at 12% 20%,
+                        rgba(255, 255, 255, .17) 0 3px,
+                        transparent 4px
+                ),
+                radial-gradient(
+                        circle at 88% 22%,
+                        rgba(255, 255, 255, .12) 0 4px,
+                        transparent 5px
+                ),
+                radial-gradient(
+                        circle at 18% 82%,
+                        rgba(255, 255, 255, .12) 0 3px,
+                        transparent 4px
+                ),
+                radial-gradient(
+                        circle at 82% 78%,
+                        rgba(255, 255, 255, .16) 0 3px,
+                        transparent 4px
+                );
+
+        pointer-events: none;
+      }
+
+      > * {
+        position: relative;
+        z-index: 1;
+      }
+    }
+
+
+    /* -----------------------------------------
+       RETRO
+       ----------------------------------------- */
+
+    .tombola-flip-back {
+      transform: rotateY(180deg);
+    }
+
+
+    /* =========================================================
+       COLORI IN BASE ALLA DIFFICOLTÀ
+       La classe viene messa sul modal dal JS.
+       ========================================================= */
+
+    &.difficulty-easy {
+
+      .tombola-flip-front,
+      .tombola-flip-back {
+        background:
+                linear-gradient(
+                        145deg,
+                        #159957 0%,
+                        #35b86f 100%
+                );
+      }
+    }
+
+
+    &.difficulty-medium {
+
+      .tombola-flip-front,
+      .tombola-flip-back {
+        background:
+                linear-gradient(
+                        145deg,
+                        #ffd900 0%,
+                        #ff9f1c 100%
+                );
+
+        color: #172018;
+      }
+    }
+
+
+    &.difficulty-hard {
+
+      .tombola-flip-front,
+      .tombola-flip-back {
+        background:
+                linear-gradient(
+                        145deg,
+                        #e63946 0%,
+                        #b82e3b 100%
+                );
+      }
+    }
+
+
+    &.difficulty-puzzle {
+
+      .tombola-flip-front,
+      .tombola-flip-back {
+        background:
+                linear-gradient(
+                        145deg,
+                        #2446b8 0%,
+                        #51358d 100%
+                );
+      }
+    }
+
+
+    /* =========================================================
+       FRONTE
+       ========================================================= */
+
+    .tombola-flip-decoration {
+      margin-bottom: .7rem;
+
+      font-size: clamp(2.5rem, 5vw, 4rem);
+
+      animation: tombola-tree-float 2s ease-in-out infinite;
+    }
+
+
+    .tombola-flip-number {
+      margin-bottom: .7rem;
+
+      font-family: Georgia, serif;
+      font-size: clamp(4.5rem, 10vw, 8rem);
+      font-weight: 700;
+      line-height: .95;
+
+      text-shadow:
+              0 5px 0 rgba(0, 0, 0, .12);
+    }
+
+
+    .tombola-flip-difficulty {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      margin-bottom: .8rem;
+      padding: .5rem 1.25rem;
+
+      border: 2px solid rgba(255, 255, 255, .55);
+      border-radius: 50px;
+
+      background: rgba(255, 255, 255, .20);
+
+      color: inherit;
+
+      font-size: clamp(.9rem, 2vw, 1.15rem);
+      font-weight: 800;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+
+      backdrop-filter: blur(5px);
+
+      &::before {
+        content: "";
+
+        width: 13px;
+        height: 13px;
+
+        margin-right: .55rem;
+
+        border: 2px solid rgba(255, 255, 255, .55);
+        border-radius: 50%;
+
+        background: currentColor;
+      }
+    }
+
+
+    .tombola-flip-character {
+      margin-top: .7rem;
+
+      font-size: clamp(2.6rem, 5vw, 4rem);
+      line-height: 1;
+    }
+
+
+    /* =========================================================
+       RETRO / DOMANDA
+       ========================================================= */
+
+    .tombola-flip-back {
+
+      .tombola-flip-character {
+        margin: 0 0 1.25rem;
+
+        animation: tombola-thinking 1.8s ease-in-out infinite;
+      }
+    }
+
+
+    .tombola-flip-question {
+      max-width: 850px;
+
+      margin: 0 auto;
+
+      font-family: Georgia, serif;
+      font-size: clamp(2.1rem, 5vw, 4.3rem);
+      font-weight: 700;
+      line-height: 1.18;
+      text-align: center;
+
+      text-shadow:
+              0 3px 0 rgba(0, 0, 0, .10);
+    }
+
+
+    .tombola-flip-sparkles {
+      margin: 1.25rem 0 .9rem;
+
+      font-size: 2.2rem;
+
+      animation: tombola-sparkle 1.2s ease-in-out infinite alternate;
+    }
+
+
+    .tombola-flip-info {
+      display: inline-flex;
+      align-items: center;
+
+      padding: .55rem 1.25rem;
+
+      border-radius: 50px;
+
+      background: #ffd326;
+      color: #172018;
+
+      font-size: .9rem;
+      font-weight: 800;
+      text-transform: uppercase;
+
+      box-shadow:
+              0 5px 15px rgba(0, 0, 0, .15);
+    }
+
+
+    .tombola-flip-separator {
+      margin: 0 .45rem;
+    }
+
+
+    /* =========================================================
+       MOBILE
+       ========================================================= */
+
+    @media (max-width: 767.98px) {
+
+      .tombola-flip-card {
+        width: calc(100% - 2rem);
+        height: 70vh;
+      }
+
+      .tombola-flip-face {
+        padding: 2rem 1.25rem;
+        border-radius: 22px;
+      }
+
+      .tombola-question-close {
+        top: 1rem;
+        right: 1rem;
+
+        width: 44px;
+        height: 44px;
+
+        font-size: 1rem;
+      }
+    }
+  }
+
+
+  /* =========================================================
+     MODALITÀ SFIDA — ROSSO / ORO
+     ========================================================= */
+
+  .tombola-modal--challenge {
+
+    .tombola-modal-panel {
+      overflow: hidden;
+
+      background:
+              radial-gradient(circle at 10% 10%,
+              rgba(255, 255, 255, .15) 0 3px,
+              transparent 4px),
+              linear-gradient(145deg, $red-dark, $red);
+
+      color: #fff;
+    }
+
+    .tombola-modal-icon {
+      background: $gold;
+      color: #6e4d08;
+    }
+
+    h2 {
+      color: #fff;
+    }
+
+    .tombola-challenge-intro {
+      color: rgba(255, 255, 255, .78);
+    }
+
+    .tombola-challenge-question {
+      background: #fffaf0;
+      color: #242424;
+    }
+  }
+
+  .tombola-modal-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 68px;
+    height: 68px;
+    margin: 0 auto 1rem;
+
+    border-radius: 50%;
+
+    font-size: 1.6rem;
+  }
+
+  .tombola-challenge-panel {
+
+    h2 {
+      margin-bottom: .5rem;
+
+      font-family: Georgia, serif;
+      font-weight: 700;
+    }
+  }
+
+  .tombola-challenge-intro {
+    margin-bottom: 0;
+  }
+
+  .tombola-challenge-question {
+    margin-top: 1.3rem;
+    padding: 1.5rem;
+
+    border-radius: 17px;
+
+    font-family: Georgia, serif;
+    font-size: clamp(1.35rem, 2.5vw, 2rem);
+    font-weight: 700;
+    line-height: 1.3;
+  }
+
+
+  /* =========================================================
+     SFIDA TOMBOLA — VIOLA / BLU
+     ========================================================= */
+
+  .tombola-modal--final {
+
+    .tombola-modal-panel {
+      background:
+              radial-gradient(circle at 88% 15%,
+              rgba(255, 255, 255, .12) 0 4px,
+              transparent 5px),
+              linear-gradient(145deg, #413270, #7655a6);
+
+      color: #fff;
+    }
+
+    .tombola-modal-icon {
+      background: rgba(255, 255, 255, .17);
+      color: $gold;
+    }
+
+    h2 {
+      color: #fff;
+    }
+
+    > p {
+      color: rgba(255, 255, 255, .80);
+    }
+  }
+
+  .tombola-final-panel {
+
+    h2 {
+      font-family: Georgia, serif;
+      font-weight: 700;
+    }
+  }
+
+  .tombola-progress {
+    display: flex;
+    justify-content: center;
+    gap: .7rem;
+
+    margin: 1.3rem 0 .65rem;
+  }
+
+  .tombola-progress-dot {
+    width: 19px;
+    height: 19px;
+
+    border: 2px solid rgba(255, 255, 255, .85);
+    border-radius: 50%;
+
+    background: transparent;
+
+    transition:
+            background .2s ease,
+            transform .2s ease;
+
+    &.is-complete {
+      border-color: $gold;
+      background: $gold;
+
+      transform: scale(1.12);
+    }
+  }
+
+  .tombola-error-counter {
+    margin-bottom: 1.2rem;
+
+    color: rgba(255, 255, 255, .75);
+    font-size: .84rem;
+  }
+
+  .tombola-final-question {
+    padding: 1.5rem;
+
+    border-radius: 17px;
+
+    background: #fff;
+    color: #242424;
+
+    small {
+      display: block;
+
+      margin-bottom: .6rem;
+
+      color: $purple;
+
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      font-weight: 700;
+    }
+
+    #tombola-question-text {
+      font-family: Georgia, serif;
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      font-weight: 700;
+      line-height: 1.3;
+    }
+  }
+
+  .tombola-answer-controls {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: .75rem;
+
+    margin-top: 1.4rem;
+  }
+
+  .tombola-answer-correct,
+  .tombola-answer-wrong {
+    min-width: 180px;
+
+    padding: .8rem 1.2rem;
+
+    border: 0;
+    border-radius: 50px;
+
+    font-weight: 700;
+  }
+
+  .tombola-answer-correct {
+    background: #bfe7ca;
+    color: #245e39;
+  }
+
+  .tombola-answer-wrong {
+    background: #f4c0ba;
+    color: #873c34;
+  }
+
+
+  /* =========================================================
+     VITTORIA / FALLIMENTO
+     ========================================================= */
+
+  .tombola-result {
+    position: fixed;
+    inset: 0;
+    z-index: 1200;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 2rem;
+
+    text-align: center;
+    color: #fff;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+            opacity .25s ease,
+            visibility .25s ease;
+
+    &.is-open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    &--victory {
+      background:
+              radial-gradient(circle at 15% 20%,
+              rgba(255, 255, 255, .12) 0 4px,
+              transparent 5px),
+              radial-gradient(circle at 82% 72%,
+              rgba(246, 189, 59, .20) 0 5px,
+              transparent 6px),
+              rgba(32, 126, 80, .97);
+    }
+
+    &--failure {
+      background: rgba(169, 65, 57, .97);
+    }
+
+    h2 {
+      margin-bottom: .7rem;
+
+      font-family: Georgia, serif;
+      font-size: clamp(3rem, 8vw, 6rem);
+      font-weight: 700;
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+      font-size: 1.15rem;
+    }
+
+    .btn {
+      min-width: 180px;
+      border-radius: 50px;
+    }
+  }
+
+  .tombola-result-icon {
+    margin-bottom: .7rem;
+    font-size: 3.8rem;
+  }
+
+
+  /* =========================================================
+     RESPONSIVE
+     ========================================================= */
+
+  @media (max-width: 991.98px) {
+
+    .tombola-board-wrapper {
+      padding: 2rem 1.5rem;
+    }
+
+    .tombola-board {
+      gap: .45rem;
+      padding: 1rem;
+    }
+
+    .tombola-number {
+      border-radius: 9px;
+      font-size: 1rem;
+      cursor: default;
+
+      &:not(.is-extracted):not(.is-marked) {
+        &:hover {
+          transform: none;
+          box-shadow:
+                  inset 0 -2px 0 rgba(0, 0, 0, .06),
+                  0 3px 7px rgba(0, 0, 0, .07);
+        }
+      }
+
+      &.is-extracted {
+        cursor: pointer;
+
+        transform: scale(1.06);
+
+        box-shadow:
+                0 0 0 3px #fff,
+                0 0 0 6px #f6bd3b,
+                0 8px 18px rgba(0, 0, 0, .22);
+
+        animation: tombola-number-ready 1.4s ease-in-out infinite;
+
+        &:hover {
+          transform: translateY(-3px) scale(1.1);
+        }
+      }
+
+      &.is-marked {
+        cursor: default;
+      }
+    }
+  }
+
+
+  @media (max-width: 767.98px) {
+
+    .tombola-board-wrapper {
+      padding: 1.5rem 1rem;
+      border-radius: 20px;
+    }
+
+    .tombola-board {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: .5rem;
+    }
+
+    .tombola-controls {
+      flex-direction: column;
+    }
+
+    .tombola-control {
+      width: 100%;
+    }
+
+    .tombola-modal {
+      padding: 1rem;
+    }
+
+    .tombola-modal-panel {
+      padding: 2rem 1.25rem 1.5rem;
+      border-radius: 20px;
+    }
+
+    .tombola-answer-controls {
+      flex-direction: column;
+    }
+
+    .tombola-answer-correct,
+    .tombola-answer-wrong {
+      width: 100%;
+    }
+  }
+
+
+  @media (max-width: 575.98px) {
+
+    .tombola-board-wrapper {
+      margin-right: -.5rem;
+      margin-left: -.5rem;
+    }
+
+    .tombola-board {
+      padding: .65rem;
+      gap: .35rem;
+    }
+
+    .tombola-number {
+      border-radius: 7px;
+      font-size: .9rem;
+    }
+
+    .tombola-main-button {
+      width: 100%;
+    }
+
+    .tombola-current-number {
+      width: 95px;
+      height: 95px;
+      font-size: 2.6rem;
+    }
+  }
+}
+
+
+/* =========================================================
+   ANIMAZIONI
+   ========================================================= */
+
+@keyframes tombola-ball-in {
+
+  0% {
+    opacity: 0;
+    transform: scale(.55) rotate(-12deg);
+  }
+
+  70% {
+    transform: scale(1.08) rotate(3deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+
+@keyframes tombola-shake {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  20% {
+    transform: translateX(-8px);
+  }
+
+  40% {
+    transform: translateX(8px);
+  }
+
+  60% {
+    transform: translateX(-5px);
+  }
+
+  80% {
+    transform: translateX(5px);
+  }
+}
+
+
+@keyframes tombola-new-game-bounce {
+
+  0% {
+    opacity: 0;
+    transform: scale(.35) translateY(-80px);
+  }
+
+  45% {
+    opacity: 1;
+    transform: scale(1.12) translateY(10px);
+  }
+
+  65% {
+    transform: scale(.94) translateY(-6px);
+  }
+
+  82% {
+    transform: scale(1.04) translateY(3px);
+  }
+
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
+
+
+@keyframes tombola-tree-bounce {
+
+  0% {
+    transform: translateY(-80px) rotate(-8deg);
+  }
+
+  55% {
+    transform: translateY(10px) rotate(5deg);
+  }
+
+  75% {
+    transform: translateY(-5px) rotate(-2deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}
+
+
+@keyframes tombola-stars-pop {
+
+  0% {
+    opacity: 0;
+    transform: scale(.2);
+  }
+
+  65% {
+    transform: scale(1.25);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+@keyframes tombola-tree-float {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+
+  50% {
+    transform: translateY(-8px) rotate(2deg);
+  }
+}
+
+
+@keyframes tombola-thinking {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+
+  50% {
+    transform: translateY(-6px) rotate(-4deg);
+  }
+}
+
+
+@keyframes tombola-sparkle {
+
+  from {
+    opacity: .65;
+    transform: scale(.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+
+@keyframes tombola-number-ready {
+
+  0%,
+  100% {
+    box-shadow:
+            0 0 0 3px #fff,
+            0 0 0 6px rgba(246, 189, 59, .75),
+            0 8px 18px rgba(0, 0, 0, .18);
+  }
+
+  50% {
+    box-shadow:
+            0 0 0 3px #fff,
+            0 0 0 9px rgba(246, 189, 59, .25),
+            0 10px 22px rgba(0, 0, 0, .24);
+  }
+}

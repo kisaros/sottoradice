@@ -5308,6 +5308,15 @@ iframe {
 .cursor-pointer:hover {
   cursor: pointer; }
 
+.object-center {
+  object-position: center; }
+
+.object-left {
+  object-position: left; }
+
+.object-right {
+  object-position: right; }
+
 /**/
 /* 05. BORDERS */
 /**/
@@ -5760,6 +5769,27 @@ iframe {
   .bg-waves-success::after {
     bottom: -291px;
     background: #27a644ad;
+    border-radius: 52% 48% 44% 56% / 55% 47% 53% 45%;
+    transform: translateX(-39%) rotate(2deg); }
+
+.bg-waves-warning {
+  position: relative;
+  overflow: hidden;
+  background: #ffe0a6;
+  isolation: isolate; }
+  .bg-waves-warning::before, .bg-waves-warning::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 140%;
+    height: 420px;
+    border-radius: 43% 57% 55% 45% / 48% 42% 58% 52%;
+    transform: translateX(-50%) rotate(-2deg);
+    z-index: -1;
+    pointer-events: none; }
+  .bg-waves-warning::after {
+    bottom: -291px;
+    background: #ffc107;
     border-radius: 52% 48% 44% 56% / 55% 47% 53% 45%;
     transform: translateX(-39%) rotate(2deg); }
 
@@ -7154,6 +7184,11 @@ quote {
     .insta-gallery {
       grid-template-columns: repeat(3, 1fr); } }
 
+.project-text p {
+  font-weight: 300; }
+.project-text strong {
+  font-weight: 700; }
+
 .scompolab-section {
   position: relative; }
 
@@ -7562,5 +7597,850 @@ quote {
     @media (min-width: 768px) {
       .under-construction figure {
         height: 60vh; } }
+
+/* =========================================================
+   TOMBOLA MATEMATICA — FESTIVE MODE
+   ========================================================= */
+.tombola-page {
+  /* Palette */
+  /* =========================================================
+     AREA GIOCO
+     ========================================================= */
+  /* =========================================================
+     ESTRAZIONE
+     ========================================================= */
+  /* =========================================================
+     PALLINA ESTRATTA
+     ========================================================= */
+  /* =========================================================
+     CONTATORE + NUMERI ESTRATTI
+     ========================================================= */
+  /* =========================================================
+     CARTELLA / TABELLONE
+     ========================================================= */
+  /* =========================================================
+     NUMERI
+     ========================================================= */
+  /* =========================================================
+     COMANDI
+     ========================================================= */
+  /* =========================================================
+     MODAL — BASE
+     ========================================================= */
+  /* =========================================================
+   QUESITO — FLIP CARD
+   ========================================================= */
+  /* =========================================================
+     MODALITÀ SFIDA — ROSSO / ORO
+     ========================================================= */
+  /* =========================================================
+     SFIDA TOMBOLA — VIOLA / BLU
+     ========================================================= */
+  /* =========================================================
+     VITTORIA / FALLIMENTO
+     ========================================================= */
+  /* =========================================================
+     RESPONSIVE
+     ========================================================= */ }
+  .tombola-page .tombola-new-game-transition {
+    position: fixed;
+    inset: 0;
+    z-index: 1300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at 50% 30%, rgba(255, 210, 70, 0.12), transparent 35%), linear-gradient(160deg, rgba(5, 48, 28, 0.96) 0%, rgba(9, 65, 38, 0.97) 45%, rgba(111, 27, 25, 0.97) 100%);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity .25s ease, visibility .25s ease; }
+    .tombola-page .tombola-new-game-transition.is-open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto; }
+      .tombola-page .tombola-new-game-transition.is-open .tombola-new-game-content {
+        animation: tombola-new-game-bounce 0.85s cubic-bezier(0.34, 1.56, 0.64, 1); }
+      .tombola-page .tombola-new-game-transition.is-open .tombola-new-game-tree {
+        animation: tombola-tree-bounce .7s ease-in-out; }
+      .tombola-page .tombola-new-game-transition.is-open .tombola-new-game-stars {
+        animation: tombola-stars-pop .8s .15s both; }
+  .tombola-page .tombola-new-game-content {
+    padding: 2rem;
+    text-align: center;
+    color: #fff; }
+    .tombola-page .tombola-new-game-content h2 {
+      margin: .6rem 0 .8rem;
+      font-family: Georgia, serif;
+      font-size: clamp(3rem, 7vw, 6rem);
+      font-weight: 700;
+      line-height: .95;
+      color: #fff;
+      text-shadow: 4px 4px 0 #c9343c, 7px 7px 0 rgba(0, 0, 0, 0.22); }
+    .tombola-page .tombola-new-game-content p {
+      margin-top: 1.25rem;
+      margin-bottom: 0;
+      color: #ffd63e;
+      font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+      font-weight: 700; }
+  .tombola-page .tombola-new-game-tree {
+    font-size: clamp(3rem, 6vw, 5rem);
+    line-height: 1; }
+  .tombola-page .tombola-new-game-stars {
+    margin-top: 1rem;
+    font-size: clamp(2rem, 4vw, 3rem); }
+    .tombola-page .tombola-new-game-stars span {
+      display: inline-block;
+      margin: 0 .6rem; }
+  .tombola-page .tombola-game {
+    min-height: 100vh; }
+  .tombola-page .tombola-board-wrapper {
+    position: relative;
+    overflow: hidden;
+    padding: 2.5rem 2.75rem 2.25rem;
+    border-radius: 28px;
+    background: radial-gradient(circle at 8% 12%, rgba(255, 255, 255, 0.12) 0 3px, transparent 4px), radial-gradient(circle at 91% 18%, rgba(246, 189, 59, 0.3) 0 4px, transparent 5px), radial-gradient(circle at 15% 82%, rgba(255, 255, 255, 0.1) 0 3px, transparent 4px), radial-gradient(circle at 88% 87%, rgba(246, 189, 59, 0.25) 0 3px, transparent 4px), linear-gradient(145deg, #173f35 0%, #24745a 55%, #286b55 100%);
+    box-shadow: 0 18px 45px rgba(22, 63, 53, 0.2);
+    /*
+     * Decorazione superiore/inferiore:
+     * niente immagini esterne.
+     */ }
+    .tombola-page .tombola-board-wrapper::before, .tombola-page .tombola-board-wrapper::after {
+      position: absolute;
+      z-index: 0;
+      color: rgba(255, 255, 255, 0.12);
+      letter-spacing: 1rem;
+      pointer-events: none;
+      white-space: nowrap; }
+    .tombola-page .tombola-board-wrapper::before {
+      content: "✦  ·  ✧  ·  ✦  ·  ✧  ·  ✦";
+      top: 20px;
+      left: 28px;
+      font-size: 1.1rem; }
+    .tombola-page .tombola-board-wrapper::after {
+      content: "✧  ·  ✦  ·  ✧  ·  ✦  ·  ✧";
+      right: 18px;
+      bottom: 18px;
+      font-size: .95rem; }
+    .tombola-page .tombola-board-wrapper > * {
+      position: relative;
+      z-index: 1; }
+  .tombola-page .tombola-extraction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem; }
+  .tombola-page .tombola-extraction-action {
+    display: flex;
+    justify-content: center;
+    width: 100%; }
+  .tombola-page .tombola-main-button {
+    min-width: 235px;
+    padding: .9rem 1.8rem;
+    border: 0;
+    border-radius: 50px;
+    background: #f6bd3b;
+    color: #34280b;
+    font-size: 1.05rem;
+    font-weight: 700;
+    box-shadow: 0 7px 0 #c88e12, 0 13px 25px rgba(0, 0, 0, 0.2);
+    transition: transform .18s ease, box-shadow .18s ease; }
+    .tombola-page .tombola-main-button:hover {
+      background: #ffc94f;
+      color: #34280b;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 0 #c88e12, 0 16px 28px rgba(0, 0, 0, 0.22); }
+    .tombola-page .tombola-main-button:active {
+      transform: translateY(4px);
+      box-shadow: 0 3px 0 #c88e12, 0 7px 15px rgba(0, 0, 0, 0.18); }
+  .tombola-page .tombola-current-wrapper {
+    margin-top: 1.5rem;
+    text-align: center; }
+    .tombola-page .tombola-current-wrapper small {
+      display: block;
+      margin-bottom: .55rem;
+      color: rgba(255, 255, 255, 0.72);
+      text-transform: uppercase;
+      letter-spacing: .11em;
+      font-size: .68rem;
+      font-weight: 700; }
+  .tombola-page .tombola-current-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 112px;
+    height: 112px;
+    margin: 0 auto;
+    border: 7px solid #ffe29a;
+    border-radius: 50%;
+    background: radial-gradient(circle at 32% 25%, #fff 0%, #fff 32%, #fff9e8 70%, #f0dfad 100%);
+    color: #173f35;
+    font-family: Georgia, serif;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+    box-shadow: inset -7px -9px 15px rgba(103, 75, 14, 0.1), 0 0 0 4px rgba(255, 255, 255, 0.13), 0 12px 28px rgba(0, 0, 0, 0.24);
+    animation: tombola-ball-in 0.38s cubic-bezier(0.2, 0.9, 0.3, 1.25); }
+  .tombola-page .tombola-counter {
+    margin: 1.25rem 0 .65rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: .85rem; }
+    .tombola-page .tombola-counter strong {
+      color: #fff; }
+  .tombola-page .tombola-extracted-numbers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .35rem;
+    min-height: 28px;
+    margin-bottom: 1.4rem; }
+  .tombola-page .tombola-extracted-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 29px;
+    height: 29px;
+    padding: 0 .4rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.14);
+    color: #fff;
+    font-size: .75rem;
+    font-weight: 700; }
+  .tombola-page .tombola-board {
+    display: grid;
+    grid-template-columns: repeat(10, minmax(0, 1fr));
+    gap: .55rem;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 1.25rem;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.16); }
+  .tombola-page .tombola-number {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1 / 1;
+    min-width: 0;
+    border: 0;
+    border-radius: 12px;
+    font-size: 1.08rem;
+    font-weight: 700;
+    line-height: 1;
+    cursor: pointer;
+    box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.06), 0 3px 7px rgba(0, 0, 0, 0.07);
+    transition: transform .15s ease, box-shadow .15s ease, filter .15s ease; }
+    .tombola-page .tombola-number:hover {
+      z-index: 2;
+      transform: translateY(-3px) scale(1.055);
+      box-shadow: 0 8px 14px rgba(0, 0, 0, 0.16); }
+    .tombola-page .tombola-number:focus {
+      outline: none; }
+    .tombola-page .tombola-number--easy {
+      background: #a9ddbd;
+      color: #174f39; }
+    .tombola-page .tombola-number--medium {
+      background: #f7d66f;
+      color: #70520c; }
+    .tombola-page .tombola-number--hard {
+      background: #ec9288;
+      color: #6f2722; }
+    .tombola-page .tombola-number--puzzle {
+      background: #bca3dd;
+      color: #4d3273; }
+    .tombola-page .tombola-number.is-marked {
+      opacity: .34;
+      filter: grayscale(0.35);
+      box-shadow: none;
+      transform: scale(0.92); }
+      .tombola-page .tombola-number.is-marked::after {
+        content: "✓";
+        position: absolute;
+        right: 5px;
+        bottom: 3px;
+        font-size: .65rem;
+        font-weight: 800; }
+      .tombola-page .tombola-number.is-marked:hover {
+        transform: scale(0.92);
+        box-shadow: none; }
+    .tombola-page .tombola-number.is-extracted {
+      position: relative;
+      z-index: 5;
+      cursor: pointer;
+      transform: scale(1.08); }
+      .tombola-page .tombola-number.is-extracted::after {
+        content: "";
+        position: absolute;
+        top: -6px;
+        right: -6px;
+        bottom: -6px;
+        left: -6px;
+        border: 4px solid #ffd43b;
+        border-radius: 12px;
+        pointer-events: none;
+        animation: tombola-number-ready 1.2s ease-in-out infinite; }
+      .tombola-page .tombola-number.is-extracted:hover {
+        z-index: 6;
+        transform: translateY(-3px) scale(1.1); }
+  .tombola-page .tombola-controls {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: .75rem;
+    margin-top: 1.6rem; }
+  .tombola-page .tombola-control {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .55rem;
+    min-width: 180px;
+    padding: .8rem 1.2rem;
+    border: 0;
+    border-radius: 50px;
+    font-weight: 700;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.16);
+    transition: transform .18s ease, box-shadow .18s ease; }
+    .tombola-page .tombola-control:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 17px rgba(0, 0, 0, 0.22); }
+    .tombola-page .tombola-control--tombola {
+      background: #7655a6;
+      color: #fff; }
+      .tombola-page .tombola-control--tombola:hover {
+        background: #8565b3;
+        color: #fff; }
+    .tombola-page .tombola-control--challenge {
+      background: #f6bd3b;
+      color: #493609; }
+      .tombola-page .tombola-control--challenge:hover {
+        background: #ffc94f;
+        color: #493609; }
+    .tombola-page .tombola-control--reset {
+      background: rgba(255, 255, 255, 0.92);
+      color: #173f35; }
+      .tombola-page .tombola-control--reset:hover {
+        background: #fff;
+        color: #173f35; }
+  .tombola-page .tombola-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    background: rgba(12, 29, 26, 0.73);
+    backdrop-filter: blur(7px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity .22s ease, visibility .22s ease; }
+    .tombola-page .tombola-modal.is-open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto; }
+      .tombola-page .tombola-modal.is-open .tombola-modal-panel {
+        transform: translateY(0) scale(1); }
+  .tombola-page .tombola-modal-panel {
+    position: relative;
+    width: 100%;
+    max-width: 650px;
+    max-height: calc(100vh - 3rem);
+    overflow-y: auto;
+    padding: 2.3rem;
+    border-radius: 25px;
+    background: #fffaf0;
+    text-align: center;
+    box-shadow: 0 25px 65px rgba(0, 0, 0, 0.3);
+    transform: translateY(15px) scale(0.97);
+    transition: transform .22s ease; }
+  .tombola-page .tombola-modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.72);
+    color: #555;
+    cursor: pointer; }
+  .tombola-page .tombola-question-modal {
+    padding: 0;
+    background: rgba(5, 18, 13, 0.82);
+    perspective: 1600px;
+    /* -----------------------------------------
+       CHIUSURA
+       ----------------------------------------- */
+    /* -----------------------------------------
+       CONTENITORE 3D
+       ----------------------------------------- */
+    /* -----------------------------------------
+       FACCE
+       ----------------------------------------- */
+    /* -----------------------------------------
+       RETRO
+       ----------------------------------------- */
+    /* =========================================================
+       COLORI IN BASE ALLA DIFFICOLTÀ
+       La classe viene messa sul modal dal JS.
+       ========================================================= */
+    /* =========================================================
+       FRONTE
+       ========================================================= */
+    /* =========================================================
+       RETRO / DOMANDA
+       ========================================================= */
+    /* =========================================================
+       MOBILE
+       ========================================================= */ }
+    .tombola-page .tombola-question-modal .tombola-question-close {
+      position: fixed;
+      top: 2rem;
+      right: 2rem;
+      z-index: 5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 54px;
+      height: 54px;
+      padding: 0;
+      border: 0;
+      border-radius: 50%;
+      background: #d62828;
+      color: #fff;
+      font-size: 1.35rem;
+      cursor: pointer;
+      box-shadow: 0 7px 20px rgba(0, 0, 0, 0.25);
+      transition: transform .18s ease, background .18s ease; }
+      .tombola-page .tombola-question-modal .tombola-question-close:hover {
+        background: #b91f24;
+        color: #fff;
+        transform: scale(1.08); }
+    .tombola-page .tombola-question-modal .tombola-flip-card {
+      width: 100%;
+      max-width: 1000px;
+      height: 72vh;
+      max-height: 650px;
+      perspective: 1600px; }
+    .tombola-page .tombola-question-modal .tombola-flip-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 0.8s cubic-bezier(0.2, 0.75, 0.25, 1); }
+      .tombola-page .tombola-question-modal .tombola-flip-inner.is-flipped {
+        transform: rotateY(180deg); }
+    .tombola-page .tombola-question-modal .tombola-flip-face {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      padding: 3rem;
+      border-radius: 30px;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      color: #fff;
+      box-shadow: 0 25px 70px rgba(0, 0, 0, 0.3);
+      /*
+       * Piccoli punti luminosi.
+       */ }
+      .tombola-page .tombola-question-modal .tombola-flip-face::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at 12% 20%, rgba(255, 255, 255, 0.17) 0 3px, transparent 4px), radial-gradient(circle at 88% 22%, rgba(255, 255, 255, 0.12) 0 4px, transparent 5px), radial-gradient(circle at 18% 82%, rgba(255, 255, 255, 0.12) 0 3px, transparent 4px), radial-gradient(circle at 82% 78%, rgba(255, 255, 255, 0.16) 0 3px, transparent 4px);
+        pointer-events: none; }
+      .tombola-page .tombola-question-modal .tombola-flip-face > * {
+        position: relative;
+        z-index: 1; }
+    .tombola-page .tombola-question-modal .tombola-flip-back {
+      transform: rotateY(180deg); }
+    .tombola-page .tombola-question-modal.difficulty-easy .tombola-flip-front,
+    .tombola-page .tombola-question-modal.difficulty-easy .tombola-flip-back {
+      background: linear-gradient(145deg, #159957 0%, #35b86f 100%); }
+    .tombola-page .tombola-question-modal.difficulty-medium .tombola-flip-front,
+    .tombola-page .tombola-question-modal.difficulty-medium .tombola-flip-back {
+      background: linear-gradient(145deg, #ffd900 0%, #ff9f1c 100%);
+      color: #172018; }
+    .tombola-page .tombola-question-modal.difficulty-hard .tombola-flip-front,
+    .tombola-page .tombola-question-modal.difficulty-hard .tombola-flip-back {
+      background: linear-gradient(145deg, #e63946 0%, #b82e3b 100%); }
+    .tombola-page .tombola-question-modal.difficulty-puzzle .tombola-flip-front,
+    .tombola-page .tombola-question-modal.difficulty-puzzle .tombola-flip-back {
+      background: linear-gradient(145deg, #2446b8 0%, #51358d 100%); }
+    .tombola-page .tombola-question-modal .tombola-flip-decoration {
+      margin-bottom: .7rem;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      animation: tombola-tree-float 2s ease-in-out infinite; }
+    .tombola-page .tombola-question-modal .tombola-flip-number {
+      margin-bottom: .7rem;
+      font-family: Georgia, serif;
+      font-size: clamp(4.5rem, 10vw, 8rem);
+      font-weight: 700;
+      line-height: .95;
+      text-shadow: 0 5px 0 rgba(0, 0, 0, 0.12); }
+    .tombola-page .tombola-question-modal .tombola-flip-difficulty {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: .8rem;
+      padding: .5rem 1.25rem;
+      border: 2px solid rgba(255, 255, 255, 0.55);
+      border-radius: 50px;
+      background: rgba(255, 255, 255, 0.2);
+      color: inherit;
+      font-size: clamp(0.9rem, 2vw, 1.15rem);
+      font-weight: 800;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      backdrop-filter: blur(5px); }
+      .tombola-page .tombola-question-modal .tombola-flip-difficulty::before {
+        content: "";
+        width: 13px;
+        height: 13px;
+        margin-right: .55rem;
+        border: 2px solid rgba(255, 255, 255, 0.55);
+        border-radius: 50%;
+        background: currentColor; }
+    .tombola-page .tombola-question-modal .tombola-flip-character {
+      margin-top: .7rem;
+      font-size: clamp(2.6rem, 5vw, 4rem);
+      line-height: 1; }
+    .tombola-page .tombola-question-modal .tombola-flip-back .tombola-flip-character {
+      margin: 0 0 1.25rem;
+      animation: tombola-thinking 1.8s ease-in-out infinite; }
+    .tombola-page .tombola-question-modal .tombola-flip-question {
+      max-width: 850px;
+      margin: 0 auto;
+      font-family: Georgia, serif;
+      font-size: clamp(2.1rem, 5vw, 4.3rem);
+      font-weight: 700;
+      line-height: 1.18;
+      text-align: center;
+      text-shadow: 0 3px 0 rgba(0, 0, 0, 0.1); }
+    .tombola-page .tombola-question-modal .tombola-flip-sparkles {
+      margin: 1.25rem 0 .9rem;
+      font-size: 2.2rem;
+      animation: tombola-sparkle 1.2s ease-in-out infinite alternate; }
+    .tombola-page .tombola-question-modal .tombola-flip-info {
+      display: inline-flex;
+      align-items: center;
+      padding: .55rem 1.25rem;
+      border-radius: 50px;
+      background: #ffd326;
+      color: #172018;
+      font-size: .9rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); }
+    .tombola-page .tombola-question-modal .tombola-flip-separator {
+      margin: 0 .45rem; }
+    @media (max-width: 767.98px) {
+      .tombola-page .tombola-question-modal .tombola-flip-card {
+        width: calc(100% - 2rem);
+        height: 70vh; }
+      .tombola-page .tombola-question-modal .tombola-flip-face {
+        padding: 2rem 1.25rem;
+        border-radius: 22px; }
+      .tombola-page .tombola-question-modal .tombola-question-close {
+        top: 1rem;
+        right: 1rem;
+        width: 44px;
+        height: 44px;
+        font-size: 1rem; } }
+  .tombola-page .tombola-modal--challenge .tombola-modal-panel {
+    overflow: hidden;
+    background: radial-gradient(circle at 10% 10%, rgba(255, 255, 255, 0.15) 0 3px, transparent 4px), linear-gradient(145deg, #983c38, #c94e45);
+    color: #fff; }
+  .tombola-page .tombola-modal--challenge .tombola-modal-icon {
+    background: #f6bd3b;
+    color: #6e4d08; }
+  .tombola-page .tombola-modal--challenge h2 {
+    color: #fff; }
+  .tombola-page .tombola-modal--challenge .tombola-challenge-intro {
+    color: rgba(255, 255, 255, 0.78); }
+  .tombola-page .tombola-modal--challenge .tombola-challenge-question {
+    background: #fffaf0;
+    color: #242424; }
+  .tombola-page .tombola-modal-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 68px;
+    height: 68px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    font-size: 1.6rem; }
+  .tombola-page .tombola-challenge-panel h2 {
+    margin-bottom: .5rem;
+    font-family: Georgia, serif;
+    font-weight: 700; }
+  .tombola-page .tombola-challenge-intro {
+    margin-bottom: 0; }
+  .tombola-page .tombola-challenge-question {
+    margin-top: 1.3rem;
+    padding: 1.5rem;
+    border-radius: 17px;
+    font-family: Georgia, serif;
+    font-size: clamp(1.35rem, 2.5vw, 2rem);
+    font-weight: 700;
+    line-height: 1.3; }
+  .tombola-page .tombola-modal--final .tombola-modal-panel {
+    background: radial-gradient(circle at 88% 15%, rgba(255, 255, 255, 0.12) 0 4px, transparent 5px), linear-gradient(145deg, #413270, #7655a6);
+    color: #fff; }
+  .tombola-page .tombola-modal--final .tombola-modal-icon {
+    background: rgba(255, 255, 255, 0.17);
+    color: #f6bd3b; }
+  .tombola-page .tombola-modal--final h2 {
+    color: #fff; }
+  .tombola-page .tombola-modal--final > p {
+    color: rgba(255, 255, 255, 0.8); }
+  .tombola-page .tombola-final-panel h2 {
+    font-family: Georgia, serif;
+    font-weight: 700; }
+  .tombola-page .tombola-progress {
+    display: flex;
+    justify-content: center;
+    gap: .7rem;
+    margin: 1.3rem 0 .65rem; }
+  .tombola-page .tombola-progress-dot {
+    width: 19px;
+    height: 19px;
+    border: 2px solid rgba(255, 255, 255, 0.85);
+    border-radius: 50%;
+    background: transparent;
+    transition: background .2s ease, transform .2s ease; }
+    .tombola-page .tombola-progress-dot.is-complete {
+      border-color: #f6bd3b;
+      background: #f6bd3b;
+      transform: scale(1.12); }
+  .tombola-page .tombola-error-counter {
+    margin-bottom: 1.2rem;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: .84rem; }
+  .tombola-page .tombola-final-question {
+    padding: 1.5rem;
+    border-radius: 17px;
+    background: #fff;
+    color: #242424; }
+    .tombola-page .tombola-final-question small {
+      display: block;
+      margin-bottom: .6rem;
+      color: #7655a6;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      font-weight: 700; }
+    .tombola-page .tombola-final-question #tombola-question-text {
+      font-family: Georgia, serif;
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      font-weight: 700;
+      line-height: 1.3; }
+  .tombola-page .tombola-answer-controls {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: .75rem;
+    margin-top: 1.4rem; }
+  .tombola-page .tombola-answer-correct,
+  .tombola-page .tombola-answer-wrong {
+    min-width: 180px;
+    padding: .8rem 1.2rem;
+    border: 0;
+    border-radius: 50px;
+    font-weight: 700; }
+  .tombola-page .tombola-answer-correct {
+    background: #bfe7ca;
+    color: #245e39; }
+  .tombola-page .tombola-answer-wrong {
+    background: #f4c0ba;
+    color: #873c34; }
+  .tombola-page .tombola-result {
+    position: fixed;
+    inset: 0;
+    z-index: 1200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+    color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity .25s ease, visibility .25s ease; }
+    .tombola-page .tombola-result.is-open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto; }
+    .tombola-page .tombola-result--victory {
+      background: radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.12) 0 4px, transparent 5px), radial-gradient(circle at 82% 72%, rgba(246, 189, 59, 0.2) 0 5px, transparent 6px), rgba(32, 126, 80, 0.97); }
+    .tombola-page .tombola-result--failure {
+      background: rgba(169, 65, 57, 0.97); }
+    .tombola-page .tombola-result h2 {
+      margin-bottom: .7rem;
+      font-family: Georgia, serif;
+      font-size: clamp(3rem, 8vw, 6rem);
+      font-weight: 700; }
+    .tombola-page .tombola-result p {
+      margin-bottom: 1.5rem;
+      font-size: 1.15rem; }
+    .tombola-page .tombola-result .btn {
+      min-width: 180px;
+      border-radius: 50px; }
+  .tombola-page .tombola-result-icon {
+    margin-bottom: .7rem;
+    font-size: 3.8rem; }
+  @media (max-width: 991.98px) {
+    .tombola-page .tombola-board-wrapper {
+      padding: 2rem 1.5rem; }
+    .tombola-page .tombola-board {
+      gap: .45rem;
+      padding: 1rem; }
+    .tombola-page .tombola-number {
+      border-radius: 9px;
+      font-size: 1rem;
+      cursor: default; }
+      .tombola-page .tombola-number:not(.is-extracted):not(.is-marked):hover {
+        transform: none;
+        box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.06), 0 3px 7px rgba(0, 0, 0, 0.07); }
+      .tombola-page .tombola-number.is-extracted {
+        cursor: pointer;
+        transform: scale(1.06);
+        box-shadow: 0 0 0 3px #fff, 0 0 0 6px #f6bd3b, 0 8px 18px rgba(0, 0, 0, 0.22);
+        animation: tombola-number-ready 1.4s ease-in-out infinite; }
+        .tombola-page .tombola-number.is-extracted:hover {
+          transform: translateY(-3px) scale(1.1); }
+      .tombola-page .tombola-number.is-marked {
+        cursor: default; } }
+  @media (max-width: 767.98px) {
+    .tombola-page .tombola-board-wrapper {
+      padding: 1.5rem 1rem;
+      border-radius: 20px; }
+    .tombola-page .tombola-board {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: .5rem; }
+    .tombola-page .tombola-controls {
+      flex-direction: column; }
+    .tombola-page .tombola-control {
+      width: 100%; }
+    .tombola-page .tombola-modal {
+      padding: 1rem; }
+    .tombola-page .tombola-modal-panel {
+      padding: 2rem 1.25rem 1.5rem;
+      border-radius: 20px; }
+    .tombola-page .tombola-answer-controls {
+      flex-direction: column; }
+    .tombola-page .tombola-answer-correct,
+    .tombola-page .tombola-answer-wrong {
+      width: 100%; } }
+  @media (max-width: 575.98px) {
+    .tombola-page .tombola-board-wrapper {
+      margin-right: -.5rem;
+      margin-left: -.5rem; }
+    .tombola-page .tombola-board {
+      padding: .65rem;
+      gap: .35rem; }
+    .tombola-page .tombola-number {
+      border-radius: 7px;
+      font-size: .9rem; }
+    .tombola-page .tombola-main-button {
+      width: 100%; }
+    .tombola-page .tombola-current-number {
+      width: 95px;
+      height: 95px;
+      font-size: 2.6rem; } }
+
+/* =========================================================
+   ANIMAZIONI
+   ========================================================= */
+@keyframes tombola-ball-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.55) rotate(-12deg); }
+  70% {
+    transform: scale(1.08) rotate(3deg); }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0); } }
+@keyframes tombola-shake {
+  0%,
+  100% {
+    transform: translateX(0); }
+  20% {
+    transform: translateX(-8px); }
+  40% {
+    transform: translateX(8px); }
+  60% {
+    transform: translateX(-5px); }
+  80% {
+    transform: translateX(5px); } }
+@keyframes tombola-new-game-bounce {
+  0% {
+    opacity: 0;
+    transform: scale(0.35) translateY(-80px); }
+  45% {
+    opacity: 1;
+    transform: scale(1.12) translateY(10px); }
+  65% {
+    transform: scale(0.94) translateY(-6px); }
+  82% {
+    transform: scale(1.04) translateY(3px); }
+  100% {
+    transform: scale(1) translateY(0); } }
+@keyframes tombola-tree-bounce {
+  0% {
+    transform: translateY(-80px) rotate(-8deg); }
+  55% {
+    transform: translateY(10px) rotate(5deg); }
+  75% {
+    transform: translateY(-5px) rotate(-2deg); }
+  100% {
+    transform: translateY(0) rotate(0); } }
+@keyframes tombola-stars-pop {
+  0% {
+    opacity: 0;
+    transform: scale(0.2); }
+  65% {
+    transform: scale(1.25); }
+  100% {
+    opacity: 1;
+    transform: scale(1); } }
+@keyframes tombola-tree-float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-2deg); }
+  50% {
+    transform: translateY(-8px) rotate(2deg); } }
+@keyframes tombola-thinking {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0); }
+  50% {
+    transform: translateY(-6px) rotate(-4deg); } }
+@keyframes tombola-sparkle {
+  from {
+    opacity: .65;
+    transform: scale(0.9); }
+  to {
+    opacity: 1;
+    transform: scale(1.15); } }
+@keyframes tombola-number-ready {
+  0%,
+  100% {
+    box-shadow: 0 0 0 3px #fff, 0 0 0 6px rgba(246, 189, 59, 0.75), 0 8px 18px rgba(0, 0, 0, 0.18); }
+  50% {
+    box-shadow: 0 0 0 3px #fff, 0 0 0 9px rgba(246, 189, 59, 0.25), 0 10px 22px rgba(0, 0, 0, 0.24); } }
 
 /*# sourceMappingURL=style.css.map */

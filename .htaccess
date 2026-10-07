@@ -57,6 +57,32 @@ RewriteRule ^progetti/?$ progetti.php [L]
 
 
 # =========================================
+# APP DEI PROGETTI
+# /progetti/{slug}/gioca
+# -> progetti/{slug}/gioca.php
+#
+# IMPORTANTE:
+# questa regola deve stare PRIMA del controllo
+# delle cartelle reali
+# =========================================
+
+RewriteRule ^progetti/([^/]+)/gioca/?$ progetti/$1/gioca.php [L]
+
+
+# =========================================
+# PROGETTI DINAMICI
+# /progetti/{slug}/
+# -> progetti/progetto.php?slug={slug}
+#
+# IMPORTANTE:
+# anche questa regola deve stare PRIMA
+# del controllo delle cartelle reali
+# =========================================
+
+RewriteRule ^progetti/([^/]+)/?$ progetti/progetto.php?slug=$1 [QSA,L]
+
+
+# =========================================
 # NON TOCCARE FILE O CARTELLE REALI
 # =========================================
 
@@ -72,15 +98,6 @@ RewriteRule ^ - [L]
 
 RewriteCond %{REQUEST_FILENAME}.php -f
 RewriteRule ^([^/.]+)/?$ $1.php [L]
-
-
-# =========================================
-# PROGETTI DINAMICI
-# /progetti/{slug}/
-# -> progetti/progetto.php?slug={slug}
-# =========================================
-
-RewriteRule ^progetti/([^/]+)/?$ progetti/progetto.php?slug=$1 [QSA,L]
 
 
 # =========================================
