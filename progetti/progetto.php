@@ -150,8 +150,14 @@ include_once '../partials/head.php';
     <header class="">
         <div class="container pt-5">
             <div class="hero mb-4">
-                <small class="text-<?= htmlspecialchars($color) ?> font-weight-500 d-flex align-items-center justify-content-start mb-2">
-                    <span class="rounded-xsmall bg-<?= htmlspecialchars($color) ?> mr-3"></span>
+                <?php
+                $heroColor = $project['slug'] === 'la-tombola-matematica'
+                        ? 'success-dark'
+                        : $color;
+                ?>
+
+                <small class="text-<?= htmlspecialchars($heroColor) ?> font-weight-500 d-flex align-items-center justify-content-start mb-2">
+                    <span class="rounded-xsmall bg-<?= htmlspecialchars($heroColor) ?> mr-3"></span>
                     <span class="text-uppercase">
                         <?= htmlspecialchars($project['category_name']) ?>
                     </span>
@@ -184,7 +190,7 @@ include_once '../partials/head.php';
                 </div>
             </div>
 
-            <div class="hero bg-waves-<?= htmlspecialchars($color) ?> mb-5">
+            <div class="hero bg-waves-<?= htmlspecialchars($heroColor) ?> mb-5">
                 <figure class="project-image">
                     <img src="<?= $dominio . htmlspecialchars($project['hero_image']) ?>"
                          class="h-100 w-100 object-contain object-center"

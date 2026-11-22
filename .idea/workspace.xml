@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9803a0f7-dbde-4a13-a4c7-4cd875e27d4b" name="Changes" comment="index progetti">
+    <list default="true" id="9803a0f7-dbde-4a13-a4c7-4cd875e27d4b" name="Changes" comment="pagina e gioco tombola direttamente dentro sottoradice">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partials/navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/partials/navbar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partials/progetti/progetti.php" beforeDir="false" afterPath="$PROJECT_DIR$/partials/progetti/progetti.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/progetti.php" beforeDir="false" afterPath="$PROJECT_DIR$/progetti.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/tombola/tombola.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/tombola/tombola.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/_custom.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/_custom.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/pages/_tombola-matematica.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/pages/_tombola-matematica.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/progetti/la-tombola-matematica/gioca.php" beforeDir="false" afterPath="$PROJECT_DIR$/progetti/la-tombola-matematica/gioca.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/progetti/progetto.php" beforeDir="false" afterPath="$PROJECT_DIR$/progetti/progetto.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,13 +22,14 @@
     <execution />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="261" />
+    <option name="cachedIndexableFilesCount" value="300" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="PHP File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -62,33 +65,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Applications/MAMP/htdocs/sottoradice&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "disable.download.node.interpreter.editor.notification": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/Applications/MAMP/htdocs/sottoradice",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/js/tombola" />
+      <recent name="$PROJECT_DIR$/partials/progetti/core" />
       <recent name="$PROJECT_DIR$/partials/progetti/scomporre-per-comprendere" />
     </key>
   </component>
@@ -124,7 +130,17 @@
       <workItem from="1779689692789" duration="8828000" />
       <workItem from="1779866412740" duration="3199000" />
       <workItem from="1779896295044" duration="23225000" />
-      <workItem from="1780128014808" duration="43449000" />
+      <workItem from="1780128014808" duration="44098000" />
+      <workItem from="1780405986362" duration="6740000" />
+      <workItem from="1780556594254" duration="2578000" />
+      <workItem from="1780986113252" duration="2245000" />
+      <workItem from="1782677358351" duration="14000" />
+      <workItem from="1783809742001" duration="3356000" />
+      <workItem from="1785228015508" duration="606000" />
+      <workItem from="1787321713562" duration="598000" />
+      <workItem from="1788051073314" duration="2262000" />
+      <workItem from="1790776599196" duration="592000" />
+      <workItem from="1790778936183" duration="55299000" />
     </task>
     <task id="LOCAL-00001" summary="php 8.3.30 sostituzione strftime">
       <option name="closed" value="true" />
@@ -342,7 +358,15 @@
       <option name="project" value="LOCAL" />
       <updated>1780397276871</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="varie">
+      <option name="closed" value="true" />
+      <created>1780405333065</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1780405333065</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -360,7 +384,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="php 8.3.30 sostituzione strftime" />
     <MESSAGE value="php 8.3.30 vangelo home" />
     <MESSAGE value="php 8.3.30 vangelo + gospel + liturgia" />
     <MESSAGE value="php 8.3.30 catechesi" />
@@ -385,7 +408,8 @@
     <MESSAGE value="pag 404" />
     <MESSAGE value="pag under construction" />
     <MESSAGE value="index progetti" />
-    <option name="LAST_COMMIT_MESSAGE" value="index progetti" />
+    <MESSAGE value="varie" />
+    <option name="LAST_COMMIT_MESSAGE" value="varie" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

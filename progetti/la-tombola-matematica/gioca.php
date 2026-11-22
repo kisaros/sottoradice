@@ -55,9 +55,9 @@ include_once '../../partials/head.php';
                 <div class="tombola-extraction-action">
 
                     <button
-                        type="button"
-                        id="extract-number"
-                        class="btn btn-warning tombola-main-button">
+                            type="button"
+                            id="extract-number"
+                            class="btn btn-warning tombola-main-button">
 
                         <i class="fas fa-dice mr-2"></i>
                         Estrai numero
@@ -68,9 +68,9 @@ include_once '../../partials/head.php';
 
 
                 <div
-                    id="current-number-wrapper"
-                    class="tombola-current-wrapper"
-                    hidden>
+                        id="current-number-wrapper"
+                        class="tombola-current-wrapper"
+                        hidden>
 
                     <small>Numero estratto</small>
 
@@ -98,8 +98,8 @@ include_once '../../partials/head.php';
             <!-- NUMERI GIÀ ESTRATTI -->
 
             <div
-                id="extracted-numbers"
-                class="tombola-extracted-numbers">
+                    id="extracted-numbers"
+                    class="tombola-extracted-numbers">
             </div>
 
 
@@ -108,9 +108,9 @@ include_once '../../partials/head.php';
             ========================== -->
 
             <div
-                id="tombola-board"
-                class="tombola-board"
-                aria-label="Tabellone della tombola">
+                    id="tombola-board"
+                    class="tombola-board"
+                    aria-label="Tabellone della tombola">
 
                 <?php for ($number = 1; $number <= 90; $number++): ?>
 
@@ -127,9 +127,10 @@ include_once '../../partials/head.php';
                     ?>
 
                     <button
-                        type="button"
-                        class="tombola-number tombola-number--<?= $difficulty ?>"
-                        data-number="<?= $number ?>">
+                            type="button"
+                            class="tombola-number tombola-number--<?= $difficulty ?>"
+                            data-number="<?= $number ?>"
+                            disabled>
 
                         <span><?= $number ?></span>
 
@@ -147,9 +148,9 @@ include_once '../../partials/head.php';
             <div class="tombola-controls">
 
                 <button
-                    type="button"
-                    id="tombola-challenge"
-                    class="btn tombola-control tombola-control--tombola">
+                        type="button"
+                        id="tombola-challenge"
+                        class="btn tombola-control tombola-control--tombola">
 
                     <i class="fas fa-bullseye"></i>
                     <span>Sfida Tombola</span>
@@ -158,9 +159,9 @@ include_once '../../partials/head.php';
 
 
                 <button
-                    type="button"
-                    id="challenge-mode"
-                    class="btn tombola-control tombola-control--challenge">
+                        type="button"
+                        id="challenge-mode"
+                        class="btn tombola-control tombola-control--challenge">
 
                     <i class="fas fa-trophy"></i>
                     <span>Modalità Sfida</span>
@@ -169,9 +170,9 @@ include_once '../../partials/head.php';
 
 
                 <button
-                    type="button"
-                    id="new-game"
-                    class="btn tombola-control tombola-control--reset">
+                        type="button"
+                        id="new-game"
+                        class="btn tombola-control tombola-control--reset">
 
                     <i class="fas fa-redo-alt"></i>
                     <span>Nuova partita</span>
@@ -281,17 +282,17 @@ include_once '../../partials/head.php';
 =================================================== -->
 
 <div
-    id="challenge-modal"
-    class="tombola-modal tombola-modal--challenge"
-    aria-hidden="true">
+        id="challenge-modal"
+        class="tombola-modal tombola-modal--challenge"
+        aria-hidden="true">
 
     <div class="tombola-modal-panel tombola-challenge-panel">
 
         <button
-            type="button"
-            class="tombola-modal-close"
-            data-close-modal
-            aria-label="Chiudi">
+                type="button"
+                class="tombola-modal-close"
+                data-close-modal
+                aria-label="Chiudi">
 
             <i class="fas fa-times"></i>
 
@@ -310,15 +311,15 @@ include_once '../../partials/head.php';
 
 
         <div
-            id="challenge-question"
-            class="tombola-challenge-question">
+                id="challenge-question"
+                class="tombola-challenge-question">
         </div>
 
 
         <button
-            type="button"
-            id="new-challenge"
-            class="btn btn-warning mt-4">
+                type="button"
+                id="new-challenge"
+                class="btn btn-warning mt-4">
 
             <i class="fas fa-random mr-2"></i>
             Nuova sfida
@@ -335,17 +336,17 @@ include_once '../../partials/head.php';
 =================================================== -->
 
 <div
-    id="tombola-challenge-modal"
-    class="tombola-modal tombola-modal--final"
-    aria-hidden="true">
+        id="tombola-challenge-modal"
+        class="tombola-modal tombola-modal--final"
+        aria-hidden="true">
 
     <div class="tombola-modal-panel tombola-final-panel">
 
         <button
-            type="button"
-            class="tombola-modal-close"
-            data-close-modal
-            aria-label="Chiudi">
+                type="button"
+                class="tombola-modal-close"
+                data-close-modal
+                aria-label="Chiudi">
 
             <i class="fas fa-times"></i>
 
@@ -400,9 +401,9 @@ include_once '../../partials/head.php';
         <div class="tombola-answer-controls">
 
             <button
-                type="button"
-                id="tombola-correct"
-                class="btn tombola-answer-correct">
+                    type="button"
+                    id="tombola-correct"
+                    class="btn tombola-answer-correct">
 
                 <i class="fas fa-check mr-2"></i>
                 Risposta corretta
@@ -411,9 +412,9 @@ include_once '../../partials/head.php';
 
 
             <button
-                type="button"
-                id="tombola-wrong"
-                class="btn tombola-answer-wrong">
+                    type="button"
+                    id="tombola-wrong"
+                    class="btn tombola-answer-wrong">
 
                 <i class="fas fa-times mr-2"></i>
                 Risposta errata
@@ -461,9 +462,9 @@ include_once '../../partials/head.php';
 =================================================== -->
 
 <div
-    id="tombola-victory"
-    class="tombola-result tombola-result--victory"
-    aria-hidden="true">
+        id="tombola-victory"
+        class="tombola-result tombola-result--victory"
+        aria-hidden="true">
 
     <div>
 
@@ -479,9 +480,9 @@ include_once '../../partials/head.php';
         </p>
 
         <button
-            type="button"
-            id="victory-new-game"
-            class="btn btn-light">
+                type="button"
+                id="victory-new-game"
+                class="btn btn-light">
 
             Nuova partita
 
@@ -497,9 +498,9 @@ include_once '../../partials/head.php';
 =================================================== -->
 
 <div
-    id="tombola-failure"
-    class="tombola-result tombola-result--failure"
-    aria-hidden="true">
+        id="tombola-failure"
+        class="tombola-result tombola-result--failure"
+        aria-hidden="true">
 
     <div>
 
@@ -515,9 +516,9 @@ include_once '../../partials/head.php';
         </p>
 
         <button
-            type="button"
-            id="failure-close"
-            class="btn btn-light">
+                type="button"
+                id="failure-close"
+                class="btn btn-light">
 
             Torna al tabellone
 

@@ -594,6 +594,8 @@ document.addEventListener('DOMContentLoaded', function () {
             'is-marked'
         );
 
+        button.disabled = true;
+
 
         const span =
             button.querySelector('span');
@@ -631,7 +633,8 @@ document.addEventListener('DOMContentLoaded', function () {
              * è già stato estratto.
              */
             if (
-                !extractedNumbers.includes(number)
+                !extractedNumbers.includes(number) ||
+                markedNumbers.includes(number)
             ) {
                 return;
             }
@@ -765,7 +768,17 @@ document.addEventListener('DOMContentLoaded', function () {
                         );
 
                     if (extractedButton) {
+                        extractedButton.disabled = false;
                         extractedButton.classList.add('is-extracted');
+
+                        // Porta in vista la riga che contiene il numero estratto.
+                        // Il numero resta da aprire manualmente.
+                        extractedButton.scrollIntoView({
+                            behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches
+                                ? 'auto' : 'smooth',
+                            block: 'center',
+                            inline: 'nearest'
+                        });
                     }
 
 
@@ -1213,6 +1226,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
                         span.textContent =
                             button.dataset.number;
+
+                        button.disabled = true;
                     }
                 }
             );
@@ -1258,6 +1273,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     function startNewGame() {
+
+        // Non azzerare il tabellone durante l'estrazione animata.
+        if (isExtracting) return;
 
         /*
          * Fallback:
